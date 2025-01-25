@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"can_bus.h": "c",
+			"a1_task.h": "c",
+			"arm_math.h": "c",
+			"ins_task.h": "c"
+		}
+	}
+}
