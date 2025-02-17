@@ -58,25 +58,25 @@ void A1_Tx_Task(void const * argument)
 		vTaskDelayUntil(&xLastWakeTime,1);
 		A1Task_dt = DWT_GetDeltaT(&A1_dwt_cnt);
 		//HAL_GPIO_TogglePin(GPIOC,RS485_VCC_Pin);
-			if(Command.Chassis_Power_Switch == OFF)
-			{
-				Leg_Output(&Leg[0],0,0);
-				Leg_Output(&Leg[1],0,0);
-			}
-			else
-			{
-                if(Robot_Status.Body.Body_Upright_Status == YES)
-                {
+		if(Command.Chassis_Power_Switch == OFF)
+		{
+			Leg_Output(&Leg[0],0,0);
+			Leg_Output(&Leg[1],0,0);
+		}
+		else
+		{
+        	if(Robot_Status.Body.Body_Upright_Status == YES)
+            {
 									
-                    Leg_Output(&Leg[LEFT] , L0_pid[LEFT].Output +Support_F[LEFT] * arm_cos_f32(Leg[0].theta) * (1.0f + arm_sin_f32(Ins_Data.Roll)) - Leg_ROLL_Compensate_pid[0].Output , -Leg[LEFT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[0],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[0].theta),Theta0_pid[0].Output
-                    Leg_Output(&Leg[RIGHT] , L0_pid[RIGHT].Output + Support_F[RIGHT] * arm_cos_f32(Leg[1].theta) * (1.0f - arm_sin_f32(Ins_Data.Roll)) + Leg_ROLL_Compensate_pid[0].Output, Leg[RIGHT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[1],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[1].theta),Theta0_pid[1].Output
-                }
-                else
-                {
-                    Leg_Output(&Leg[0],-10,0);
-                    Leg_Output(&Leg[1],-10,0);
-                }
-			}
+                Leg_Output(&Leg[LEFT] , L0_pid[LEFT].Output +Support_F[LEFT] * arm_cos_f32(Leg[0].theta) * (1.0f + arm_sin_f32(Ins_Data.Roll)) - Leg_ROLL_Compensate_pid[0].Output , -Leg[LEFT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[0],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[0].theta),Theta0_pid[0].Output
+                Leg_Output(&Leg[RIGHT] , L0_pid[RIGHT].Output + Support_F[RIGHT] * arm_cos_f32(Leg[1].theta) * (1.0f - arm_sin_f32(Ins_Data.Roll)) + Leg_ROLL_Compensate_pid[0].Output, Leg[RIGHT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[1],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[1].theta),Theta0_pid[1].Output
+            }
+            else
+            {
+                Leg_Output(&Leg[0],-10,0);
+                Leg_Output(&Leg[1],-10,0);
+            }
+		}
 			
 			//分别计算左右腿虚拟力控，放在这里是为了减轻主任务Balance_Task的资源消耗，应该有助于保持进程执行周期的稳定
 			//同时也是因为这是并联腿控制特有的算法，放在这里感觉比较合理
@@ -88,53 +88,14 @@ void A1_Tx_Task(void const * argument)
 			A1_Control[0].T =  Func_Limit(Leg[0].T0,2.0,-2.0);
 			A1_Control[1].T =  Func_Limit(Leg[0].T1,2.0,-2.0);
 			A1_Control[2].T =  Func_Limit(Leg[1].T0,2.0,-2.0);
-			A1_Control[3].T =  Func_Limit(Leg[1].T1,2.0,-2.0);
+			A1_Control[3].T =  Func_Limit(Leg[1].T1,2.0,-2.0);	
 			
-//		if(Leg[0].transmit_count % 2 == 0)//通过计数变量做分频发送
-//		{
-//			A1_Modify_Data(&A1_Control[0]);
-//			A1_Transmit_Data_Deal_Left(&A1_Control[0]);
-//			HAL_GPIO_WritePin(GPIOC,RS485_DIR1_Pin,GPIO_PIN_SET);
-//			HAL_UART_Transmit_DMA(&huart1,A1_Transmit_Data_Left,34);
-//			HAL_UART_Receive_DMA(&huart1,A1_Receive_Data_Left,78);
-//			Leg[0].transmit_count++;
-//		}
-//		else
-//		{
-//			A1_Modify_Data(&A1_Control[1]);
-//			A1_Transmit_Data_Deal_Left(&A1_Control[1]);
-//			HAL_GPIO_WritePin(GPIOC,RS485_DIR1_Pin,GPIO_PIN_SET);
-//			HAL_UART_Transmit_DMA(&huart1,A1_Transmit_Data_Left,34);
-//			HAL_UART_Receive_DMA(&huart1,A1_Receive_Data_Left,78);
-//			Leg[0].transmit_count++;
-//		}
-
-//		if(Leg[1].transmit_count % 2 == 0)//锟斤拷锟斤拷锟斤拷锟捷凤拷锟斤拷
-//		{
-//			A1_Modify_Data(&A1_Control[2]);
-//			A1_Transmit_Data_Deal_Right(&A1_Control[2]);
-//			HAL_UART_Transmit_DMA(&huart6,A1_Transmit_Data_Right,34);
-//			HAL_UART_Receive_DMA(&huart6,A1_Receive_Data_Right,78);
-//			Leg[1].transmit_count++;
-//		}
-//		else
-//		{
-//			A1_Modify_Data(&A1_Control[3]);
-//			A1_Transmit_Data_Deal_Right(&A1_Control[3]);
-//			HAL_UART_Transmit_DMA(&huart6,A1_Transmit_Data_Right,34);
-//			HAL_UART_Receive_DMA(&huart6,A1_Receive_Data_Right,78);
-//			Leg[1].transmit_count++;
-//		}
-		
-		
-		
-		
 		
 		//达妙板载RS485没有自动流控，需要在发送前和接收前控制485芯片的流向pin脚
 		//在发送前拉高DIR引脚，将数据流向设置为芯片到外设，将MCU内部数据发送至电机
 		//之后使用UART发送完成中断回调函数将DIR引脚拉低，开始接收电机反馈数据
 		//由于板载485总线在4.8Mbps的通讯速率下不能完全将波特率锁定至4.8Mbps，会出现发生频率很低的通讯失败
-		//解决方法是将串口超采样倍率降低至8倍，降低后基本不会出现通讯错误的情况；同时检验电机反馈帧的帧头，若帧头错误则重启接收
+		//解决方法是将串口超采样倍率降低至8倍，降低后并不会出现通讯错误的情况；同时检验电机反馈帧的帧头，若帧头错误则重启接收
 		A1_Modify_Data(&A1_Control[0]);
 		A1_Transmit_Data_Deal_Left(&A1_Control[0]);
 		HAL_GPIO_WritePin(GPIOC,RS485_DIR1_Pin,GPIO_PIN_SET);

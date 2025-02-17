@@ -104,23 +104,23 @@ void Balance_Task(void const * argument)
 	
 	while(1)
 	{
-		//缁崵绮哄鑸垫1ms
+		//设置任务周期为1ms
 		osDelayUntil(&xLastWakeTime,1);
 		
-		//缁楊剟娴傚銉礉閼惧嘲褰囨潻娑氣柤閹笛嗩攽閸涖劍婀t
+		//获取任务执行耗时
 		BalanceTask_dt = DWT_GetDeltaT(&balance_dwt_cnt);
 
-		//缂佹鍏涚粩鏉戭潰閵夘垳绀夐柡宥堫潐瀹撲線宕楃€圭姴螡闁汇垹鐏氬┃鈧柛娆忕Ч椤╊參寮悧鍫濈ウ闁告粌鏈崕鑽も偓闈涘悑閺嗙喖骞戦娆惧悁缂佺姵顨呴懟鐔兼嚂閺冨洤鎮柣妯垮煐閳ь兛绶氶崳锟�
+		//更新关节电机数据
 		Jointmotor_Feedback_Update_Left(BalanceTask_dt);
 		Jointmotor_Feedback_Update_Right(BalanceTask_dt);
 			
-		//缂佹鍏涚花鈺侇潰閵夘垳绀夐柡鍥х摠閺屽﹪鏌屽畝鈧埢鑲╂媼閿燂拷
+		//更新里程计数据
 		Odometry_Update (&Leg[LEFT],&Leg[RIGHT],&State_Variables ,&LK9025_Motor[0],&LK9025_Motor[1],&Ins_Data ,BalanceTask_dt);
 		
-		//缂佹鍏涚粭浣割潰閵夘垳绀夐柡鍥х摠閺屽﹪鎮╅懜纰樺亾娴ｇǹ缍侀梺璇ф嫹
+		//汇总数据，更新状态变量
 		State_Variables_Update(&State_Variables,BalanceTask_dt);
         
-		//缂佹鍓欏ú鎾愁潰閵夘垳绀夐悹渚婄磿閻ｇ睈QR闁绘ǹ鍩栭埀顑跨瀵姤锛冮崼鐔蜂粯闁告帟娉涘▍锟�
+		//计算左右腿LQR控制量
 		LQR_Calc(&State_Variables,&Leg[LEFT],&Robot_Status);
 		LQR_Calc(&State_Variables,&Leg[RIGHT],&Robot_Status);
 		
@@ -149,29 +149,20 @@ void Balance_Task(void const * argument)
 			
 		}
 		
+		//计算左右腿控制器控制量
 		Leg_Control_Cacl();
-		//PID_Calc(&Leg_theta_Harmonize_pid[1],Leg[LEFT].theta - Leg[RIGHT].theta ,0);
 		
-//		L9015_Output_Zero();//缂佸倷鐒﹂娑欐姜椤旂晫妲嬮柣銏犵仛濠р偓閺夊牊鎸搁崵顓㈡晬瀹€鍐閻犲洦娲滈弫锟�
+//		L9015_Output_Zero();//关闭轮毂电机输出，调试用
 		
 	}
 
 }
 
 
-//缂佹鍓熷ù鍌氼潰閵夘垳绀夐梺顐ｄ亢缁诲儊WT閻犱讲鍓濆鍌炲闯閵娿劌绠€电増顨夌换妯肩矙鐎ｎ偄鈷旈悶娑樿嫰閹冲棝寮甸敓锟�
-
-//缂佹鍏涚粩鏉戭潰閵夘垳绀夐柡宥堫潐瀹撲線宕楃€圭姴螡闁汇垹鐏氬┃鈧柛娆忕Ч椤╊參寮悧鍫濈ウ闁告粌鏈崕鑽も偓闈涘悑閺嗙喖骞戦娆惧悁缂佺姵顨呴懟鐔兼嚂閺冨洤鎮柣妯垮煐閳ь兛绶氶崳锟�
-/**
- * @brief 鐎归潻缂氶弲鍫曠嵁閹绮撻柤浣冩硶婵悂骞€娴ｇǹ缍侀梺鎻掔箺椤撳摜绮诲Δ鈧崵閬嶅极閿燂拷
- * @param NONE
- * @retval NONE
- * @author LTL
- */
 void Jointmotor_Feedback_Update_Left(float dt)
 {
-	float xD, yD, xB, yB, A0, B0, C0 , xC , yC;//閻庤鐭粻鐔哥▔鐎涙ɑ顦ч柛娆愶耿閸ｏ拷
-	static float L0_last ,theta2_last, theta_last;
+	float xD, yD, xB, yB, A0, B0, C0 , xC , yC;//定义五连杆机构的坐标
+	static float L0_last,L0_dot_last,theta2_last, theta_last;
 	
 	Leg->coord[0] = xB = -l5_Half + l1 * arm_cos_f32(Leg[LEFT].theta1);
 	Leg->coord[1] = yB = l1 * arm_sin_f32(Leg[LEFT].theta1);
@@ -202,7 +193,10 @@ void Jointmotor_Feedback_Update_Left(float dt)
 	Leg[LEFT].theta_dot_lpf = Theta_Klpf*Leg[LEFT].theta_dot_lpf +(1- Theta_Klpf)*Leg[LEFT].theta_dot;
 	//One_Older_LPF(Leg[LEFT].theta_dot,0.99);
 	
+	
+
 	L0_last = Leg[LEFT].L0;
+	L0_dot_last = Leg[LEFT].L0_dot;
 	theta2_last = Leg[LEFT].theta2;
 	theta_last = Leg[LEFT].theta;
 }
@@ -248,7 +242,6 @@ void Jointmotor_Feedback_Update_Right(float dt)
 	theta_last = Leg[RIGHT].theta;
 	
 	//湖大跃鹿的关节状态预测算法，在这个车上效果不是很好，可能还需调试，暂未采用
-	// 妫板嫭绁存稉瀣╃娑擃亝妞傞崚锟�
 //    static float predict_dt = 0.0001f;
 //    float phi1_pred = Leg[RIGHT].theta1 + Leg[RIGHT].theta1_dot * predict_dt; // 妫板嫭绁存稉瀣╃閺冭泛鍩㈤惃鍕彠閼哄倽顫楁惔锟�(閸掆晝鏁ら崗瀹犲Ν鐟欐帡鈧喎瀹�)
 //    float phi4_pred = Leg[RIGHT].theta4 + Leg[RIGHT].theta4_dot * predict_dt;
@@ -485,10 +478,14 @@ float Leg_Theta0_Limit(Leg_t* leg)
 
 void Leg_Control_Cacl(void)
 {
+	//计算腿长控制量
 	PID_Calc(&L0_pid[0],Leg[0].L0,State_Variables.target_Leg_Length[0] - Leg_ROLL_Compensate_pid[1].Output);
 	PID_Calc(&L0_pid[1],Leg[1].L0,State_Variables.target_Leg_Length[1] + Leg_ROLL_Compensate_pid[1].Output);
 	
+	//计算抗劈叉控制量
 	PID_Calc(&Leg_theta_Harmonize_pid[0],Leg[LEFT].theta - Leg[RIGHT].theta ,0);
+
+	//计算机体滚转角度控制量
 	PID_Calc(&Leg_ROLL_Compensate_pid[0],Ins_Data.Roll,State_Variables.target_Roll);
 }
 
@@ -500,8 +497,8 @@ void Leg_Output(Leg_t * leg,float f,float tp)
 
 void Leg_Fall_Mode(void)
 {
+	//设置腿长为120mm，即缩腿
 	Leg[0].L0_set     = 120;
-
 	Leg[1].L0_set     = 120;
 
 }
