@@ -70,7 +70,7 @@
 
 //里程计一阶卡尔曼滤波器参数
 #define VEL_PROCESS_NOISE 100	//速度过程噪声
-#define VEL_MEASURE_NOISE 2500	//速度测量噪声
+#define VEL_MEASURE_NOISE 2000	//速度测量噪声
 
 //底盘IMU安装位置
 #define CENTER_IMU_L 0.05743//机体前后向偏差

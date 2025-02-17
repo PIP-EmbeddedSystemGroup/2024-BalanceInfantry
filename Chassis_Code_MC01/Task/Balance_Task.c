@@ -39,21 +39,34 @@
 //float a25[4] = {942.2017,-900.8558,322.1064,-0.9325};
 //float a26[4] = {118.4404,-118.1467,44.7296,-2.0764};//保底
 
-float a11[4] = {-113.4565,233.7880,-197.0249,1.7168};
-float a12[4] = {57.7438,-41.3475,-13.4751,0.2739};
-float a13[4] = {-10.1264,9.7490,-3.5194,0.0044};
-float a14[4] = {-197.7084,190.7414,-69.2456,0.0643};
-float a15[4] = {127.9262,-14.3882,-54.4930,27.2731};
-float a16[4] = {23.3141,-8.6889,-5.1346,4.0241};
-float a21[4] = {1139.9729,-936.6341,248.4732,6.5131};
-float a22[4] = {89.6445,-90.7297,34.8253,0.2705};
-float a23[4] = {4.8312,-0.1174,-2.4029,1.1017};
-float a24[4] = {95.6563,-3.2846,-46.7845,21.6437};
-float a25[4] = {939.8127,-907.4880,329.9648,-3.4998};
-float a26[4] = {121.8077,-122.4618,47.0965,-2.6868};//好参数
+//float a11[4] = {-113.4565,233.7880,-197.0249,1.7168};
+//float a12[4] = {57.7438,-41.3475,-13.4751,0.2739};
+//float a13[4] = {-10.1264,9.7490,-3.5194,0.0044};
+//float a14[4] = {-197.7084,190.7414,-69.2456,0.0643};
+//float a15[4] = {127.9262,-14.3882,-54.4930,27.2731};
+//float a16[4] = {23.3141,-8.6889,-5.1346,4.0241};
+//float a21[4] = {1139.9729,-936.6341,248.4732,6.5131};
+//float a22[4] = {89.6445,-90.7297,34.8253,0.2705};
+//float a23[4] = {4.8312,-0.1174,-2.4029,1.1017};
+//float a24[4] = {95.6563,-3.2846,-46.7845,21.6437};
+//float a25[4] = {939.8127,-907.4880,329.9648,-3.4998};
+//float a26[4] = {121.8077,-122.4618,47.0965,-2.6868};//好参数
 
+//新参数
+float a11[4] = {-256.2254,323.4460,-194.3473,1.0294};
+float a12[4] = {7.5368,-3.9563,-17.9370,0.5286};
+float a13[4] = {-6.6125,6.7619,-2.4914,-0.1301};
+float a14[4] = {-106.4913,109.0527,-40.4522,-2.1043};
+float a15[4] = {-290.0492,383.1821,-201.9698,51.9930};
+float a16[4] = {-17.3940,27.5897,-17.4106,5.6887};
+float a21[4] = {391.6877,-348.0339,85.8613,14.1885};
+float a22[4] = {49.4567,-51.6625,19.0900,0.9110};
+float a23[4] = {-6.7750,8.8513,-4.6003,1.1515};
+float a24[4] = {-108.4588,141.8830,-73.8769,18.5792};
+float a25[4] = {1269.9710,-1301.6951,481.6824,21.5965};
+float a26[4] = {125.7665,-132.3777,51.0600,-0.9244};
 
-State_Val_t State_Variables = {0};//闁哄牆鎼▍鎺撶閾忕懓笑闁诡兛绀佽ぐ澶愭煂韫囨洜娉㈤柡瀣缂嶏拷
+State_Val_t State_Variables = {0};//
 
 PidTypeDef Balance_Yaw_Position_pid = {0};
 PidTypeDef Balance_Yaw_Speed_pid = {0};
@@ -300,7 +313,7 @@ void Odometry_Update(Leg_t* lp, Leg_t* rp,State_Val_t* state,LK9025_Motor_t* lw,
     state->acc_m = macc_x * arm_cos_f32(pitch) - macc_z * arm_sin_f32(pitch);
 //	if (Func_Abs(state->acc_m)<0.03)
 //		state->acc_m = 0;
-	state->acc_m+=0.0526736666;
+	//state->acc_m+=0.0526736666;
     // 闁捐绉撮幃搴ㄥ礉閻樼儵鍋撻悢宄邦唺閻犱緤绱曞▓鎴﹀极閻楀牆绁﹂柛婊冩湰濠р偓濞达絾鎹囬埀顒傚枎鐎癸拷
     //static float u, k;   // 閺夊牊鎸搁崣鍡涘椽鐏炶棄骞㈤悘蹇旀⒐濞存牗鏅堕悙鍨妱
     //static float vel_prior, vel_measure, vel_cov;     // 闁稿繐鐗撻悰娆愬閹峰矈鍚€闁靛棔鐒︾粊鎾煂韫囧鍋撴担绋垮弗濡ょ姴鑻畷妤呭棘閻熺増鈻�
@@ -324,7 +337,7 @@ void Odometry_Update(Leg_t* lp, Leg_t* rp,State_Val_t* state,LK9025_Motor_t* lw,
 //	// //在机器人直立后对速度进行积分求得车体位移，之后会改为速度低于阈值后的速度积分项
 //	// //据现在的测试结果，在全部运动状态下都进行积分会导致加速度计在激烈运动下的误差被累计，导致机器人运动稳定性下降
 //	 	state->X = state->X + state->X_dot * dt;
-	if(Robot_Status.Body.Body_Upright_Status == YES && Func_Abs(State_Variables.X_dot) <= 0.2)
+	if(Robot_Status.Body.Body_Upright_Status == YES ) //&& Func_Abs(State_Variables.X_dot) <= 0.2
 		state->X = state->X + state->X_dot * dt;
 	else
 		state->X = 0;
@@ -401,15 +414,15 @@ void State_Variables_Update(State_Val_t* state , float dt)
 		}
 	}else
 		state->target_Height = 0;
-	Func_Ramp((float)(-Command.Vx * 10),&Command.Vx_step,1);
+	Func_Ramp((float)(-Command.Vx * 10),&Command.Vx_step,5);
 	state->target_X_dot = Command.Vx_step * 0.001f;
 	
 	//当机器人实际速度小于阈值时开启位移设定值的计算，与位移反馈值的计算同步进行
 	//避免加速度计噪声和误差导致机器人运动稳定性下降
-	if(Robot_Status.Body.Body_Upright_Status == YES && Func_Abs(state->X_dot) <= 0.2 )
+	if(Robot_Status.Body.Body_Upright_Status == YES)// && Func_Abs(state->X_dot) <= 0.2 
 		state->target_X +=( state->target_X_dot) * dt;
-//	else
-//		state->target_X = 0;//在阈值外时将设定值清零
+	else
+		state->target_X = 0;//在阈值外时将设定值清零
 
 //	if(Robot_Status.Body.Body_Upright_Status == YES)
 //		state->X += (state->target_X_dot - state->X_dot) * dt;
@@ -418,7 +431,6 @@ void State_Variables_Update(State_Val_t* state , float dt)
 
 void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status)
 {
-	
 		leg->U[0]= (a11[0] * state->leg_len_pow3 +a11[1] * state->leg_len_pow2 + a11[2] * state->leg_length + a11[3]) * (state ->target_Theta-leg->theta)\
             +(a12[0] * state->leg_len_pow3 +a12[1] * state->leg_len_pow2 + a12[2] * state->leg_length + a12[3]) * (-leg->theta_dot_lpf)\
             -(a14[0] * state->leg_len_pow3 +a14[1] * state->leg_len_pow2 + a14[2] * state->leg_length + a14[3]) * (state->target_X_dot - state->X_dot)\
@@ -427,8 +439,8 @@ void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status)
 		if(Func_Abs(state->X_dot)<=0.2f)
 			leg->U[0]-=(a13[0] * state->leg_len_pow3 +a13[1] * state->leg_len_pow2 + a13[2] * state->leg_length + a13[3]) * (state->target_X - state->X);
 	
-//	if(leg->P <=0.05 && robot_status->Body.Body_Upright_Status == YES) //触地不良时关闭轮毂输出，可考虑改为根据触地力进行动态调整的限幅
-//		leg->U[0] = 0;
+	if(leg->P <=0.002 && robot_status->Body.Body_Upright_Status == YES && leg->L0 > (L0_LOW+10)) //触地不良时关闭轮毂输出，可考虑改为根据触地力进行动态调整的限幅
+		leg->U[0] = 0;
 
 	if(robot_status->Body.Body_Upright_Status == YES)
 	{
@@ -443,15 +455,12 @@ void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status)
 			leg->U[1]-=(a23[0] * state->leg_len_pow3 +a23[1] * state->leg_len_pow2 + a23[2] * state->leg_length + a23[3]) * (state->target_X - state->X);
 				//(1-Func_Abs(state->target_X_dot*0.51f))
 		}
-//		if(leg->P<=0.05)//腿触地不良时保持腿垂直于水平方向
-//		{
-//			leg->U[1]= (a21[0] * state->leg_len_pow3 +a21[1] * state->leg_len_pow2 + a21[2] * state->leg_length + a21[3]) * (state ->target_Theta-leg->theta)\
-//            +(a22[0] * state->leg_len_pow3 +a22[1] * state->leg_len_pow2 + a22[2] * state->leg_length + a22[3]) * (-leg->theta_dot_lpf);
-//		}
-
+		if(leg->P<=0.002 && leg->L0 > (L0_LOW+10))//腿触地不良时保持腿垂直于水平方向
+		{	
+			leg->U[1]= (a21[0] * state->leg_len_pow3 +a21[1] * state->leg_len_pow2 + a21[2] * state->leg_length + a21[3]) * (state ->target_Theta-leg->theta)\
+            +(a22[0] * state->leg_len_pow3 +a22[1] * state->leg_len_pow2 + a22[2] * state->leg_length + a22[3]) * (-leg->theta_dot_lpf);
+		}
 	}
-
-	
 }
 
 
@@ -476,7 +485,6 @@ float Leg_Theta0_Limit(Leg_t* leg)
 
 void Leg_Control_Cacl(void)
 {
-	//PID_Calc(&Leg_ROLL_Compensate_pid[1],Ins_Data.Roll,State_Variables.target_Roll);
 	PID_Calc(&L0_pid[0],Leg[0].L0,State_Variables.target_Leg_Length[0] - Leg_ROLL_Compensate_pid[1].Output);
 	PID_Calc(&L0_pid[1],Leg[1].L0,State_Variables.target_Leg_Length[1] + Leg_ROLL_Compensate_pid[1].Output);
 	

@@ -1,8 +1,8 @@
 /*
  * @Author: 静_火 lintianlang0918@qq.com
  * @Date: 2024-03-19 11:23:19
- * @LastEditors: 静_火 lintianlang0918@qq.com
- * @LastEditTime: 2024-03-20 08:47:14
+ * @LastEditors: frozen-fire 2812643217@qq.com
+ * @LastEditTime: 2025-02-17 16:13:07
  * @FilePath: \MC-01_chassis\Driver\UNITREE_A1\A1_Driver.c
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -33,7 +33,7 @@
 #include "Balance_Task.h"
 #include "A1_Task.h"	
 
-float A1_Pos_offset[4] = {0};//宇树A1位置初始化偏移量，用于在上电复位时进行角度标定
+float A1_Pos_offset[4] = {-23.0142841f,- 31.0693245f,-2.05481553f,- 48.303196f};//宇树A1位置初始化偏移量，用于在上电复位时进行角度标定
 /**
  * @brief  左侧并联腿A1电机数据接收函数
  * @param  None
@@ -50,7 +50,7 @@ void A1_Data_Rx_Left(void)
 			A1_Motor[0].Position.Origin = A1_Receive_Data_Left[30] + (uint32_t)(A1_Receive_Data_Left[31] << 8) + (uint32_t)(A1_Receive_Data_Left[32] << 16) + (uint32_t)(A1_Receive_Data_Left[33] << 24);
 			A1_Motor[0].T.Origin = A1_Receive_Data_Left[12] + (uint16_t)(A1_Receive_Data_Left[13] << 8);
 			A1_Motor[0].T.Real = A1_Motor[0].T.Origin / 256.0f;
-			A1_Motor[0].Position.Realf = A1_Motor[0].Position.Origin * 0.002333f - 21.059237f + 180.0f;
+			A1_Motor[0].Position.Realf = A1_Motor[0].Position.Origin * 0.002333f +A1_Pos_offset[0] + 180.0f;
 			A1_Motor[0].Speed.Origin = (A1_Receive_Data_Right[14] | (int16_t)A1_Receive_Data_Right[15]<<8);
 			A1_Motor[0].Speed.real = A1_Motor[2].Speed.Origin *0.11f/128.0f;
 			Leg[LEFT].theta1 = A1_Motor[0].Position.Realf * 0.017453f;
@@ -60,7 +60,7 @@ void A1_Data_Rx_Left(void)
 			A1_Motor[1].Position.Origin = A1_Receive_Data_Left[30] + (uint32_t)(A1_Receive_Data_Left[31] << 8) + (uint32_t)(A1_Receive_Data_Left[32] << 16) + (uint32_t)(A1_Receive_Data_Left[33] << 24);
 			A1_Motor[1].T.Origin = A1_Receive_Data_Left[12] + (uint16_t)(A1_Receive_Data_Left[13] << 8);
 			A1_Motor[1].T.Real = A1_Motor[1].T.Origin / 256.0f;
-			A1_Motor[1].Position.Realf = A1_Motor[1].Position.Origin * 0.002333f - 31.997858f;
+			A1_Motor[1].Position.Realf = A1_Motor[1].Position.Origin * 0.002333f +A1_Pos_offset[1];
 			A1_Motor[1].Speed.Origin = (A1_Receive_Data_Right[14] | (int16_t)A1_Receive_Data_Right[15]<<8);
 			A1_Motor[1].Speed.real = A1_Motor[2].Speed.Origin*0.11f /128.0f;
 			Leg[LEFT].theta4 = A1_Motor[1].Position.Realf * 0.017453f;
@@ -87,7 +87,7 @@ void A1_Data_Rx_Right(void)
 			A1_Motor[2].Position.Origin = A1_Receive_Data_Right[30] | (uint32_t)(A1_Receive_Data_Right[31] << 8) |(uint32_t)(A1_Receive_Data_Right[32] << 16) | (uint32_t)(A1_Receive_Data_Right[33] << 24);
 			A1_Motor[2].T.Origin = A1_Receive_Data_Right[12] + (uint16_t)(A1_Receive_Data_Right[13] << 8);
 			A1_Motor[2].T.Real = A1_Motor[2].T.Origin / 256.0f;
-			A1_Motor[2].Position.Realf = A1_Motor[2].Position.Origin * 0.002333f - 1.996280f + 180.0f;
+			A1_Motor[2].Position.Realf = A1_Motor[2].Position.Origin * 0.002333f + A1_Pos_offset[2] + 180.0f;
 			A1_Motor[2].Speed.Origin = (A1_Receive_Data_Right[14] | (int16_t)A1_Receive_Data_Right[15]<<8);
 			A1_Motor[2].Speed.real = A1_Motor[2].Speed.Origin *0.11f/128.0f;
 			Leg[RIGHT].theta1 = A1_Motor[2].Position.Realf * 0.017453f;
@@ -97,7 +97,7 @@ void A1_Data_Rx_Right(void)
 			A1_Motor[3].Position.Origin = A1_Receive_Data_Right[30] + (uint32_t)(A1_Receive_Data_Right[31] << 8) + (uint32_t)(A1_Receive_Data_Right[32] << 16) + (uint32_t)(A1_Receive_Data_Right[33] << 24);
 			A1_Motor[3].T.Origin = A1_Receive_Data_Right[12] + (uint16_t)(A1_Receive_Data_Right[13] << 8);
 			A1_Motor[3].T.Real = A1_Motor[3].T.Origin / 256.0f;
-			A1_Motor[3].Position.Realf = A1_Motor[3].Position.Origin * 0.002333f - 36.477219f;
+			A1_Motor[3].Position.Realf = A1_Motor[3].Position.Origin * 0.002333f + A1_Pos_offset[3];
 			A1_Motor[3].Speed.Origin = (A1_Receive_Data_Right[14] | (int16_t)A1_Receive_Data_Right[15]<<8);
 			A1_Motor[3].Speed.real = A1_Motor[2].Speed.Origin *0.11f/128.0f;
 			Leg[RIGHT].theta4 = A1_Motor[3].Position.Realf * 0.017453f;
