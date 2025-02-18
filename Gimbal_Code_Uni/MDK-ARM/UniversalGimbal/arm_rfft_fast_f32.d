@@ -1,0 +1,16 @@
+universalgimbal\arm_rfft_fast_f32.o: ..\Drivers\CMSIS\DSP\Source\TransformFunctions\arm_rfft_fast_f32.c
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/DSP/Include/dsp/transform_functions.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/DSP/Include/arm_math_types.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+universalgimbal\arm_rfft_fast_f32.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+universalgimbal\arm_rfft_fast_f32.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\string.h
+universalgimbal\arm_rfft_fast_f32.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\math.h
+universalgimbal\arm_rfft_fast_f32.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\float.h
+universalgimbal\arm_rfft_fast_f32.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\limits.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/DSP/Include/arm_math_memory.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/DSP/Include/dsp/none.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/DSP/Include/dsp/utils.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/DSP/Include/dsp/basic_math_functions.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/DSP/Include/dsp/complex_math_functions.h
+universalgimbal\arm_rfft_fast_f32.o: ../Drivers/CMSIS/DSP/Include/dsp/fast_math_functions.h

@@ -1,0 +1,77 @@
+#ifndef _ROBOT_CONFIG_H_
+#define _ROBOT_CONFIG_H_
+
+#include "stdint.h"
+
+//以下参数未注明单位者 均采用国际单位制
+
+#define ROBOT_NAME "infantry-balance-2024"
+enum RobotNumber
+{
+    ROBOT_NUMBER_HERO = 1,
+    ROBOT_NUMBER_ENGINEER = 2,
+    ROBOT_NUMBER_INFANTRY3 = 3,
+    ROBOT_NUMBER_INFANTRY4 = 4,
+    ROBOT_NUMBER_INFANTRY5 = 5,
+    ROBOT_NUMBER_DRONE = 6,
+    ROBOT_NUMBER_SENTRY = 7,
+};
+#define ROBOT_NUMBER ROBOT_NUMBER_INFANTRY5
+
+#define WHEEL_RADIUS (0.075f)    //XXX
+#define MECANUM_RADIUS (0.185f)  //XXX麦轮轮组外接圆半径
+#define ROBOT_WEIGHT (20)   //XXX机器人重量 用于动能回收时计算动能
+
+#define GIMBAL_BOARD_OFFSET_X (0.06f) //XXX云台C板到云台轴心的*水平前后向*距离 靠前为正值
+#define GIMBAL_BOARD_OFFSET_Y (0) //XXX云台C板到云台轴心的*水平左右向*距离 靠左为正值
+#define GIMBAL_BOARD_OFFSET_Z (0.055f) //XXX云台C板到云台轴心的*垂直*距离 靠上为正值
+
+#define CHASSIS_SPEED (200)
+#define CHASSIS_MOTOR_MAX_RPM (6000)    //rpm
+#define CHASSIS_SPIN_SPEED (540.f)  // deg/s
+#define CHASSIS_SLIDE_CONSTRAIN_INTERVAL (1.f) //打滑抑制速度区间 轮速设定值不会超过观测值±此值
+
+#define RC_DBUS_S2_PAD_CTRL         1
+#define RC_DBUS_S2_COMPUTER_CTRL    2
+#define RC_DBUS_S2_DISABLE_CTRL     3
+
+#define PITCH_INIT_ENCODER (6120)//(0x8000)
+#define PITCH_MAX_ENCODER (6750)//(PITCH_INIT_ENCODER + 1050)
+#define PITCH_MIN_ENCODER (5620)//(PITCH_INIT_ENCODER - 950)
+
+#define PITCH_DEGREE_TO_ENCODER(enc) ((float)enc / 360.f * 8192.f + PITCH_INIT_ENCODER)
+#define PITCH_ENCODER_TO_DEGREE(enc) (((float)enc - PITCH_INIT_ENCODER) / 8192.f * 360.f)
+#define PITCH_INIT_DEGREE PITCH_ENCODER_TO_DEGREE(PITCH_INIT_ENCODER)
+#define PITCH_MAX_DEGREE PITCH_ENCODER_TO_DEGREE(PITCH_MAX_ENCODER)
+#define PITCH_MIN_DEGREE PITCH_ENCODER_TO_DEGREE(PITCH_MIN_ENCODER)
+
+#define YAW_INIT_ENCODER (4760) //对应Yaw轴电机编码器数值
+
+#define PITCH_SENSITY_MOUSE (0.05f)
+#define YAW_SENSITY_MOUSE (0.05f)
+#define YAW_SENSITY_PAD (120.f) // deg/s
+
+#define FEEDING_AMMO_PER_TURN 8 //拨弹盘每圈弹量
+#define SHOOTING_FREQ 5         //射击频率
+
+#define VISION_CHASSIS_SPEED_SCALE 0.8f  //视觉预瞄的速度补偿系数 具体见Vision_PathPreview
+
+#define BOARD_COMM_DBUS_PAD_CANID 0x010
+#define BOARD_COMM_DBUS_MOUSE_CANID 0x011
+#define BOARD_COMM_DBUS_KEY_CANID 0x012
+#define BOARD_COMM_VTM_MOUSE_CANID 0x013
+#define BOARD_COMM_VTM_KEY_CANID 0x014
+#define BOARD_COMM_RC_VISION_MOUSE_CANID 0x015
+#define BOARD_COMM_RC_VISION_KEY_CANID 0x016
+#define BOARD_COMM_YAW_OUTPUT_CANID 0x20
+#define BOARD_COMM_CHASSIS_ERROR_CANID 0x30
+#define BOARD_COMM_GIMBAL_ERROR_CANID 0x31
+#define BOARD_COMM_CHASSIS_ODOMETER_SPEED_CANID 0x40
+#define BOARD_COMM_GIMBAL_FUSION_INS_SPEED_CANID 0x41
+
+#define ERR_CHASSIS_INERTIAL_INIT   (1 << 0)
+#define ERR_CHASSIS_OTHER           (1 << 15)
+#define ERR_GIMBAL_INERTIAL_INIT    (1 << 0 << 16)
+#define ERR_GIMBAL_OTHER            (1 << 15 << 16)
+
+#endif
