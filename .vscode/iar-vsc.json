@@ -1,0 +1,15 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\Chassis_Code_MC01\\Drivers\\CMSIS\\Project\\STM32F4xx_StdPeriph_Templates\\EWARM\\Project.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\Chassis_Code_MC01\\Drivers\\CMSIS\\Project\\STM32F4xx_StdPeriph_Templates\\EWARM\\Project.eww": {
+      "configs": {
+        "${workspaceFolder}\\Chassis_Code_MC01\\Drivers\\CMSIS\\Project\\STM32F4xx_StdPeriph_Templates\\EWARM\\Project.ewp": "STM32F429_439xx"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\Chassis_Code_MC01\\Drivers\\CMSIS\\Project\\STM32F4xx_StdPeriph_Templates\\EWARM\\Project.ewp"
+      }
+    }
+  }
+}

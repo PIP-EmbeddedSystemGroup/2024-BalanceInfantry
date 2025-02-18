@@ -1,0 +1,15 @@
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+universalgimbal\queue.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdlib.h
+universalgimbal\queue.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\string.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+universalgimbal\queue.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\queue.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\queue.o: ../Core/Inc/FreeRTOSConfig.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+universalgimbal\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
