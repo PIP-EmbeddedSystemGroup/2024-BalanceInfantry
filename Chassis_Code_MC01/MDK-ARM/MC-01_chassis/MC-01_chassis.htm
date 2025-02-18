@@ -3,7 +3,7 @@
 <title>Static Call Graph - [MC-01_chassis\MC-01_chassis.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image MC-01_chassis\MC-01_chassis.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Mon Jan 13 17:15:56 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Mon Feb 17 19:20:47 2025
 <BR><P>
 <H3>Maximum Stack Usage =        520 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -509,15 +509,14 @@ Global Symbols
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 </UL>
 
-<P><STRONG><a name="[15a]"></a>__aeabi_dcmpgt</STRONG> (Thumb, 54 bytes, Stack size 12 bytes, dcmpgt.o(.text))
+<P><STRONG><a name="[148]"></a>__aeabi_dcmpgt</STRONG> (Thumb, 54 bytes, Stack size 12 bytes, dcmpgt.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_dcmpgt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;State_Variables_Update
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Odometry_Update
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LQR_Calc
 </UL>
 
 <P><STRONG><a name="[13e]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;State_Variables_Update
+<BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LQR_Calc
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Odometry_Update
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Jointmotor_Feedback_Update_Right
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Jointmotor_Feedback_Update_Left
@@ -638,7 +637,7 @@ Global Symbols
 
 <P><STRONG><a name="[1b7]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[8b]"></a>A1_Data_Rx_Left</STRONG> (Thumb, 536 bytes, Stack size 24 bytes, a1_driver.o(.text.A1_Data_Rx_Left))
+<P><STRONG><a name="[8b]"></a>A1_Data_Rx_Left</STRONG> (Thumb, 544 bytes, Stack size 24 bytes, a1_driver.o(.text.A1_Data_Rx_Left))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = A1_Data_Rx_Left &rArr; HAL_UART_Receive_DMA &rArr; UART_Start_Receive_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_DMAStop
@@ -647,7 +646,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 
-<P><STRONG><a name="[128]"></a>A1_Data_Rx_Right</STRONG> (Thumb, 464 bytes, Stack size 12 bytes, a1_driver.o(.text.A1_Data_Rx_Right))
+<P><STRONG><a name="[128]"></a>A1_Data_Rx_Right</STRONG> (Thumb, 472 bytes, Stack size 12 bytes, a1_driver.o(.text.A1_Data_Rx_Right))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = A1_Data_Rx_Right
 </UL>
 <BR>[Called By]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
@@ -957,14 +956,14 @@ Global Symbols
 
 <P><STRONG><a name="[125]"></a>Error_Handler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, main.o(.text.Error_Handler))
 <BR><BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
-<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
-<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART4_Init
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART4_Init
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
@@ -972,8 +971,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Func_Abs
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LQR_Calc
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;State_Variables_Update
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Odometry_Update
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
 </UL>
 
@@ -1088,8 +1085,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
+<BR>[Called By]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
 </UL>
 
 <P><STRONG><a name="[db]"></a>HAL_CAN_MspInit</STRONG> (Thumb, 414 bytes, Stack size 80 bytes, can.o(.text.HAL_CAN_MspInit))
@@ -1245,14 +1242,14 @@ Global Symbols
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
 <P><STRONG><a name="[9b]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;A1_Tx_Task
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BMI088_GYRO_NS_H
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BMI088_GYRO_NS_L
@@ -1317,7 +1314,7 @@ Global Symbols
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
 </UL>
 
 <P><STRONG><a name="[de]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 50 bytes, Stack size 32 bytes, stm32f4xx_hal_cortex.o(.text.HAL_NVIC_SetPriority))
@@ -1332,7 +1329,7 @@ Global Symbols
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
 </UL>
 
 <P><STRONG><a name="[e8]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, stm32f4xx_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping))
@@ -1402,7 +1399,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
+<BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
 </UL>
 
 <P><STRONG><a name="[fa]"></a>HAL_SPI_MspInit</STRONG> (Thumb, 146 bytes, Stack size 40 bytes, spi.o(.text.HAL_SPI_MspInit))
@@ -1434,11 +1431,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
 
-<P><STRONG><a name="[150]"></a>HAL_TIMEx_MasterConfigSynchronization</STRONG> (Thumb, 290 bytes, Stack size 20 bytes, stm32f4xx_hal_tim_ex.o(.text.HAL_TIMEx_MasterConfigSynchronization))
+<P><STRONG><a name="[151]"></a>HAL_TIMEx_MasterConfigSynchronization</STRONG> (Thumb, 290 bytes, Stack size 20 bytes, stm32f4xx_hal_tim_ex.o(.text.HAL_TIMEx_MasterConfigSynchronization))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_TIMEx_MasterConfigSynchronization
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<BR>[Called By]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
 </UL>
 
 <P><STRONG><a name="[ed]"></a>HAL_TIM_Base_Init</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_Base_Init))
@@ -1448,8 +1445,8 @@ Global Symbols
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
 </UL>
 
 <P><STRONG><a name="[fc]"></a>HAL_TIM_Base_MspInit</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, tim.o(.text.HAL_TIM_Base_MspInit))
@@ -1465,13 +1462,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = HAL_TIM_Base_Start_IT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Fall_Detect
+<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Fall_Detect
 </UL>
 
 <P><STRONG><a name="[15d]"></a>HAL_TIM_Base_Stop_IT</STRONG> (Thumb, 82 bytes, Stack size 4 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_Base_Stop_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_TIM_Base_Stop_IT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Fall_Detect
+<BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Fall_Detect
 </UL>
 
 <P><STRONG><a name="[fe]"></a>HAL_TIM_ConfigClockSource</STRONG> (Thumb, 388 bytes, Stack size 32 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_ConfigClockSource))
@@ -1482,8 +1479,8 @@ Global Symbols
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITRx_SetConfig
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI1_ConfigInputStage
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<BR>[Called By]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
 </UL>
 
 <P><STRONG><a name="[104]"></a>HAL_TIM_IC_CaptureCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_IC_CaptureCallback))
@@ -1512,7 +1509,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<BR>[Called By]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
 </UL>
 
 <P><STRONG><a name="[10c]"></a>HAL_TIM_OC_ConfigChannel</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_OC_ConfigChannel))
@@ -1523,7 +1520,7 @@ Global Symbols
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC3_SetConfig
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC1_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
+<BR>[Called By]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
 </UL>
 
 <P><STRONG><a name="[105]"></a>HAL_TIM_OC_DelayElapsedCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_OC_DelayElapsedCallback))
@@ -1538,7 +1535,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_OC_MspInit
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
+<BR>[Called By]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
 </UL>
 
 <P><STRONG><a name="[112]"></a>HAL_TIM_OC_MspInit</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_OC_MspInit))
@@ -1555,7 +1552,7 @@ Global Symbols
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC3_SetConfig
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC1_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<BR>[Called By]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
 </UL>
 
 <P><STRONG><a name="[114]"></a>HAL_TIM_PWM_Init</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_PWM_Init))
@@ -1564,7 +1561,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<BR>[Called By]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
 </UL>
 
 <P><STRONG><a name="[115]"></a>HAL_TIM_PWM_MspInit</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_PWM_MspInit))
@@ -1651,9 +1648,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
-<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART4_Init
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<BR>[Called By]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART4_Init
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
 </UL>
 
 <P><STRONG><a name="[123]"></a>HAL_UART_MspInit</STRONG> (Thumb, 798 bytes, Stack size 96 bytes, usart.o(.text.HAL_UART_MspInit))
@@ -1883,10 +1880,12 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.rodata..L__const.StartDefaultTask.os_thread_def_LK9025_Tx_Task)
 </UL>
-<P><STRONG><a name="[b2]"></a>LQR_Calc</STRONG> (Thumb, 956 bytes, Stack size 32 bytes, balance_task.o(.text.LQR_Calc))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LQR_Calc &rArr; Func_Abs
+<P><STRONG><a name="[b2]"></a>LQR_Calc</STRONG> (Thumb, 1248 bytes, Stack size 32 bytes, balance_task.o(.text.LQR_Calc))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = LQR_Calc &rArr; __aeabi_dcmpgt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Func_Abs
+<BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dcmpgt
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Func_Abs
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 </UL>
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Balance_Task
 </UL>
@@ -1905,7 +1904,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;A1_Tx_Task
 </UL>
 
-<P><STRONG><a name="[148]"></a>MX_CAN1_Init</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, can.o(.text.MX_CAN1_Init))
+<P><STRONG><a name="[149]"></a>MX_CAN1_Init</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, can.o(.text.MX_CAN1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = MX_CAN1_Init &rArr; HAL_CAN_Init &rArr; HAL_CAN_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
@@ -1914,7 +1913,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[149]"></a>MX_CAN2_Init</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, can.o(.text.MX_CAN2_Init))
+<P><STRONG><a name="[14a]"></a>MX_CAN2_Init</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, can.o(.text.MX_CAN2_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = MX_CAN2_Init &rArr; HAL_CAN_Init &rArr; HAL_CAN_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
@@ -1923,7 +1922,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[14a]"></a>MX_DMA_Init</STRONG> (Thumb, 118 bytes, Stack size 40 bytes, dma.o(.text.MX_DMA_Init))
+<P><STRONG><a name="[14b]"></a>MX_DMA_Init</STRONG> (Thumb, 118 bytes, Stack size 40 bytes, dma.o(.text.MX_DMA_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MX_DMA_Init &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
@@ -1932,15 +1931,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[14b]"></a>MX_FREERTOS_Init</STRONG> (Thumb, 70 bytes, Stack size 40 bytes, freertos.o(.text.MX_FREERTOS_Init))
+<P><STRONG><a name="[14c]"></a>MX_FREERTOS_Init</STRONG> (Thumb, 70 bytes, Stack size 40 bytes, freertos.o(.text.MX_FREERTOS_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 300<LI>Call Chain = MX_FREERTOS_Init &rArr; osThreadCreate &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; vListInsertEnd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+<BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[14d]"></a>MX_GPIO_Init</STRONG> (Thumb, 282 bytes, Stack size 72 bytes, gpio.o(.text.MX_GPIO_Init))
+<P><STRONG><a name="[14e]"></a>MX_GPIO_Init</STRONG> (Thumb, 282 bytes, Stack size 72 bytes, gpio.o(.text.MX_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = MX_GPIO_Init &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
@@ -1949,7 +1948,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[14e]"></a>MX_SPI2_Init</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, spi.o(.text.MX_SPI2_Init))
+<P><STRONG><a name="[14f]"></a>MX_SPI2_Init</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, spi.o(.text.MX_SPI2_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = MX_SPI2_Init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
@@ -1958,12 +1957,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[14f]"></a>MX_TIM3_Init</STRONG> (Thumb, 216 bytes, Stack size 64 bytes, tim.o(.text.MX_TIM3_Init))
+<P><STRONG><a name="[150]"></a>MX_TIM3_Init</STRONG> (Thumb, 216 bytes, Stack size 64 bytes, tim.o(.text.MX_TIM3_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = MX_TIM3_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
-<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
@@ -1972,12 +1971,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[151]"></a>MX_TIM5_Init</STRONG> (Thumb, 204 bytes, Stack size 64 bytes, tim.o(.text.MX_TIM5_Init))
+<P><STRONG><a name="[152]"></a>MX_TIM5_Init</STRONG> (Thumb, 204 bytes, Stack size 64 bytes, tim.o(.text.MX_TIM5_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = MX_TIM5_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_OC_ConfigChannel
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_OC_Init
-<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
@@ -1985,7 +1984,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[152]"></a>MX_UART4_Init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, usart.o(.text.MX_UART4_Init))
+<P><STRONG><a name="[153]"></a>MX_UART4_Init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, usart.o(.text.MX_UART4_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = MX_UART4_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
@@ -1994,7 +1993,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[153]"></a>MX_USART1_UART_Init</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, usart.o(.text.MX_USART1_UART_Init))
+<P><STRONG><a name="[154]"></a>MX_USART1_UART_Init</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, usart.o(.text.MX_USART1_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = MX_USART1_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
@@ -2003,7 +2002,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[154]"></a>MX_USART6_UART_Init</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, usart.o(.text.MX_USART6_UART_Init))
+<P><STRONG><a name="[155]"></a>MX_USART6_UART_Init</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, usart.o(.text.MX_USART6_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = MX_USART6_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
@@ -2016,8 +2015,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = MahonyAHRSupdateIMU &rArr; __hardfp_atan2f
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2f
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
-<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;invSqrt
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;invSqrt
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;INS_Task
 </UL>
@@ -2030,21 +2029,19 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelayUntil
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Task_Monitor
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Clear
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Fall_Detect
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Task_Monitor
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Clear
+<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Fall_Detect
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.rodata..L__const.StartDefaultTask.os_thread_def_Monitor_Task)
 </UL>
 <P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_it.o(.text.NMI_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f446xx.o(RESET)
 </UL>
-<P><STRONG><a name="[b0]"></a>Odometry_Update</STRONG> (Thumb, 1684 bytes, Stack size 280 bytes, balance_task.o(.text.Odometry_Update))
+<P><STRONG><a name="[b0]"></a>Odometry_Update</STRONG> (Thumb, 1572 bytes, Stack size 280 bytes, balance_task.o(.text.Odometry_Update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 368<LI>Call Chain = Odometry_Update &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dcmpgt
-<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Func_Abs
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
@@ -2075,11 +2072,11 @@ Global Symbols
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMU_Temperature_Ctrl
 </UL>
 
-<P><STRONG><a name="[158]"></a>PID_Clear</STRONG> (Thumb, 30 bytes, Stack size 4 bytes, pid.o(.text.PID_Clear))
+<P><STRONG><a name="[159]"></a>PID_Clear</STRONG> (Thumb, 30 bytes, Stack size 4 bytes, pid.o(.text.PID_Clear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = PID_Clear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor_Task
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Fall_Detect
+<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_Fall_Detect
 </UL>
 
 <P><STRONG><a name="[16a]"></a>PID_Init</STRONG> (Thumb, 150 bytes, Stack size 48 bytes, pid.o(.text.PID_Init))
@@ -2103,17 +2100,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[157]"></a>Robot_Fall_Detect</STRONG> (Thumb, 516 bytes, Stack size 24 bytes, monitor_task.o(.text.Robot_Fall_Detect))
+<P><STRONG><a name="[158]"></a>Robot_Fall_Detect</STRONG> (Thumb, 516 bytes, Stack size 24 bytes, monitor_task.o(.text.Robot_Fall_Detect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Robot_Fall_Detect &rArr; HAL_TIM_Base_Start_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Stop_IT
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Clear
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Clear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor_Task
 </UL>
 
-<P><STRONG><a name="[159]"></a>Robot_Task_Monitor</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, monitor_task.o(.text.Robot_Task_Monitor))
+<P><STRONG><a name="[15a]"></a>Robot_Task_Monitor</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, monitor_task.o(.text.Robot_Task_Monitor))
 <BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor_Task
 </UL>
 
@@ -2128,19 +2125,16 @@ Global Symbols
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;INS_Init
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;User_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.rodata..L__const.MX_FREERTOS_Init.os_thread_def_defaultTask)
 </UL>
-<P><STRONG><a name="[b1]"></a>State_Variables_Update</STRONG> (Thumb, 496 bytes, Stack size 32 bytes, balance_task.o(.text.State_Variables_Update))
+<P><STRONG><a name="[b1]"></a>State_Variables_Update</STRONG> (Thumb, 448 bytes, Stack size 32 bytes, balance_task.o(.text.State_Variables_Update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = State_Variables_Update &rArr; __hardfp_powf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Func_Ramp
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dcmpgt
-<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Func_Abs
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 </UL>
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Balance_Task
 </UL>
@@ -2245,7 +2239,7 @@ Global Symbols
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_it.o(.text.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f446xx.o(RESET)
 </UL>
-<P><STRONG><a name="[161]"></a>User_Init</STRONG> (Thumb, 492 bytes, Stack size 64 bytes, main.o(.text.User_Init))
+<P><STRONG><a name="[161]"></a>User_Init</STRONG> (Thumb, 504 bytes, Stack size 64 bytes, main.o(.text.User_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = User_Init &rArr; PID_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Init
@@ -2353,7 +2347,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMU_Temperature_Ctrl
 </UL>
 
-<P><STRONG><a name="[155]"></a>invSqrt</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, imu_task.o(.text.invSqrt))
+<P><STRONG><a name="[156]"></a>invSqrt</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, imu_task.o(.text.invSqrt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = invSqrt
 </UL>
 <BR>[Called By]<UL><LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MahonyAHRSupdateIMU
@@ -2363,23 +2357,23 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = main &rArr; MX_FREERTOS_Init &rArr; osThreadCreate &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; vListInsertEnd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BMI088_init
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RS485_Start
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Start
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DWT_Init
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
-<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
-<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART4_Init
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART4_Init
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
@@ -2409,7 +2403,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[14c]"></a>osThreadCreate</STRONG> (Thumb, 172 bytes, Stack size 80 bytes, cmsis_os.o(.text.osThreadCreate))
+<P><STRONG><a name="[14d]"></a>osThreadCreate</STRONG> (Thumb, 172 bytes, Stack size 80 bytes, cmsis_os.o(.text.osThreadCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = osThreadCreate &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; vListInsertEnd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;makeFreeRtosPriority
@@ -2417,7 +2411,7 @@ Global Symbols
 <LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDefaultTask
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
 
 <P><STRONG><a name="[17f]"></a>pvPortMalloc</STRONG> (Thumb, 492 bytes, Stack size 48 bytes, heap_4.o(.text.pvPortMalloc))
@@ -2598,7 +2592,7 @@ Global Symbols
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
 </UL>
 
 <P><STRONG><a name="[170]"></a>xTaskCreateStatic</STRONG> (Thumb, 206 bytes, Stack size 72 bytes, tasks.o(.text.xTaskCreateStatic))
@@ -2607,7 +2601,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 </UL>
 
@@ -2659,7 +2653,7 @@ Global Symbols
 <P><STRONG><a name="[18e]"></a>__ARM_fpclassifyf</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fpclassifyf.o(i.__ARM_fpclassifyf))
 <BR><BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2f
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
 </UL>
 
 <P><STRONG><a name="[133]"></a>__hardfp_acosf</STRONG> (Thumb, 234 bytes, Stack size 16 bytes, acosf.o(i.__hardfp_acosf))
@@ -2673,7 +2667,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMU_QuaternionEKF_xhatUpdate
 </UL>
 
-<P><STRONG><a name="[156]"></a>__hardfp_asinf</STRONG> (Thumb, 258 bytes, Stack size 16 bytes, asinf.o(i.__hardfp_asinf))
+<P><STRONG><a name="[157]"></a>__hardfp_asinf</STRONG> (Thumb, 258 bytes, Stack size 16 bytes, asinf.o(i.__hardfp_asinf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __hardfp_asinf &rArr; sqrtf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrtf
@@ -2858,7 +2852,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[18b]"></a>__mathlib_flt_infnan</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, funder.o(i.__mathlib_flt_infnan))
-<BR><BR>[Called By]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
+<BR><BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_acosf
 </UL>
 
@@ -2869,7 +2863,7 @@ Global Symbols
 
 <P><STRONG><a name="[18d]"></a>__mathlib_flt_invalid</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, funder.o(i.__mathlib_flt_invalid))
 <BR><BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_acosf
 </UL>
 
@@ -2880,7 +2874,7 @@ Global Symbols
 <P><STRONG><a name="[18f]"></a>__mathlib_flt_underflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, funder.o(i.__mathlib_flt_underflow))
 <BR><BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2f
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
 </UL>
 
 <P><STRONG><a name="[1b9]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
@@ -2898,7 +2892,7 @@ Global Symbols
 <LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2f
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_acosf
 </UL>
 
@@ -2938,7 +2932,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 </UL>
-<BR>[Called By]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
+<BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asinf
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_acosf
 </UL>
 <P>
@@ -3220,7 +3214,7 @@ Local Symbols
 <P><STRONG><a name="[16f]"></a>makeFreeRtosPriority</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, cmsis_os.o(.text.makeFreeRtosPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = makeFreeRtosPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
 </UL>
 
 <P><STRONG><a name="[181]"></a>prvHeapInit</STRONG> (Thumb, 188 bytes, Stack size 16 bytes, heap_4.o(.text.prvHeapInit))
