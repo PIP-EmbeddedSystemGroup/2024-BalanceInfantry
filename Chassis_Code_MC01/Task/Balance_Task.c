@@ -1,8 +1,8 @@
 /*
  * @Author: 闂傚倸鍊搁悧濠囨偘婵犲洦鐓熼煫鍥ュ劜鐎氾拷 lintianlang0918@qq.com
  * @Date: 2024-03-07 19:46:25
- * @LastEditors: 静_火 lintianlang0918@qq.com
- * @LastEditTime: 2024-04-04 02:51:16
+ * @LastEditors: frozen-fire 2812643217@qq.com
+ * @LastEditTime: 2025-02-18 14:50:32
  * @FilePath: \MC-01_chassis\Task\Chassis_Task.c
  * @Description: 闂佸搫顦弲婊堟偡閿曗偓鍗遍柛娑樷看濞撹埖淇婇娑卞劌闁告艾娲幃瑙勬媴缁嬪簱鎸冮梺姹囧€ч幏锟�,闂佽崵濮村ú銊╁蓟婢舵劦鏁婇柡鍥╁Х绾鹃箖鏌ｉ姀鈺傛喗ustomMade`, 闂備胶鎳撻悘姘跺箰閸濄儲顫曢柟杈╅嚋roFileHeader闂備礁鎼悮顐﹀磿閸愯鑰块柛娑樼摠閻撯偓閻庡箍鍎卞ú銊╁几閿燂拷 闂佸搫顦弲婊呯矙閺嶎厹鈧線骞嬮悩鍐差€涢梺鍛婃寙閸涱喚鈧拷: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -39,32 +39,32 @@
 //float a25[4] = {942.2017,-900.8558,322.1064,-0.9325};
 //float a26[4] = {118.4404,-118.1467,44.7296,-2.0764};//保底
 
-//float a11[4] = {-113.4565,233.7880,-197.0249,1.7168};
-//float a12[4] = {57.7438,-41.3475,-13.4751,0.2739};
-//float a13[4] = {-10.1264,9.7490,-3.5194,0.0044};
-//float a14[4] = {-197.7084,190.7414,-69.2456,0.0643};
-//float a15[4] = {127.9262,-14.3882,-54.4930,27.2731};
-//float a16[4] = {23.3141,-8.6889,-5.1346,4.0241};
-//float a21[4] = {1139.9729,-936.6341,248.4732,6.5131};
-//float a22[4] = {89.6445,-90.7297,34.8253,0.2705};
-//float a23[4] = {4.8312,-0.1174,-2.4029,1.1017};
-//float a24[4] = {95.6563,-3.2846,-46.7845,21.6437};
-//float a25[4] = {939.8127,-907.4880,329.9648,-3.4998};
-//float a26[4] = {121.8077,-122.4618,47.0965,-2.6868};//好参数
+float a11[4] = {-113.4565,233.7880,-197.0249,1.7168};
+float a12[4] = {57.7438,-41.3475,-13.4751,0.2739};
+float a13[4] = {-10.1264,9.7490,-3.5194,0.0044};
+float a14[4] = {-197.7084,190.7414,-69.2456,0.0643};
+float a15[4] = {127.9262,-14.3882,-54.4930,27.2731};
+float a16[4] = {23.3141,-8.6889,-5.1346,4.0241};
+float a21[4] = {1139.9729,-936.6341,248.4732,6.5131};
+float a22[4] = {89.6445,-90.7297,34.8253,0.2705};
+float a23[4] = {4.8312,-0.1174,-2.4029,1.1017};
+float a24[4] = {95.6563,-3.2846,-46.7845,21.6437};
+float a25[4] = {939.8127,-907.4880,329.9648,-3.4998};
+float a26[4] = {121.8077,-122.4618,47.0965,-2.6868};//好参数
 
 //新参数
-float a11[4] = {-256.2254,323.4460,-194.3473,1.0294};
-float a12[4] = {7.5368,-3.9563,-17.9370,0.5286};
-float a13[4] = {-6.6125,6.7619,-2.4914,-0.1301};
-float a14[4] = {-106.4913,109.0527,-40.4522,-2.1043};
-float a15[4] = {-290.0492,383.1821,-201.9698,51.9930};
-float a16[4] = {-17.3940,27.5897,-17.4106,5.6887};
-float a21[4] = {391.6877,-348.0339,85.8613,14.1885};
-float a22[4] = {49.4567,-51.6625,19.0900,0.9110};
-float a23[4] = {-6.7750,8.8513,-4.6003,1.1515};
-float a24[4] = {-108.4588,141.8830,-73.8769,18.5792};
-float a25[4] = {1269.9710,-1301.6951,481.6824,21.5965};
-float a26[4] = {125.7665,-132.3777,51.0600,-0.9244};
+//float a11[4] = {-256.2254,323.4460,-194.3473,1.0294};
+//float a12[4] = {7.5368,-3.9563,-17.9370,0.5286};
+//float a13[4] = {-6.6125,6.7619,-2.4914,-0.1301};
+//float a14[4] = {-106.4913,109.0527,-40.4522,-2.1043};
+//float a15[4] = {-290.0492,383.1821,-201.9698,51.9930};
+//float a16[4] = {-17.3940,27.5897,-17.4106,5.6887};
+//float a21[4] = {391.6877,-348.0339,85.8613,14.1885};
+//float a22[4] = {49.4567,-51.6625,19.0900,0.9110};
+//float a23[4] = {-6.7750,8.8513,-4.6003,1.1515};
+//float a24[4] = {-108.4588,141.8830,-73.8769,18.5792};
+//float a25[4] = {1269.9710,-1301.6951,481.6824,21.5965};
+//float a26[4] = {125.7665,-132.3777,51.0600,-0.9244};
 
 State_Val_t State_Variables = {0};//
 
@@ -95,11 +95,23 @@ extern float Support_F[2];
 float Jump_F[2]={60.0f,60.0f};
 float acc_avg =0;
 int32_t avg_count = 3000;
+
+extern arm_matrix_instance_f32 A_sorce_Left;
+extern arm_matrix_instance_f32 A_sorce_Right;
+extern arm_matrix_instance_f32 A_inverse_Left;
+extern arm_matrix_instance_f32 A_inverse_Right;
+
 void Balance_Task(void const * argument)
 {
     portTickType xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
 
+	A1_Control[0].id = 0x00;
+	A1_Control[1].id = 0x01;
+	A1_Control[2].id = 0x00;
+	A1_Control[3].id = 0x01;
+	
+	VMC_IK_Matrix_Init();
 	
 	
 	while(1)
@@ -119,7 +131,10 @@ void Balance_Task(void const * argument)
 		
 		//汇总数据，更新状态变量
 		State_Variables_Update(&State_Variables,BalanceTask_dt);
-        
+		
+		Robot_Fall_Detect();
+			//Robot_Param_Switch ();
+			
 		//计算左右腿LQR控制量
 		LQR_Calc(&State_Variables,&Leg[LEFT],&Robot_Status);
 		LQR_Calc(&State_Variables,&Leg[RIGHT],&Robot_Status);
@@ -135,24 +150,60 @@ void Balance_Task(void const * argument)
 		}
 		
 			//Balance_Yaw_Position_pid.Max_out = 2 - Func_Abs(- Balance_fai_Position_pid.Output - Balance_fai_Speed_pid.Output + (Balance_theta_Position_pid[0].Output +Balance_theta_Position_pid[1].Output)*0.5f - Wheel_Speed_pid.Output);
-		//if(Robot_Status.Body.Body_Upright_Status == YES)
+		if(Robot_Status.Body.Body_Upright_Status == YES)
 		{
 			if(Command.Rotate_Flag == 1)
 			{
 				Balance_Yaw_Position_pid.Output = Func_Limit(80,Balance_Yaw_Position_pid.Max_out,-Balance_Yaw_Position_pid.Max_out);
 			}
 			else
+			//进入常规底盘航向角跟随控制
 				//Chassis_Follow_PD_Calc(&Balance_Yaw_Position_pid,Fuzzy_PD_Param,GM6020_YAW.Position.Real_fp32,Func_ValueRannge(YAW_POSITION_INIT + Command.Yaw_Position_Move,8192,0)*0.043f);//PD
 				PID_Calc(&Balance_Yaw_Position_pid,GM6020_YAW.Position.Real_fp32,Func_ValueRannge(YAW_POSITION_INIT + Command.Yaw_Position_Move,8192,0)*0.043f);//PD
-
-			
-			
 		}
 		
 		//计算左右腿控制器控制量
 		Leg_Control_Cacl();
 		
 //		L9015_Output_Zero();//关闭轮毂电机输出，调试用
+
+		if(Command.Chassis_Power_Switch == OFF)
+		{
+			Leg_Output(&Leg[0],0,0);
+			Leg_Output(&Leg[1],0,0);
+			State_Variables.X = 0;
+			State_Variables.X_dot = 0;
+			State_Variables.X_dot_cov = 0;
+			State_Variables.X_dot_meansure = 0;
+			State_Variables.X_dot_predict = 0;
+			State_Variables.target_X = 0;
+			Leg[LEFT].U[1] = 0;
+			Leg[RIGHT].U[1] = 0;
+			Leg[LEFT].Tp = 0;
+			Leg[RIGHT].Tp = 0;
+			PID_Clear(&Balance_Yaw_Position_pid);
+			PID_Clear(&Balance_Yaw_Speed_pid);
+			PID_Clear(&Leg_theta_Harmonize_pid[0]);
+		}
+		else
+		{
+			if(Robot_Status.Body.Body_Upright_Status == YES)
+			{			
+				Leg_Output(&Leg[LEFT] , L0_pid[LEFT].Output +Support_F[LEFT] * arm_cos_f32(Leg[0].theta) * (1.0f + arm_sin_f32(Ins_Data.Roll)) - Leg_ROLL_Compensate_pid[0].Output , -Leg[LEFT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[0],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[0].theta),Theta0_pid[0].Output
+				Leg_Output(&Leg[RIGHT] , L0_pid[RIGHT].Output + Support_F[RIGHT] * arm_cos_f32(Leg[1].theta) * (1.0f - arm_sin_f32(Ins_Data.Roll)) + Leg_ROLL_Compensate_pid[0].Output, Leg[RIGHT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[1],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[1].theta),Theta0_pid[1].Output
+			}
+			else
+			{
+				Leg_Output(&Leg[0],-10,0);
+				Leg_Output(&Leg[1],-10,0);
+			}
+		}
+		//分别计算左右腿虚拟力和接触力
+		
+		();
+		Jointmotor_Control_Cacl_Right();
+		
+		A1_LimitMotorOutput(2.0f);
 		
 	}
 
@@ -429,7 +480,7 @@ void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status)
             -(a14[0] * state->leg_len_pow3 +a14[1] * state->leg_len_pow2 + a14[2] * state->leg_length + a14[3]) * (state->target_X_dot - state->X_dot)\
 			+(a15[0] * state->leg_len_pow3 +a15[1] * state->leg_len_pow2 + a15[2] * state->leg_length + a15[3]) * (state->target_Phi - state->Phi)\
             +(a16[0] * state->leg_len_pow3 +a16[1] * state->leg_len_pow2 + a16[2] * state->leg_length + a16[3]) * (-state->Phi_dot);
-		if(Func_Abs(state->X_dot)<=0.2f)
+		//if(Func_Abs(state->X_dot)<=0.2f)
 			leg->U[0]-=(a13[0] * state->leg_len_pow3 +a13[1] * state->leg_len_pow2 + a13[2] * state->leg_length + a13[3]) * (state->target_X - state->X);
 	
 	if(leg->P <=0.002 && robot_status->Body.Body_Upright_Status == YES && leg->L0 > (L0_LOW+10)) //触地不良时关闭轮毂输出，可考虑改为根据触地力进行动态调整的限幅
@@ -444,7 +495,7 @@ void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status)
             -(a24[0] * state->leg_len_pow3 +a24[1] * state->leg_len_pow2 + a24[2] * state->leg_length + a24[3]) * (state->target_X_dot - state->X_dot)\
 			+(a25[0] * state->leg_len_pow3 +a25[1] * state->leg_len_pow2 + a25[2] * state->leg_length + a25[3]) * (state->target_Phi - state->Phi)\
         	+(a26[0] * state->leg_len_pow3 +a26[1] * state->leg_len_pow2 + a26[2] * state->leg_length + a26[3]) * (-state->Phi_dot);
-		if(Func_Abs(state->X_dot)<=0.2f)						
+		//if(Func_Abs(state->X_dot)<=0.2f)						
 			leg->U[1]-=(a23[0] * state->leg_len_pow3 +a23[1] * state->leg_len_pow2 + a23[2] * state->leg_length + a23[3]) * (state->target_X - state->X);
 				//(1-Func_Abs(state->target_X_dot*0.51f))
 		}

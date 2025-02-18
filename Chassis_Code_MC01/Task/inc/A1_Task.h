@@ -8,3 +8,6 @@ void Leg_Normal_Mode(void);
 void Leg_Fall_Mode(void);
 void Jointmotor_Control_Cacl_Left(void);
 void Jointmotor_Control_Cacl_Right(void);
+void VMC_IK_Matrix_Init(void);
+void A1_LimitMotorOutput(float Torque_Limit);
+

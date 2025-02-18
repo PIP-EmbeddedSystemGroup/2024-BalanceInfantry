@@ -133,11 +133,11 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-	taskENTER_CRITICAL();
-	
- osThreadDef(Monitor_Task, Monitor_Task, osPriorityNormal,0,128);
-  MonitorTaskHandle = osThreadCreate(osThread(Monitor_Task), NULL);
-    taskEXIT_CRITICAL();
+//	taskENTER_CRITICAL();
+//	
+// osThreadDef(Monitor_Task, Monitor_Task, osPriorityNormal,0,128);
+//  MonitorTaskHandle = osThreadCreate(osThread(Monitor_Task), NULL);
+//    taskEXIT_CRITICAL();
 	
 	INS_Init();
 	taskENTER_CRITICAL();
@@ -147,10 +147,10 @@ void StartDefaultTask(void const * argument)
     osThreadDef(Balance_Task, Balance_Task, osPriorityAboveNormal,0,1024);
   ChassisTaskHandle = osThreadCreate(osThread(Balance_Task), NULL);
     
-	osThreadDef(A1_Tx_Task, A1_Tx_Task, osPriorityNormal,0,256);
+	osThreadDef(A1_Tx_Task, A1_Tx_Task, osPriorityAboveNormal,0,256);
   A1_Tx_Task_Handle = osThreadCreate(osThread(A1_Tx_Task), NULL);
 	
-	osThreadDef(LK9025_Tx_Task, LK9025_Tx_Task, osPriorityNormal,0,256);
+	osThreadDef(LK9025_Tx_Task, LK9025_Tx_Task, osPriorityAboveNormal,0,256);
   LK9025_Tx_Task_Handle = osThreadCreate(osThread(LK9025_Tx_Task), NULL);
 	
 	osThreadDef(Communicate_Task, Communicate_Task, osPriorityBelowNormal,0,128);

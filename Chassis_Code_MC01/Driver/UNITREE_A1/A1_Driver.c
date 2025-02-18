@@ -108,17 +108,6 @@ void A1_Data_Rx_Right(void)
 }
 
 void A1_Modify_Data(A1_CMD_Tx_t* motor_s){
-    motor_s->hex_len = 34;
-    motor_s->motor_send_data.head.start[0] = 0xFE;
-    motor_s->motor_send_data.head.start[1] = 0xEE;
-    motor_s->motor_send_data.head.motorID = motor_s->id;
-    motor_s->motor_send_data.head.reserved = 0x0;
-    //motor_s->motor_send_data.Mdata.mode = motor_s->mode;
-	  motor_s->motor_send_data.Mdata.mode = 0x0A;
-    motor_s->motor_send_data.Mdata.ModifyBit = 0xFF;
-    motor_s->motor_send_data.Mdata.ReadBit = 0x0;
-    motor_s->motor_send_data.Mdata.reserved = 0x0;
-    motor_s->motor_send_data.Mdata.Modify.L = 0;
     motor_s->motor_send_data.Mdata.T = motor_s->T*256;
     motor_s->motor_send_data.Mdata.W = motor_s->W*128;
     motor_s->motor_send_data.Mdata.Pos = (int)(motor_s->Pos * 2607.594715f);

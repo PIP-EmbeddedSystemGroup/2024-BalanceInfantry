@@ -9,6 +9,7 @@
 #include "cmsis_os.h"
 #include "FreeRTOS.h"
 #include "tim.h"
+#include "universal.h"
 
 #include "Can_Bus.h"
 #include "Configuration.h"
@@ -32,24 +33,7 @@ void Monitor_Task(void const * argument)
 		operate_count++;
 		if((operate_count%1)==0)//200Hz
 		{
-			Robot_Fall_Detect();
-			//Robot_Param_Switch ();
-			if(Command.Chassis_Power_Switch == OFF)
-			{
-				State_Variables.X = 0;
-				State_Variables.X_dot = 0;
-				State_Variables.X_dot_cov = 0;
-				State_Variables.X_dot_meansure = 0;
-				State_Variables.X_dot_predict = 0;
-				State_Variables.target_X = 0;
-				Leg[LEFT].U[1] = 0;
-				Leg[RIGHT].U[1] = 0;
-				Leg[LEFT].Tp = 0;
-				Leg[RIGHT].Tp = 0;
-				PID_Clear(&Balance_Yaw_Position_pid);
-				PID_Clear(&Balance_Yaw_Speed_pid);
-				PID_Clear(&Leg_theta_Harmonize_pid[0]);
-			}
+			
 			// if(Command.Height_Set != Height_Set_Last)
 			// 	Command.Height_Switch =1;//车体高度控制命令变化时将高度切换控制位置1，进行高度切换
 			// Height_Set_Last = Command.Height_Set;
@@ -73,75 +57,12 @@ void Monitor_Task(void const * argument)
 */
 void Robot_Fall_Detect(void)
 {
-	if(Robot_Status.Body.Body_Upright_Status == YES)
+	if(Func_Abs(Ins_Data.Pitch)>0.35f)
 	{
-		
-		if((Ins_Data.Pitch < -0.28f) ||(Ins_Data.Pitch > 0.28f))
-		{
-			if(Status_Counter [1]!=1)//确认定时器未被启动
-			{
-				HAL_TIM_Base_Start_IT (&htim5);//开启状态切换计时器
-				Status_Counter [1] = 1;
-			}
-		}
-		else
-		{
-			HAL_TIM_Base_Stop_IT(&htim5);//关闭计时器
-			Status_Counter [0]= 0;
-			Status_Counter [1] = 0;
-		}
-		
-		if(Status_Counter [0] > 200)
-			{
-				Robot_Status.Body.Body_Upright_Status = NO;//将车体直立状态位设为NO
-				State_Variables.X = 0;
-				State_Variables.X_dot = 0;
-				State_Variables.X_dot_cov = 0;
-				State_Variables.X_dot_meansure = 0;
-				State_Variables.X_dot_predict = 0;
-				State_Variables.target_X = 0;
-				Leg[LEFT].U[1] = 0;
-				Leg[RIGHT].U[1] = 0;
-				Leg[LEFT].Tp = 0;
-				Leg[RIGHT].Tp = 0;
-				PID_Clear(&Balance_Yaw_Position_pid);
-				PID_Clear(&Balance_Yaw_Speed_pid);
-				PID_Clear(&Leg_theta_Harmonize_pid[0]);
-				Robot_Status.Param_Switch = 1;
-				Status_Counter [0] = 0;//清空计时器
-				Status_Counter [1] = 0;
-			}
+		Robot_Status.Body.Body_Upright_Status = NO;
 	}
-	
-	if(Robot_Status.Body.Body_Upright_Status == NO)
-	{
-		
-		if((Ins_Data.Pitch > -0.05f) && (Ins_Data.Pitch < 0.05f))
-		{
-			if(Status_Counter [1]!=1)//确认定时器未被启动
-			{
-				HAL_TIM_Base_Start_IT (&htim5);//开启状态切换计时器
-				Status_Counter [1] = 1;
-			}
-		}
-		else
-		{
-			HAL_TIM_Base_Stop_IT(&htim5);//关闭计时器
-			Status_Counter [0] = 0;//清空状态切换计时器
-			Status_Counter [1] = 0;
-		}
-		
-		if(Status_Counter [0]> 300)
-		{
-			Robot_Status.Body.Body_Upright_Status = YES;//将车体直立状态位设为YES
-			HAL_TIM_Base_Stop_IT(&htim5);//关闭计时器
-			Robot_Status.Param_Switch = 1;
-			Status_Counter [0]= 0;//清空状态切换计时器
-			Status_Counter [1]= 0;
-			
-		}
-		
-	}
+	else
+		Robot_Status.Body.Body_Upright_Status = YES;
 }
 
 void Robot_Param_Switch (void)

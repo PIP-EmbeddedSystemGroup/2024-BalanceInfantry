@@ -1,3 +1,11 @@
+/*
+ * @Author: frozen-fire 2812643217@qq.com
+ * @Date: 2025-02-18 13:33:09
+ * @LastEditors: frozen-fire 2812643217@qq.com
+ * @LastEditTime: 2025-02-18 14:38:31
+ * @FilePath: \2024-BalanceInfantry\Chassis_Code_MC01\Task\A1_Task.c
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 #include "stdint.h"
 #include "cmsis_os.h"
 #include "FreeRTOS.h"
@@ -38,59 +46,30 @@ float A1Task_dt;
 //宇树A1电机控制命令发送进程
 void A1_Tx_Task(void const * argument)
 {
-    
-
-	A1_Control[0].id = 0x00;
-	A1_Control[1].id = 0x01;
-	A1_Control[2].id = 0x00;
-	A1_Control[3].id = 0x01;
-	
-	arm_mat_init_f32(&A_sorce_Left,2,2,Leg[0].A_matrix);
-	arm_mat_init_f32(&A_inverse_Left,2,2,Leg[0].A_inverse_matrix);
-	arm_mat_init_f32(&A_sorce_Right,2,2,Leg[1].A_matrix);
-	arm_mat_init_f32(&A_inverse_Right,2,2,Leg[1].A_inverse_matrix);
 	
 	portTickType xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
+	
+	for(int i; i<4;i++)
+	{
+		A1_Control[i].hex_len = 34;
+		A1_Control[i].motor_send_data.head.start[0] = 0xFE;
+		A1_Control[i].motor_send_data.head.start[1] = 0xEE;
+		A1_Control[i].motor_send_data.head.motorID = A1_Control[i].id;
+		A1_Control[i].motor_send_data.head.reserved = 0x0;
+		//motor_s->motor_send_data.Mdata.mode = motor_s->mode;
+		A1_Control[i].motor_send_data.Mdata.mode = 0x0A;
+		A1_Control[i].motor_send_data.Mdata.ModifyBit = 0xFF;
+		A1_Control[i].motor_send_data.Mdata.ReadBit = 0x0;
+		A1_Control[i].motor_send_data.Mdata.reserved = 0x0;
+		A1_Control[i].motor_send_data.Mdata.Modify.L = 0;
+	}
 	
 	while(1)
 	{
 		vTaskDelayUntil(&xLastWakeTime,1);
 		A1Task_dt = DWT_GetDeltaT(&A1_dwt_cnt);
 		//HAL_GPIO_TogglePin(GPIOC,RS485_VCC_Pin);
-		if(Command.Chassis_Power_Switch == OFF)
-		{
-			Leg_Output(&Leg[0],0,0);
-			Leg_Output(&Leg[1],0,0);
-		}
-		else
-		{
-        	if(Robot_Status.Body.Body_Upright_Status == YES)
-            {
-									
-                Leg_Output(&Leg[LEFT] , L0_pid[LEFT].Output +Support_F[LEFT] * arm_cos_f32(Leg[0].theta) * (1.0f + arm_sin_f32(Ins_Data.Roll)) - Leg_ROLL_Compensate_pid[0].Output , -Leg[LEFT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[0],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[0].theta),Theta0_pid[0].Output
-                Leg_Output(&Leg[RIGHT] , L0_pid[RIGHT].Output + Support_F[RIGHT] * arm_cos_f32(Leg[1].theta) * (1.0f - arm_sin_f32(Ins_Data.Roll)) + Leg_ROLL_Compensate_pid[0].Output, Leg[RIGHT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[1],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[1].theta),Theta0_pid[1].Output
-            }
-            else
-            {
-                Leg_Output(&Leg[0],-10,0);
-                Leg_Output(&Leg[1],-10,0);
-            }
-		}
-			
-			//分别计算左右腿虚拟力控，放在这里是为了减轻主任务Balance_Task的资源消耗，应该有助于保持进程执行周期的稳定
-			//同时也是因为这是并联腿控制特有的算法，放在这里感觉比较合理
-			Jointmotor_Control_Cacl_Left();
-			Jointmotor_Control_Cacl_Right();
-			
-			//电机输出限幅，目前限制的转子最大转矩是正负2NM，对应的输出轴最大转矩是正负18NM左右，在平地上应该是绝对够用的
-			//之后要实现跳跃和飞坡落地应该需要放宽限制
-			A1_Control[0].T =  Func_Limit(Leg[0].T0,2.0,-2.0);
-			A1_Control[1].T =  Func_Limit(Leg[0].T1,2.0,-2.0);
-			A1_Control[2].T =  Func_Limit(Leg[1].T0,2.0,-2.0);
-			A1_Control[3].T =  Func_Limit(Leg[1].T1,2.0,-2.0);	
-			
-		
 		//达妙板载RS485没有自动流控，需要在发送前和接收前控制485芯片的流向pin脚
 		//在发送前拉高DIR引脚，将数据流向设置为芯片到外设，将MCU内部数据发送至电机
 		//之后使用UART发送完成中断回调函数将DIR引脚拉低，开始接收电机反馈数据
@@ -102,14 +81,14 @@ void A1_Tx_Task(void const * argument)
 		HAL_UART_Transmit_DMA(&huart1,A1_Transmit_Data_Left,34);
 		HAL_UART_Receive_DMA(&huart1,A1_Receive_Data_Left,78);
 		//Leg[0].transmit_count++;
-		DWT_Delay(0.0001f);
+		//DWT_Delay(0.0001f);
 		A1_Modify_Data(&A1_Control[2]);
 		A1_Transmit_Data_Deal_Right(&A1_Control[2]);
 		HAL_UART_Transmit_DMA(&huart6,A1_Transmit_Data_Right,34);
 		HAL_UART_Receive_DMA(&huart6,A1_Receive_Data_Right,78);
 		//Leg[1].transmit_count++;
 		
-		DWT_Delay(0.0002f);
+		DWT_Delay(0.0003f);
 
 		A1_Modify_Data(&A1_Control[1]);
 		A1_Transmit_Data_Deal_Left(&A1_Control[1]);
@@ -117,7 +96,7 @@ void A1_Tx_Task(void const * argument)
 		HAL_UART_Transmit_DMA(&huart1,A1_Transmit_Data_Left,34);
 		HAL_UART_Receive_DMA(&huart1,A1_Receive_Data_Left,78);
 		//Leg[0].transmit_count++;
-		DWT_Delay(0.0001f);
+		//DWT_Delay(0.0001f);
 		A1_Modify_Data(&A1_Control[3]);
 		A1_Transmit_Data_Deal_Right(&A1_Control[3]);
 		HAL_UART_Transmit_DMA(&huart6,A1_Transmit_Data_Right,34);
@@ -150,8 +129,8 @@ void Jointmotor_Control_Cacl_Left(void)
 	Leg[0].A_matrix[3] = Leg[0].A22;
 	
 	if(arm_mat_inverse_f32(&A_sorce_Left,&A_inverse_Left) != ARM_MATH_SUCCESS)  
-	    //Leg[0].transmit_error_count++;
-		;
+	    Leg[0].transmit_error_count++;
+	
 
 	Leg[0].F_Feedback  = Leg[0].A_inverse_matrix[0] * A1_Motor[0].T.Real + Leg[0].A_inverse_matrix[1] * A1_Motor[1].T.Real;
 	Leg[0].Tp_Feedback = Leg[0].A_inverse_matrix[2] * A1_Motor[0].T.Real + Leg[0].A_inverse_matrix[3] * A1_Motor[1].T.Real;
@@ -173,10 +152,23 @@ void Jointmotor_Control_Cacl_Right(void)
 	Leg[1].A_matrix[3] = Leg[1].A22;
 	
 	if(arm_mat_inverse_f32(&A_sorce_Right,&A_inverse_Right) != ARM_MATH_SUCCESS)  
-	    //Leg[1].transmit_error_count++;
-		;
+		Leg[1].transmit_error_count++;
 
 	Leg[1].F_Feedback  = Leg[1].A_inverse_matrix[0] * A1_Motor[2].T.Real + Leg[1].A_inverse_matrix[1] * A1_Motor[3].T.Real;
 	Leg[1].Tp_Feedback = Leg[1].A_inverse_matrix[2] * A1_Motor[2].T.Real + Leg[1].A_inverse_matrix[3] * A1_Motor[3].T.Real;
 	Leg[1].P = Leg[1].F_Feedback * arm_cos_f32(Leg[1].theta * 0.000767f) + (Leg[1].Tp_Feedback * arm_sin_f32(Leg[1].theta * 0.000767f)) / Leg[1].L0;
+}
+
+void VMC_IK_Matrix_Init(void){
+	arm_mat_init_f32(&A_sorce_Left,2,2,Leg[0].A_matrix);
+	arm_mat_init_f32(&A_inverse_Left,2,2,Leg[0].A_inverse_matrix);
+	arm_mat_init_f32(&A_sorce_Right,2,2,Leg[1].A_matrix);
+	arm_mat_init_f32(&A_inverse_Right,2,2,Leg[1].A_inverse_matrix);
+}
+
+void A1_LimitMotorOutput(float Torque_Limit) {
+    A1_Control[0].T = Func_Limit(Leg[0].T0, Torque_Limit, -Torque_Limit);
+    A1_Control[1].T = Func_Limit(Leg[0].T1, Torque_Limit, -Torque_Limit);
+    A1_Control[2].T = Func_Limit(Leg[1].T0, Torque_Limit, -Torque_Limit);
+    A1_Control[3].T = Func_Limit(Leg[1].T1, Torque_Limit, -Torque_Limit);
 }

@@ -46,6 +46,7 @@ mc-01_chassis/monitor_task.o: ..\Task\Monitor_Task.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
-  ..\BSP\inc\Can_Bus.h ..\Task\inc\Balance_Task.h ..\Task\inc\INS_Task.h \
-  ..\Task\inc\Monitor_Task.h ..\Task\inc\Configuration.h \
-  ..\Algorithm\inc\PID.h ..\Task\inc\Communicate_Task.h
+  ..\BSP\inc\universal.h ..\BSP\inc\Can_Bus.h ..\Task\inc\Balance_Task.h \
+  ..\Task\inc\INS_Task.h ..\Task\inc\Monitor_Task.h \
+  ..\Task\inc\Configuration.h ..\Algorithm\inc\PID.h \
+  ..\Task\inc\Communicate_Task.h
