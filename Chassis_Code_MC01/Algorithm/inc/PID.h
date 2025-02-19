@@ -29,6 +29,8 @@ extern PidTypeDef Balance_Yaw_Speed_pid;
 extern PidTypeDef Leg_theta_Harmonize_pid[2];
 extern PidTypeDef Leg_ROLL_Compensate_pid[2];
 extern PidTypeDef L0_pid[2];
+extern PidTypeDef Wheel_Anti_Slip_pid[2];
+
 extern PidTypeDef Theta0_pid[2];
 extern PidTypeDef TempCtrl_pid;
 

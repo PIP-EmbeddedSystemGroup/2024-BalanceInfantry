@@ -85,10 +85,10 @@ void A1_Tx_Task(void const * argument)
 			
 			//电机输出限幅，目前限制的转子最大转矩是正负2NM，对应的输出轴最大转矩是正负18NM左右，在平地上应该是绝对够用的
 			//之后要实现跳跃和飞坡落地应该需要放宽限制
-			A1_Control[0].T =  Func_Limit(Leg[0].T0,2.0,-2.0);
-			A1_Control[1].T =  Func_Limit(Leg[0].T1,2.0,-2.0);
-			A1_Control[2].T =  Func_Limit(Leg[1].T0,2.0,-2.0);
-			A1_Control[3].T =  Func_Limit(Leg[1].T1,2.0,-2.0);
+			A1_Control[0].T =  Func_Limit(Leg[0].T0,3.0,-3.0);
+			A1_Control[1].T =  Func_Limit(Leg[0].T1,3.0,-3.0);
+			A1_Control[2].T =  Func_Limit(Leg[1].T0,3.0,-3.0);
+			A1_Control[3].T =  Func_Limit(Leg[1].T1,3.0,-3.0);
 			
 //		if(Leg[0].transmit_count % 2 == 0)//通过计数变量做分频发送
 //		{
@@ -195,6 +195,7 @@ void Jointmotor_Control_Cacl_Left(void)
 	Leg[0].F_Feedback  = Leg[0].A_inverse_matrix[0] * A1_Motor[0].T.Real + Leg[0].A_inverse_matrix[1] * A1_Motor[1].T.Real;
 	Leg[0].Tp_Feedback = Leg[0].A_inverse_matrix[2] * A1_Motor[0].T.Real + Leg[0].A_inverse_matrix[3] * A1_Motor[1].T.Real;
 	Leg[0].P = Leg[0].F_Feedback * arm_cos_f32(Leg[0].theta * 0.000767f) + (Leg[0].Tp_Feedback * arm_sin_f32(Leg[0].theta * 0.000767f)) / Leg[0].L0;
+	Leg[0].P = Leg[0].P *10000.0f + 1.25*(9.81f);
 }
 
 void Jointmotor_Control_Cacl_Right(void)
@@ -218,4 +219,5 @@ void Jointmotor_Control_Cacl_Right(void)
 	Leg[1].F_Feedback  = Leg[1].A_inverse_matrix[0] * A1_Motor[2].T.Real + Leg[1].A_inverse_matrix[1] * A1_Motor[3].T.Real;
 	Leg[1].Tp_Feedback = Leg[1].A_inverse_matrix[2] * A1_Motor[2].T.Real + Leg[1].A_inverse_matrix[3] * A1_Motor[3].T.Real;
 	Leg[1].P = Leg[1].F_Feedback * arm_cos_f32(Leg[1].theta * 0.000767f) + (Leg[1].Tp_Feedback * arm_sin_f32(Leg[1].theta * 0.000767f)) / Leg[1].L0;
+	Leg[1].P = Leg[1].P *10000.0f + 1.25*(9.81f);
 }

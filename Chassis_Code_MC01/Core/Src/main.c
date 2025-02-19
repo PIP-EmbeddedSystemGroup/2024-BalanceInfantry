@@ -81,7 +81,7 @@ void User_Init(void)
 //	PowerLimit.Flag = 0;
 //	PowerLimit.RemainPower[2] = 60;
 //	PowerLimit.Real_Power[2]  = 75;
-//	PowerLimit.MaxSpeed       = CHASSIS_MAX_SPEED;//设定�??大转�??
+//	PowerLimit.MaxSpeed       = CHASSIS_MAX_SPEED;//设定�??大转�??
 //	Chassis.Position.Flag     = 1;
 
 	Robot_Status.Body.Body_Upright_Status = NO;
@@ -98,19 +98,20 @@ void User_Init(void)
 //	Command.SpeedZoom = 1;
 	
 
-	//PID初始化分别为KP KI KD �??大输�?? 死区 积分范围 �??大输�?? �??大积分�?�（输出�??=�??大积分�??*KI�??
+	//PID初始化分别为KP KI KD �??大输�?? 死区 积分范围 �??大输�?? �??大积分�?�（输出�??=�??大积分�??*KI�??
 	//注意！！！！！！
 	//积分范围只有在位置式PID计算的时候起作用 
 		//底盘电机
 	PID_Init(&Balance_Yaw_Position_pid,0.1,0,20.0,2.0f,0,50,10000,200,0.05f,POSITIONAL);//底盘跟随PD
 	//PID_Init(&Balance_Yaw_Speed_pid,10,0,0,5,0,0,3,0,POSITIONAL);
-	PID_Init(&Leg_theta_Harmonize_pid[0],150,0,0,3,0,0.05,2,1,0.001f,POSITIONAL);//关节电机抗劈叉PD
+	PID_Init(&Leg_theta_Harmonize_pid[0],50,0,10,2.5,0,0.05,2,1,0.001f,POSITIONAL);//关节电机抗劈叉PD
 	//PID_Init(&Leg_theta_Harmonize_pid[1],0,0,0,10,0,0,4,0,POSITIONAL);//轮毂电机抗劈叉PD
-	PID_Init(&Leg_ROLL_Compensate_pid[0],250,0,150,80,0,0,3.14,0,0.05f,POSITIONAL);
+	PID_Init(&Leg_ROLL_Compensate_pid[0],200,0,250,80,0,0,3.14,0,0.05f,POSITIONAL);
 	PID_Init(&Leg_ROLL_Compensate_pid[1],50.0f,0.2,150,30,0,0.05f,3.14,15.0f,0.05f,POSITIONAL);
-	PID_Init(&L0_pid[0],1.5f,0.0f,50,40,0,3,360,5.0f,0.05f,POSITIONAL);//腿长控制
-	PID_Init(&L0_pid[1],1.5f,0.0f,50,40,0,3,360,5.0f,0.05f,POSITIONAL);
-	
+	PID_Init(&L0_pid[0],1.5f,0.0f,40,40,0,3,360,5.0f,0.05f,POSITIONAL);//腿长控制
+	PID_Init(&L0_pid[1],1.5f,0.0f,40,40,0,3,360,5.0f,0.05f,POSITIONAL);
+	PID_Init(&Wheel_Anti_Slip_pid[0],1.0f,0.0f,0,3,0,0,10,0,0.05f,POSITIONAL);
+	PID_Init(&Wheel_Anti_Slip_pid[1],1.0f,0.0f,0,3,0,0,10,0,0.05f,POSITIONAL);
 	 PID_Init(&TempCtrl_pid, 800, 0.02, 5.0f, 600, 0, 0, 100, 600,0.05, POSITIONAL);
 }
 

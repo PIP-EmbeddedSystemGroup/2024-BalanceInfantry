@@ -60,8 +60,8 @@ function K = get_k_length(leg_length)
     % Q=diag([10 30 50 10 250 1]);
     % R=[20 0;0 3];
     
-    Q=diag([1 1 1 375 2000 1]);
-    R=diag([3.75,1]);
+    Q=diag([300 1 1 550 12000 1]);
+    R=diag([1.9,0.75]);
     K=lqr(A,B,Q,R);
   
 end

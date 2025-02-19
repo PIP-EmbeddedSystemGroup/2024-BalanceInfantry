@@ -66,7 +66,7 @@
 #define l4 140
 #define WHEEL_RADIUS 0.1 //m
 //云台参数设置
-#define YAW_POSITION_INIT   4790
+#define YAW_POSITION_INIT   4700
 
 //里程计一阶卡尔曼滤波器参数
 #define VEL_PROCESS_NOISE 100	//速度过程噪声

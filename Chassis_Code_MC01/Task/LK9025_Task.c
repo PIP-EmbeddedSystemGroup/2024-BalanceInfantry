@@ -20,7 +20,7 @@ void LK9025_Tx_Task(void const * argument)
         
 		if(Command.Chassis_Power_Switch == ON)
 		{
-			LK9025_Output_Normal(-Leg[LEFT].U[0] + Balance_Yaw_Position_pid.Output, Leg[RIGHT].U[0] + Balance_Yaw_Position_pid.Output );
+			LK9025_Output_Normal(-Leg[LEFT].U[0] + Balance_Yaw_Position_pid.Output + Wheel_Anti_Slip_pid[0].Output, Leg[RIGHT].U[0] + Balance_Yaw_Position_pid.Output - Wheel_Anti_Slip_pid[1].Output);
 		}
 		else if(Command.Chassis_Power_Switch == OFF)
 			LK9025_Output_Zero();
