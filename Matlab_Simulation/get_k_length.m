@@ -1,4 +1,4 @@
-function K = get_k_length(leg_length)
+function [K,Q,R] = get_k_length(leg_length)
    
     %theta : 摆杆与竖直方向夹角             R   ：驱动轮半径
     %x     : 驱动轮位移                    L   : 摆杆重心到驱动轮轴距离
@@ -60,8 +60,8 @@ function K = get_k_length(leg_length)
     % Q=diag([10 30 50 10 250 1]);
     % R=[20 0;0 3];
     
-    Q=diag([300 1 1 550 12000 1]);
-    R=diag([1.9,0.75]);
+    Q=diag([200 1 1 150 4000 1]);
+    R=diag([2.85,0.25]);
     K=lqr(A,B,Q,R);
   
 end

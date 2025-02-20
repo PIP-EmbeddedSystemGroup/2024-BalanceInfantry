@@ -37,13 +37,8 @@ Q1 = q(1,1);
 Q2 = q(2,2);
 Q3 = q(3,3);
 Q4 = q(4,4);
-Q5 = q(5,5);
-Q6 = q(6,6);
-
-R1 = r(1,1);
-R2 = r(2,2);
-
-
+Q5 = q(5,2);
+Q6 = q(2,2);
 x0=leg;              %步长为0.1
 y11=polyval(a11,x0);          %返回值y0是对应于x0的函数值
 y12=polyval(a12,x0);          %返回值y0是对应于x0的函数值
@@ -73,9 +68,8 @@ subplot(3,4,11);plot(leg,k25,'o',x0,y25,'r');xlabel('x');ylabel('y');title('k25'
 subplot(3,4,12);plot(leg,k26,'o',x0,y26,'r');xlabel('x');ylabel('y');title('k26');
 grid on;                   %添加网格线
 set(gca,'GridLineStyle',':','GridColor','k','GridAlpha',1);  %将网格线变成虚线
-
-disp(q);
-disp(r);
+fprint('Q: %.4f,%.4f,%.4f,%.4f,%.4f,%.4f',q(1),q(2),q(3),q(4),q(5),q(6));
+fprint('R: %.4f,%.4f',r(1,1),r(2,2));
 fprintf('float a11[4] = {%.4f,%.4f,%.4f,%.4f};\n',a11(1),a11(2),a11(3),a11(4));
 fprintf('float a12[4] = {%.4f,%.4f,%.4f,%.4f};\n',a12(1),a12(2),a12(3),a12(4));
 fprintf('float a13[4] = {%.4f,%.4f,%.4f,%.4f};\n',a13(1),a13(2),a13(3),a13(4));

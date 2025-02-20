@@ -87,6 +87,7 @@ typedef struct
 	float target_Roll;
 	float target_Height;
 	float target_Leg_Length[2];
+	float target_Leg_Length_Step[2];
 	
 	
 }State_Val_t;

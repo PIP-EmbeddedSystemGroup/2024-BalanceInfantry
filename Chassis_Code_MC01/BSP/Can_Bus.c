@@ -4,6 +4,7 @@
 #include "universal.h"
 #include "Configuration.h"
 
+#include "LK9025_Task.h"
 #include "Communicate_Task.h"
 
 #define RAD_2_DEGREE 57.2957795f    // 180/pi
@@ -49,40 +50,6 @@ void LK9025_Tcurrent_Output(uint32_t ID,int16_t Tcurrent)
     }
 }
 
-void LK9025_Output_Normal(float output_left,float output_right)
-{
-//	if(LK9025_Tx_Count == 1)
-//	{
-		output_left = output_left * 403.44f - 36.746f;	
-		//output_left = output_left *195.3f;
-		output_left = Func_Limit(output_left,1800,-1800);
-		LK9025_Tcurrent_Output(LEFT_WHEEL_ID,output_left);
-		//LK9025_Tx_Count=LK9025_Tx_Count << 1;
-//	}else
-//	{
-		output_right = output_right * 403.44f - 36.746f;
-		//output_right = output_right *195.3f;
-		output_right = Func_Limit(output_right,1800,-1800);
-		LK9025_Tcurrent_Output(RIGHT_WHEEL_ID,output_right);
-		//LK9025_Tx_Count=LK9025_Tx_Count >> 1;
-//	}
-	
-
-	
-}
- 
-void LK9025_Output_Zero(void)
-{ 
-	if(LK9025_Tx_Count == 1)
-	{
-		LK9025_Tcurrent_Output(LEFT_WHEEL_ID,0);
-		LK9025_Tx_Count=LK9025_Tx_Count << 1;
-	}else
-	{
-		LK9025_Tcurrent_Output(RIGHT_WHEEL_ID,0);
-		LK9025_Tx_Count=LK9025_Tx_Count >> 1;
-	}
-}
 
 void HMI_Communicate(Robot_Status_t* status)//用户交互通信
 {
@@ -150,7 +117,7 @@ void Gimbal_Data_Receive(void)
 		case 0X208:
 		{
 			//接收YAW轴6020电机数据反馈包
-			GM6020_YAW.Position.Real_fp32 = ((Data_Buf[0]<<8)|Data_Buf[1]) * 0.043f;
+			GM6020_YAW.Position.Real_fp32 = (((Data_Buf[0]<<8)|Data_Buf[1]) /8192.0f )* 2 * NORMAL_PI;
 			GM6020_YAW.Speed.Real = (Data_Buf[2]<<8)|Data_Buf[3];
 			GM6020_YAW.TCurrent = (Data_Buf[4]<<8)|Data_Buf[5];
 			GM6020_YAW.Temperature = Data_Buf[6];

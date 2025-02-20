@@ -33,4 +33,5 @@ mc-01_chassis/can_bus.o: ..\BSP\Can_Bus.c ..\Core\Inc\can.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   ..\BSP\inc\Can_Bus.h ..\Task\inc\Balance_Task.h ..\Task\inc\INS_Task.h \
   ..\Task\inc\Monitor_Task.h ..\BSP\inc\universal.h \
-  ..\Task\inc\Configuration.h ..\Task\inc\Communicate_Task.h
+  ..\Task\inc\Configuration.h ..\Task\inc\LK9025_Task.h \
+  ..\Task\inc\Communicate_Task.h

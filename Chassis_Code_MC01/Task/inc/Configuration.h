@@ -52,10 +52,11 @@
 #define LOW 1
 #define MID 2
 #define HIGH 3
-#define L0_LOW  150.0f
-#define L0_MID  190.0f
-#define L0_HIGH 270.0f
+#define L0_LOW  130.0f
+#define L0_MID  200.0f
+#define L0_HIGH 280.0f
 #define THETA0_MID  1.5708f
+#define CONTACT_F_MIN 30
 
 //腿部连杆的长度参数
 #define l5 110 //mm
@@ -68,7 +69,7 @@
 //云台参数设置
 #define YAW_POSITION_INIT   4700
 
-//里程计一阶卡尔曼滤波器参数
+//里程计二维卡尔曼滤波器参数
 #define VEL_PROCESS_NOISE 100	//速度过程噪声
 #define VEL_MEASURE_NOISE 2000	//速度测量噪声
 

@@ -1,3 +1,11 @@
+/*
+ * @Author: frozen-fire 2812643217@qq.com
+ * @Date: 2025-01-25 19:43:07
+ * @LastEditors: frozen-fire 2812643217@qq.com
+ * @LastEditTime: 2025-02-19 17:57:27
+ * @FilePath: \2024-BalanceInfantry\Chassis_Code_MC01\Algorithm\inc\PID.h
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 #include "stdint.h"
 
 typedef struct
@@ -30,6 +38,7 @@ extern PidTypeDef Leg_theta_Harmonize_pid[2];
 extern PidTypeDef Leg_ROLL_Compensate_pid[2];
 extern PidTypeDef L0_pid[2];
 extern PidTypeDef Wheel_Anti_Slip_pid[2];
+extern PidTypeDef Wheel_Damping_pid[2];
 
 extern PidTypeDef Theta0_pid[2];
 extern PidTypeDef TempCtrl_pid;

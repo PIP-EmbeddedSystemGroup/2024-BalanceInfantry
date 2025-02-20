@@ -17,4 +17,5 @@ mc-01_chassis/lk9025_task.o: ..\Task\LK9025_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
   ..\BSP\inc\Can_Bus.h ..\Task\inc\Balance_Task.h ..\Task\inc\INS_Task.h \
   ..\Task\inc\Monitor_Task.h ..\Task\inc\Configuration.h \
-  ..\Algorithm\inc\PID.h ..\Task\inc\Communicate_Task.h
+  ..\Algorithm\inc\PID.h ..\BSP\inc\Universal.h \
+  ..\Task\inc\LK9025_Task.h ..\Task\inc\Communicate_Task.h

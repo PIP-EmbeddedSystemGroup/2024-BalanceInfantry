@@ -2,7 +2,7 @@
  * @Author: 闂傚倸鍊搁悧濠囨偘婵犲洦鐓熼煫鍥ュ劜鐎氾拷 lintianlang0918@qq.com
  * @Date: 2024-03-07 19:46:25
  * @LastEditors: frozen-fire 2812643217@qq.com
- * @LastEditTime: 2025-02-19 16:09:10
+ * @LastEditTime: 2025-02-20 09:40:35
  * @FilePath: \MC-01_chassis\Task\Chassis_Task.c
  * @Description: 闂佸搫顦弲婊堟偡閿曗偓鍗遍柛娑樷看濞撹埖淇婇娑卞劌闁告艾娲幃瑙勬媴缁嬪簱鎸冮梺姹囧€ч幏锟�,闂佽崵濮村ú銊╁蓟婢舵劦鏁婇柡鍥╁Х绾鹃箖鏌ｉ姀鈺傛喗ustomMade`, 闂備胶鎳撻悘姘跺箰閸濄儲顫曢柟杈╅嚋roFileHeader闂備礁鎼悮顐﹀磿閸愯鑰块柛娑樼摠閻撯偓閻庡箍鍎卞ú銊╁几閿燂拷 闂佸搫顦弲婊呯矙閺嶎厹鈧線骞嬮悩鍐差€涢梺鍛婃寙閸涱喚鈧拷: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -26,72 +26,43 @@
 #include "A1_Task.h"
 #include "Communicate_Task.h"
 
-//float a11[4] = {-155.9316,254.0555,-185.0108,1.2442};
-//float a12[4] = {47.2934,-32.7831,-12.1635,0.2118};
-//float a13[4] = {-10.1391,9.6784,-3.4424,-0.0200};
-//float a14[4] = {-162.2113,155.2344,-55.5910,-0.3421};
-//float a15[4] = {103.6842,9.5532,-61.9532,27.2285};
-//float a16[4] = {18.7884,-4.4123,-6.4557,3.9953};
-//float a21[4] = {1010.0438,-810.4388,205.8031,6.6265};
-//float a22[4] = {75.9429,-74.9077,27.5461,0.3802};
-//float a23[4] = {3.9794,0.7408,-2.6709,1.1003};
-//float a24[4] = {64.5622,11.2439,-42.7203,17.7419};
-//float a25[4] = {942.2017,-900.8558,322.1064,-0.9325};
-//float a26[4] = {118.4404,-118.1467,44.7296,-2.0764};//保底
+//好参数，保底
+//float a11[4] = {-114.2216,214.0117,-167.9867,1.1653};
+//float a12[4] = {37.5907,-28.0400,-10.9791,0.2090};
+//float a13[4] = {-10.1132,11.1790,-4.5144,0.0077};
+//float a14[4] = {-103.1355,114.5583,-46.7768,0.0521};
+//float a15[4] = {176.7064,-36.6450,-70.2276,36.5422};
+//float a16[4] = {17.2560,-4.7467,-6.7789,4.3711};
+//float a21[4] = {1171.1263,-1016.3377,267.0797,11.7113};
+//float a22[4] = {89.6106,-94.0768,35.1603,1.1442};
+//float a23[4] = {10.7322,-1.9997,-4.4149,2.2060};
+//float a24[4] = {110.1199,-20.5935,-45.4127,22.8670};
+//float a25[4] = {1355.1342,-1495.2800,604.3203,-5.4524};
+//float a26[4] = {115.8221,-138.6280,61.2261,-3.6376};
 
-//float a11[4] = {-113.4565,233.7880,-197.0249,1.7168};
-//float a12[4] = {57.7438,-41.3475,-13.4751,0.2739};
-//float a13[4] = {-10.1264,9.7490,-3.5194,0.0044};
-//float a14[4] = {-197.7084,190.7414,-69.2456,0.0643};
-//float a15[4] = {127.9262,-14.3882,-54.4930,27.2731};
-//float a16[4] = {23.3141,-8.6889,-5.1346,4.0241};
-//float a21[4] = {1139.9729,-936.6341,248.4732,6.5131};
-//float a22[4] = {89.6445,-90.7297,34.8253,0.2705};
-//float a23[4] = {4.8312,-0.1174,-2.4029,1.1017};
-//float a24[4] = {95.6563,-3.2846,-46.7845,21.6437};
-//float a25[4] = {939.8127,-907.4880,329.9648,-3.4998};
-//float a26[4] = {121.8077,-122.4618,47.0965,-2.6868};//好参数
+//真的好参数，QR:（操作激烈一些甚至能响胎漂移
+// 200           0           0           0           0           0
+//            0           1           0           0           0           0
+//            0           0           1           0           0           0
+//            0           0           0         150           0           0
+//            0           0           0           0        4000           0
+//            0           0           0           0           0           1
 
-//新参数
-//float a11[4] = {-274.3602,381.4875,-275.9544,-0.1765};
-//float a12[4] = {53.5355,-38.2151,-25.3314,0.3639};
-//float a13[4] = {-12.2867,10.9246,-3.5850,-0.2313};
-//float a14[4] = {-275.6756,245.6161,-81.1149,-5.2777};
-//float a15[4] = {-287.3400,446.1159,-258.6352,72.6764};
-//float a16[4] = {-7.4184,24.9369,-19.8790,7.4978};
-//float a21[4] = {874.3104,-696.8892,172.7291,14.3170};
-//float a22[4] = {103.2481,-96.3210,34.1359,0.6500};
-//float a23[4] = {-4.8813,7.5764,-4.3636,1.1949};
-//float a24[4] = {-112.5909,172.6467,-98.8855,27.0837};
-//float a25[4] = {2044.0437,-1813.5595,594.9886,31.5118};
-//float a26[4] = {176.5766,-164.9170,58.1733,-0.9310};
+//     2.8500         0
+//          0    0.2500
 
-// float a11[4] = {-278.8371,386.8850,-282.2976,-1.2250};
-// float a12[4] = {37.3508,-29.1202,-28.4293,0.4989};
-// float a13[4] = {-9.5646,9.2786,-3.2677,-0.2506};
-// float a14[4] = {-224.8587,218.5461,-77.4524,-6.0016};
-// float a15[4] = {-352.3249,496.2370,-276.5415,76.7741};
-// float a16[4] = {-14.8761,29.4811,-21.0232,7.7544};
-// float a21[4] = {588.9734,-509.4641,128.8009,19.9305};
-// float a22[4] = {89.2722,-90.2061,33.9633,0.7680};
-// float a23[4] = {-5.5846,7.9045,-4.3981,1.1949};
-// float a24[4] = {-135.0704,189.4015,-104.7436,28.4231};
-// float a25[4] = {1694.9580,-1639.5984,576.5608,36.0175};
-// float a26[4] = {145.3371,-147.2887,55.4702,-0.7297};
-
-float a11[4] = {-294.8829,400.6997,-288.2490,-1.6394};
-float a12[4] = {35.3556,-27.5135,-29.6359,0.4947};
-float a13[4] = {-9.6407,9.2628,-3.2211,-0.2827};
-float a14[4] = {-226.5915,218.1181,-76.3434,-6.7643};
-float a15[4] = {-463.5978,609.5710,-320.7050,84.9209};
-float a16[4] = {-20.7476,35.5964,-23.4541,8.2212};
-float a21[4] = {546.8633,-470.2333,116.8833,19.9613};
-float a22[4] = {85.7978,-86.1664,32.1966,0.8179};
-float a23[4] = {-6.5477,8.6433,-4.5419,1.1791};
-float a24[4] = {-157.8646,206.8938,-108.1499,28.0467};
-float a25[4] = {1814.3841,-1739.2821,604.2147,44.5108};
-float a26[4] = {149.5474,-150.0564,55.8024,-0.2867};
-
+float a11[4] = {-146.0058,243.0074,-179.0074,1.5563};
+float a12[4] = {29.8262,-23.8564,-12.1303,0.3688};
+float a13[4] = {-7.5220,8.9286,-3.8187,0.0376};
+float a14[4] = {-93.7493,111.6242,-48.1237,0.4303};
+float a15[4] = {159.8778,-31.4361,-81.2869,43.5614};
+float a16[4] = {13.9591,-3.8365,-6.9320,4.5941};
+float a21[4] = {986.8800,-908.4870,229.2207,29.4297};
+float a22[4] = {111.8598,-124.3577,48.0889,0.9336};
+float a23[4] = {8.2010,-1.4319,-4.3094,2.2330};
+float a24[4] = {94.5185,-10.0904,-56.6706,28.5028};
+float a25[4] = {1753.7109,-2063.0298,875.8850,-16.2438};
+float a26[4] = {116.6211,-151.7745,72.0041,-5.0101};
 
 State_Val_t State_Variables = {0};//
 
@@ -101,6 +72,7 @@ PidTypeDef Leg_ROLL_Compensate_pid[2] = {0};
 PidTypeDef Leg_theta_Harmonize_pid[2] = {0};
 PidTypeDef L0_pid[2] = {0};
 PidTypeDef Wheel_Anti_Slip_pid[2] = {0};
+PidTypeDef Wheel_Damping_pid[2] = {0};
 
 LK9025_Motor_t LK9025_Motor[2]={0};
 Motor_t GM6020_YAW = {0};
@@ -163,7 +135,7 @@ void Balance_Task(void const * argument)
 		}
 		
 			//Balance_Yaw_Position_pid.Max_out = 2 - Func_Abs(- Balance_fai_Position_pid.Output - Balance_fai_Speed_pid.Output + (Balance_theta_Position_pid[0].Output +Balance_theta_Position_pid[1].Output)*0.5f - Wheel_Speed_pid.Output);
-		//if(Robot_Status.Body.Body_Upright_Status == YES)//站立后再进行底盘航向角跟随
+//		if(Leg[0].P > CONTACT_F_MIN)//站立后再进行底盘航向角跟随
 		{
 			if(Command.Rotate_Flag == 1)
 			{
@@ -171,12 +143,20 @@ void Balance_Task(void const * argument)
 			}
 			else
 				//Chassis_Follow_PD_Calc(&Balance_Yaw_Position_pid,Fuzzy_PD_Param,GM6020_YAW.Position.Real_fp32,Func_ValueRannge(YAW_POSITION_INIT + Command.Yaw_Position_Move,8192,0)*0.043f);//PD
-				PID_Calc(&Balance_Yaw_Position_pid,GM6020_YAW.Position.Real_fp32,Func_ValueRannge(YAW_POSITION_INIT + Command.Yaw_Position_Move,8192,0)*0.043f);//PD
+				PID_Calc(&Balance_Yaw_Position_pid,GM6020_YAW.Position.Real_fp32,(Func_ValueRannge(YAW_POSITION_INIT + Command.Yaw_Position_Move,8192,0)/8192.0f)*2*NORMAL_PI);//PD
 		
 			// PID_Calc(&Wheel_Anti_Slip_pid[0],(State_Variables.X_dot - State_Variables.X_dot_meansure),0); //LK9025_Motor[0].Speed.Real*WHEEL_RADIUS
 			// PID_Calc(&Wheel_Anti_Slip_pid[1],(State_Variables.X_dot + State_Variables.X_dot_meansure),0);
 			
 		}
+//		else
+//		{
+//			Leg[LEFT].U[0] = 0;
+//			Leg[RIGHT].U[0] = 0;
+//			Balance_Yaw_Position_pid.Output = 0;
+//			
+//		}
+			
 		
 		Leg_Control_Cacl();
 		//PID_Calc(&Leg_theta_Harmonize_pid[1],Leg[LEFT].theta - Leg[RIGHT].theta ,0);
@@ -365,7 +345,7 @@ void Odometry_Update(Leg_t* lp, Leg_t* rp,State_Val_t* state,LK9025_Motor_t* lw,
 //	// //在机器人直立后对速度进行积分求得车体位移，之后会改为速度低于阈值后的速度积分项
 //	// //据现在的测试结果，在全部运动状态下都进行积分会导致加速度计在激烈运动下的误差被累计，导致机器人运动稳定性下降
 //	 	state->X = state->X + state->X_dot * dt;
-	if(Robot_Status.Body.Body_Upright_Status == YES ) //&& Func_Abs(State_Variables.X_dot) <= 0.2
+	if(Robot_Status.Body.Body_Upright_Status == YES) //&& Func_Abs(State_Variables.X_dot) <= 0.2
 		state->X = state->X + state->X_dot * dt;
 	else
 		state->X = 0;
@@ -442,7 +422,7 @@ void State_Variables_Update(State_Val_t* state , float dt)
 		}
 	}else
 		state->target_Height = 0;
-	Func_Ramp((float)(-Command.Vx * 10),&Command.Vx_step,2);
+	Func_FRamp((float)(-Command.Vx * 10.0f),&Command.Vx_step,2.0f);
 	state->target_X_dot = Command.Vx_step * 0.001f;
 	
 	//当机器人实际速度小于阈值时开启位移设定值的计算，与位移反馈值的计算同步进行
@@ -459,7 +439,7 @@ void State_Variables_Update(State_Val_t* state , float dt)
 
 void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status)
 {
-	if(leg->P <=35 && robot_status->Body.Body_Upright_Status == YES && leg->L0 > (L0_LOW+10)) //触地不良时关闭轮毂输出，可考虑改为根据触地力进行动态调整的限幅
+	if(leg->P <=CONTACT_F_MIN && robot_status->Body.Body_Upright_Status == YES && leg->L0 > (L0_LOW +30)) //触地不良时关闭轮毂输出，可考虑改为根据触地力进行动态调整的限幅
 		leg->U[0] = 0;
 	else
 	{
@@ -473,12 +453,14 @@ void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status)
 	
 	}
 
-	//if(robot_status->Body.Body_Upright_Status == YES)
+	if(robot_status->Body.Body_Upright_Status == YES)
 	{
-		if(leg->P<=35 && leg->L0 > (L0_LOW+10))//腿触地不良时保持腿垂直于水平方向
+		if(leg->P<=CONTACT_F_MIN && leg->L0 > (L0_LOW +30))//腿触地不良时保持腿垂直于水平方向
 		{
-		leg->U[1]= (a21[0] * state->leg_len_pow3 +a21[1] * state->leg_len_pow2 + a21[2] * state->leg_length + a21[3]) * (state ->target_Theta-leg->theta)/
-            +(a22[0] * state->leg_len_pow3 +a22[1] * state->leg_len_pow2 + a22[2] * state->leg_length + a22[3]) * (-leg->theta_dot_lpf);
+		leg->U[1]=((a21[0] * state->leg_len_pow3 +a21[1] * state->leg_len_pow2 + a21[2] * state->leg_length + a21[3]) * (state ->target_Theta - leg->theta)/
+            +(a22[0] * state->leg_len_pow3 +a22[1] * state->leg_len_pow2 + a22[2] * state->leg_length + a22[3]) * (- leg->theta_dot_lpf));
+			
+			
 		}
 		else
 		{	
@@ -517,8 +499,10 @@ float Leg_Theta0_Limit(Leg_t* leg)
 
 void Leg_Control_Cacl(void)
 {
-	PID_Calc(&L0_pid[0],Leg[0].L0,State_Variables.target_Leg_Length[0] - Leg_ROLL_Compensate_pid[1].Output);
-	PID_Calc(&L0_pid[1],Leg[1].L0,State_Variables.target_Leg_Length[1] + Leg_ROLL_Compensate_pid[1].Output);
+	Func_FRamp(State_Variables.target_Leg_Length[0],&(State_Variables.target_Leg_Length_Step[0]),10.0f);
+	PID_Calc(&L0_pid[0],Leg[0].L0,State_Variables.target_Leg_Length_Step[0] - Leg_ROLL_Compensate_pid[1].Output);
+	Func_FRamp(State_Variables.target_Leg_Length[1],&(State_Variables.target_Leg_Length_Step[1]),10.0f);
+	PID_Calc(&L0_pid[1],Leg[1].L0,State_Variables.target_Leg_Length_Step[1] + Leg_ROLL_Compensate_pid[1].Output);
 	
 	PID_Calc(&Leg_theta_Harmonize_pid[0],Leg[LEFT].theta - Leg[RIGHT].theta ,0);
 	PID_Calc(&Leg_ROLL_Compensate_pid[0],Ins_Data.Roll,State_Variables.target_Roll);

@@ -4,7 +4,7 @@
 typedef struct              
 {  
     int16_t Vx;	
-	int16_t Vx_step;//移动速度设定值的斜坡值
+	float Vx_step;//移动速度设定值的斜坡值
 	int16_t Yaw_Position_Move;
 	float SpeedZoom;//移动速度缩放系数，用于调整移速设定值的数值范围
 	uint8_t Chassis_Power_Switch;//底盘开关控制位

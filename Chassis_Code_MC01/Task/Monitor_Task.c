@@ -42,6 +42,8 @@ void Monitor_Task(void const * argument)
 				State_Variables.X_dot_meansure = 0;
 				State_Variables.X_dot_predict = 0;
 				State_Variables.target_X = 0;
+				State_Variables.target_Leg_Length[0] = L0_LOW;
+				State_Variables.target_Leg_Length[1] = L0_LOW;
 				Leg[LEFT].U[1] = 0;
 				Leg[RIGHT].U[1] = 0;
 				Leg[LEFT].Tp = 0;
@@ -76,7 +78,7 @@ void Robot_Fall_Detect(void)
 	if(Robot_Status.Body.Body_Upright_Status == YES)
 	{
 		
-		if((Ins_Data.Pitch < -0.28f) ||(Ins_Data.Pitch > 0.28f))
+		if((Ins_Data.Pitch < -0.35f) ||(Ins_Data.Pitch > 0.35f))
 		{
 			if(Status_Counter [1]!=1)//确认定时器未被启动
 			{
@@ -91,7 +93,7 @@ void Robot_Fall_Detect(void)
 			Status_Counter [1] = 0;
 		}
 		
-		if(Status_Counter [0] > 200)
+		if(Status_Counter [0] > 100)
 			{
 				Robot_Status.Body.Body_Upright_Status = NO;//将车体直立状态位设为NO
 				State_Variables.X = 0;
@@ -107,6 +109,8 @@ void Robot_Fall_Detect(void)
 				PID_Clear(&Balance_Yaw_Position_pid);
 				PID_Clear(&Balance_Yaw_Speed_pid);
 				PID_Clear(&Leg_theta_Harmonize_pid[0]);
+				State_Variables.target_Leg_Length_Step[0] = L0_LOW;
+				State_Variables.target_Leg_Length_Step[1] = L0_LOW;
 				Robot_Status.Param_Switch = 1;
 				Status_Counter [0] = 0;//清空计时器
 				Status_Counter [1] = 0;
@@ -116,7 +120,7 @@ void Robot_Fall_Detect(void)
 	if(Robot_Status.Body.Body_Upright_Status == NO)
 	{
 		
-		if((Ins_Data.Pitch > -0.05f) && (Ins_Data.Pitch < 0.05f))
+		if((Ins_Data.Pitch > -0.15f) && (Ins_Data.Pitch < 0.15f))
 		{
 			if(Status_Counter [1]!=1)//确认定时器未被启动
 			{
@@ -131,7 +135,7 @@ void Robot_Fall_Detect(void)
 			Status_Counter [1] = 0;
 		}
 		
-		if(Status_Counter [0]> 300)
+		if(Status_Counter [0]> 200)
 		{
 			Robot_Status.Body.Body_Upright_Status = YES;//将车体直立状态位设为YES
 			HAL_TIM_Base_Stop_IT(&htim5);//关闭计时器

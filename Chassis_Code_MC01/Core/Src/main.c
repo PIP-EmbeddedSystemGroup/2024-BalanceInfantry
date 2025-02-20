@@ -91,7 +91,8 @@ void User_Init(void)
   Robot_Status.Gimbal.Gimbal_Reposition_Status = NO;
   Robot_Status.INS.INS_Init_Status = NO;
   Robot_Status.INS.INS_Fail_Status = NO;
-
+	State_Variables.target_Leg_Length_Step[0] = L0_LOW;
+	State_Variables.target_Leg_Length_Step[1] = L0_LOW;
 
 //  SpinTop.Speed = ROTATE_NORMAL_SPEED;
 //	Command.SpeedMinish = 1;
@@ -102,17 +103,21 @@ void User_Init(void)
 	//注意！！！！！！
 	//积分范围只有在位置式PID计算的时候起作用 
 		//底盘电机
-	PID_Init(&Balance_Yaw_Position_pid,0.1,0,20.0,2.0f,0,50,10000,200,0.05f,POSITIONAL);//底盘跟随PD
+//	PID_Init(&Balance_Yaw_Position_pid,10,0,900,6.0f,0,50,10000,200,0.05f,POSITIONAL);//底盘跟随PD
+	PID_Init(&Balance_Yaw_Position_pid,10,0,900,6.0f,0,50,10000,200,0.05f,POSITIONAL);//底盘跟随PD
 	//PID_Init(&Balance_Yaw_Speed_pid,10,0,0,5,0,0,3,0,POSITIONAL);
-	PID_Init(&Leg_theta_Harmonize_pid[0],50,0,10,2.5,0,0.05,2,1,0.001f,POSITIONAL);//关节电机抗劈叉PD
+	PID_Init(&Leg_theta_Harmonize_pid[0],10,0,0,10,0,0.05,2,1,0.001f,POSITIONAL);//关节电机抗劈叉PD
 	//PID_Init(&Leg_theta_Harmonize_pid[1],0,0,0,10,0,0,4,0,POSITIONAL);//轮毂电机抗劈叉PD
-	PID_Init(&Leg_ROLL_Compensate_pid[0],200,0,250,80,0,0,3.14,0,0.05f,POSITIONAL);
+//	PID_Init(&Leg_ROLL_Compensate_pid[0],500,0,1000,60,0,0,3.14,0,0.05f,POSITIONAL);
+	PID_Init(&Leg_ROLL_Compensate_pid[0],200,0,500,60,0,0,3.14,0,0.05f,POSITIONAL);
 	PID_Init(&Leg_ROLL_Compensate_pid[1],50.0f,0.2,150,30,0,0.05f,3.14,15.0f,0.05f,POSITIONAL);
-	PID_Init(&L0_pid[0],1.5f,0.0f,40,40,0,3,360,5.0f,0.05f,POSITIONAL);//腿长控制
-	PID_Init(&L0_pid[1],1.5f,0.0f,40,40,0,3,360,5.0f,0.05f,POSITIONAL);
+	PID_Init(&L0_pid[0],0.8f,0.0f,150,40,0,3,360,5.0f,0.05f,POSITIONAL);//腿长控制
+	PID_Init(&L0_pid[1],0.8f,0.0f,150,40,0,3,360,5.0f,0.05f,POSITIONAL);
 	PID_Init(&Wheel_Anti_Slip_pid[0],1.0f,0.0f,0,3,0,0,10,0,0.05f,POSITIONAL);
 	PID_Init(&Wheel_Anti_Slip_pid[1],1.0f,0.0f,0,3,0,0,10,0,0.05f,POSITIONAL);
-	 PID_Init(&TempCtrl_pid, 800, 0.02, 5.0f, 600, 0, 0, 100, 600,0.05, POSITIONAL);
+	PID_Init(&TempCtrl_pid, 800, 0.02, 5.0f, 600, 0, 0, 100, 600,0.05, POSITIONAL);
+  PID_Init(&Wheel_Damping_pid[0], 0.2f, 0.0f, 0.0f, 2, 0, 0, 10, 0, 0.05f, POSITIONAL);
+  PID_Init(&Wheel_Damping_pid[1], 0.2f, 0.0f, 0.0f, 2, 0, 0, 10, 0, 0.05f, POSITIONAL);
 }
 
 void A1_Init_Left(void)
