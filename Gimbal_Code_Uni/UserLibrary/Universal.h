@@ -31,5 +31,6 @@ int AngleWrap(int val, int max);
 float AngleWrapF(float val, float max);
 int AngleDiff(int a, int b, int max);
 float AngleDiffF(float a, float b, float max);
+void HanningWindow_Init(float* out, int n);
 
 #endif

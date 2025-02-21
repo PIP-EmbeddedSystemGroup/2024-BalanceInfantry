@@ -67,7 +67,7 @@ typedef struct
 
 void NUC_Init(void);
 void NUC_SendConfig(void);
-void NUC_RxCallback(void);
+void NUC_RxCallback(int isFromUart);
 
 extern uint8_t NucRxBuf[32];
 extern NUC_t NUC;

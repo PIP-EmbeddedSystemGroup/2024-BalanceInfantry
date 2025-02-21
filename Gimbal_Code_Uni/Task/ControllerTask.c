@@ -183,9 +183,9 @@ void Controller_MouseKeyboard(void)
 
     float MoveFB = 0, MoveLR = 0;
     if (Key_Update(&Keyboard.W) == KEY_PRESSED)
-        MoveFB += CHASSIS_SPEED * 0.5f;
+        MoveFB += CHASSIS_SPEED * 0.3f;
     if (Key_Update(&Keyboard.S) == KEY_PRESSED)
-        MoveFB += -CHASSIS_SPEED * 0.5f;
+        MoveFB += -CHASSIS_SPEED * 0.3f;
     // if (Key_Update(&Keyboard.A) == KEY_PRESSED)
     //     MoveLR += CHASSIS_SPEED * 0.5f;
     // if (Key_Update(&Keyboard.D) == KEY_PRESSED)

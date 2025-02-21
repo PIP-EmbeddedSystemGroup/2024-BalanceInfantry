@@ -68,3 +68,12 @@ float AngleDiffF(float a, float b, float max)
         err += max;
     return err;
 }
+
+/// @brief 生成汉宁窗
+/// @param out  输出
+/// @param n    长度
+void HanningWindow_Init(float* out, int n)
+{
+    for (int i = 0; i < n; i++)
+        out[i] = 0.5f - 0.5f * arm_cos_f32(2 * PI *  i / (n - 1));
+}

@@ -10,7 +10,7 @@
 
 #include "UniversalPID.h"
 
-#define VISION_FFT_LEN 128
+#define VISION_FFT_LEN 128  //用来做频域分析的数据长度 实际计算时会继续补零
 
 typedef enum
 {
@@ -32,14 +32,16 @@ typedef struct
 
     struct
     {
-        float Angle;        //目标方位角
+        float Angle;        //目标瞄准点方位角
+        float AngleRaw;     //目标装甲板方位角
         float AngularSpeed; //目标角速度 rad/s
         KalmanFilter1st_t AngularSpeedFilter;
 
         arm_rfft_fast_instance_f32 FFT;
+        float HanningWindow[VISION_FFT_LEN];
         float Queue[VISION_FFT_LEN];
         int QueueIndex;
-        float FreqMag[VISION_FFT_LEN / 2];
+        float FreqMag[32];
 
         float Freq;
 

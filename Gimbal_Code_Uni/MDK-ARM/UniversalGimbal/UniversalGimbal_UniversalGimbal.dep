@@ -209,7 +209,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -218,7 +218,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/tim.h)(0x6785FEA0)
@@ -233,7 +233,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -241,11 +241,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (../Core/Src/dma.c)(0x67127020)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\dma.o --omf_browse universalgimbal\dma.crf --depend universalgimbal\dma.d)
@@ -362,7 +362,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x65A4E1D0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x65A4E1D0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x65A4E1D0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x65A4E1D0)
-F (../Core/Src/usart.c)(0x67B2045D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\usart.o --omf_browse universalgimbal\usart.crf --depend universalgimbal\usart.d)
+F (../Core/Src/usart.c)(0x67B8AE22)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\usart.o --omf_browse universalgimbal\usart.crf --depend universalgimbal\usart.d)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/main.h)(0x6785FEA1)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x65A4E1CF)
@@ -418,7 +418,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -427,7 +427,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/can.h)(0x67AEFB90)
 I (../Core/Inc/tim.h)(0x6785FEA0)
@@ -442,7 +442,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -450,11 +450,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (../Core/Src/stm32f4xx_it.c)(0x67B34FC1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\stm32f4xx_it.o --omf_browse universalgimbal\stm32f4xx_it.crf --depend universalgimbal\stm32f4xx_it.d)
@@ -622,7 +622,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -632,7 +632,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -648,7 +648,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -656,14 +656,14 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
-F (..\Task\ControllerTask.c)(0x67B3F025)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\controllertask.o --omf_browse universalgimbal\controllertask.crf --depend universalgimbal\controllertask.d)
+F (..\Task\ControllerTask.c)(0x67B8B65E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\controllertask.o --omf_browse universalgimbal\controllertask.crf --depend universalgimbal\controllertask.d)
 I (../Core/Inc/header.h)(0x6785FF01)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x65A4E1CF)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x670DE7BE)
@@ -717,7 +717,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -727,7 +727,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -743,7 +743,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -751,11 +751,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\Task\InertialTask.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\inertialtask.o --omf_browse universalgimbal\inertialtask.crf --depend universalgimbal\inertialtask.d)
@@ -812,7 +812,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -822,7 +822,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -838,7 +838,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -846,11 +846,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\Task\DebugTask.c)(0x67AEEC7D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\debugtask.o --omf_browse universalgimbal\debugtask.crf --depend universalgimbal\debugtask.d)
@@ -907,7 +907,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -917,7 +917,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -933,7 +933,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -941,11 +941,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\Task\BoardCommTask.c)(0x67B4090E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\boardcommtask.o --omf_browse universalgimbal\boardcommtask.crf --depend universalgimbal\boardcommtask.d)
@@ -1002,7 +1002,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -1012,7 +1012,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -1028,7 +1028,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -1036,14 +1036,14 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
-F (..\Task\GimbalTask.c)(0x67B40704)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\gimbaltask.o --omf_browse universalgimbal\gimbaltask.crf --depend universalgimbal\gimbaltask.d)
+F (..\Task\GimbalTask.c)(0x67B40ADD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\gimbaltask.o --omf_browse universalgimbal\gimbaltask.crf --depend universalgimbal\gimbaltask.d)
 I (../Core/Inc/header.h)(0x6785FF01)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x65A4E1CF)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x670DE7BE)
@@ -1097,7 +1097,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -1107,7 +1107,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -1123,7 +1123,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -1131,11 +1131,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\Task\ShootingTask.c)(0x67B3FE3A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\shootingtask.o --omf_browse universalgimbal\shootingtask.crf --depend universalgimbal\shootingtask.d)
@@ -1192,7 +1192,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -1202,7 +1202,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -1218,7 +1218,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -1226,14 +1226,14 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
-F (..\Task\VisionTask.c)(0x67B333C5)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\visiontask.o --omf_browse universalgimbal\visiontask.crf --depend universalgimbal\visiontask.d)
+F (..\Task\VisionTask.c)(0x67B8ACA0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\visiontask.o --omf_browse universalgimbal\visiontask.crf --depend universalgimbal\visiontask.d)
 I (../Core/Inc/header.h)(0x6785FF01)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x65A4E1CF)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x670DE7BE)
@@ -1287,7 +1287,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -1297,7 +1297,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -1313,7 +1313,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -1321,11 +1321,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\Task\FusionInsTask.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\fusioninstask.o --omf_browse universalgimbal\fusioninstask.crf --depend universalgimbal\fusioninstask.d)
@@ -1382,7 +1382,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -1392,7 +1392,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -1408,7 +1408,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -1416,11 +1416,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (../USB_DEVICE/App/usb_device.c)(0x6718945A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\usb_device.o --omf_browse universalgimbal\usb_device.crf --depend universalgimbal\usb_device.d)
@@ -1518,7 +1518,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
 I (../USB_DEVICE/App/usbd_desc.h)(0x6718945B)
-F (../USB_DEVICE/App/usbd_cdc_if.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\usbd_cdc_if.o --omf_browse universalgimbal\usbd_cdc_if.crf --depend universalgimbal\usbd_cdc_if.d)
+F (../USB_DEVICE/App/usbd_cdc_if.c)(0x67B8ADC6)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\usbd_cdc_if.o --omf_browse universalgimbal\usbd_cdc_if.crf --depend universalgimbal\usbd_cdc_if.d)
 I (../USB_DEVICE/App/usbd_cdc_if.h)(0x6718945B)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
@@ -1582,7 +1582,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -1591,14 +1591,14 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
 I (../Core/Inc/tim.h)(0x6785FEA0)
 I (../Core/Inc/spi.h)(0x670DE7BE)
 I (../USB_DEVICE/App/usb_device.h)(0x6718945A)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -1606,11 +1606,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (../USB_DEVICE/Target/usbd_conf.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\usbd_conf.o --omf_browse universalgimbal\usbd_conf.crf --depend universalgimbal\usbd_conf.d)
@@ -2505,7 +2505,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -2515,7 +2515,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -2531,7 +2531,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -2539,11 +2539,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\ExHardware\RC_VTM.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\rc_vtm.o --omf_browse universalgimbal\rc_vtm.crf --depend universalgimbal\rc_vtm.d)
@@ -2600,7 +2600,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -2610,7 +2610,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -2626,7 +2626,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -2634,11 +2634,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\ExHardware\Chassis.c)(0x67B331BA)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\chassis.o --omf_browse universalgimbal\chassis.crf --depend universalgimbal\chassis.d)
@@ -2695,7 +2695,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -2705,7 +2705,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -2721,7 +2721,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -2729,11 +2729,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\ExHardware\UniversalMotor.c)(0x6780F344)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\universalmotor.o --omf_browse universalgimbal\universalmotor.crf --depend universalgimbal\universalmotor.d)
@@ -2790,7 +2790,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -2800,7 +2800,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -2816,7 +2816,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -2824,11 +2824,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\ExHardware\DM4310.c)(0x6780F238)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\dm4310.o --omf_browse universalgimbal\dm4310.crf --depend universalgimbal\dm4310.d)
@@ -2885,7 +2885,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -2895,7 +2895,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -2911,7 +2911,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -2919,11 +2919,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\ExHardware\DjiMotor.c)(0x6780F544)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\djimotor.o --omf_browse universalgimbal\djimotor.crf --depend universalgimbal\djimotor.d)
@@ -2980,7 +2980,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -2990,7 +2990,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -3006,7 +3006,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -3014,14 +3014,14 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
-F (..\ExHardware\NUC.c)(0x67B333D9)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\nuc.o --omf_browse universalgimbal\nuc.crf --depend universalgimbal\nuc.d)
+F (..\ExHardware\NUC.c)(0x67B8AF58)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\nuc.o --omf_browse universalgimbal\nuc.crf --depend universalgimbal\nuc.d)
 I (../Core/Inc/header.h)(0x6785FF01)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x65A4E1CF)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x670DE7BE)
@@ -3075,7 +3075,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -3085,7 +3085,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -3101,7 +3101,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -3109,11 +3109,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\ExHardware\Misc.c)(0x6785FFCD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\misc.o --omf_browse universalgimbal\misc.crf --depend universalgimbal\misc.d)
@@ -3170,7 +3170,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -3180,7 +3180,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -3196,7 +3196,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -3204,11 +3204,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\ExHardware\BMI088\BMI088driver.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\bmi088driver.o --omf_browse universalgimbal\bmi088driver.crf --depend universalgimbal\bmi088driver.d)
@@ -3615,7 +3615,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x65A4E1D0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x65A4E1D0)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-F (..\UserLibrary\Universal.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\universal.o --omf_browse universalgimbal\universal.crf --depend universalgimbal\universal.d)
+F (..\UserLibrary\Universal.c)(0x67B8ADFC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\universal.o --omf_browse universalgimbal\universal.crf --depend universalgimbal\universal.d)
 I (../Core/Inc/header.h)(0x6785FF01)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x65A4E1CF)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x670DE7BE)
@@ -3669,7 +3669,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -3679,7 +3679,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -3695,7 +3695,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -3703,11 +3703,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\UserLibrary\UniversalPID.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\universalpid.o --omf_browse universalgimbal\universalpid.crf --depend universalgimbal\universalpid.d)
@@ -3764,7 +3764,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -3774,7 +3774,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -3790,7 +3790,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -3798,11 +3798,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\UserLibrary\UniversalFilter.c)(0x67AEF312)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\universalfilter.o --omf_browse universalgimbal\universalfilter.crf --depend universalgimbal\universalfilter.d)
@@ -3859,7 +3859,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -3869,7 +3869,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -3885,7 +3885,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -3893,11 +3893,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\UserLibrary\KalmanFilterInertial.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\kalmanfilterinertial.o --omf_browse universalgimbal\kalmanfilterinertial.crf --depend universalgimbal\kalmanfilterinertial.d)
@@ -3954,7 +3954,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -3964,7 +3964,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -3980,7 +3980,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -3988,11 +3988,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\UserLibrary\QuaternionEKF.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\quaternionekf.o --omf_browse universalgimbal\quaternionekf.crf --depend universalgimbal\quaternionekf.d)
@@ -4049,7 +4049,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -4059,7 +4059,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -4075,7 +4075,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -4083,11 +4083,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\UserLibrary\MouseKeyboard.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\mousekeyboard.o --omf_browse universalgimbal\mousekeyboard.crf --depend universalgimbal\mousekeyboard.d)
@@ -4144,7 +4144,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -4154,7 +4154,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -4170,7 +4170,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -4178,11 +4178,11 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\UserLibrary\FusionKF.c)(0x6721D9DD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\fusionkf.o --omf_browse universalgimbal\fusionkf.crf --depend universalgimbal\fusionkf.d)
@@ -4239,7 +4239,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65A4E1D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65A4E1D4)
 I (../Middlewares/ST/ARM/DSP/Inc/arm_math.h)(0x65B0AF57)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (../../RobotConfig.h)(0x67B40853)
+I (../../RobotConfig.h)(0x67B8B65A)
 I (../ExHardware/RC_DBUS.h)(0x6721D9DD)
 I (../ExHardware/RC_VTM.h)(0x6721D9DD)
 I (../ExHardware/Chassis.h)(0x6721D9DD)
@@ -4249,7 +4249,7 @@ I (../ExHardware/UniversalMotor.h)(0x6780F656)
 I (../UserLibrary/UniversalPID.h)(0x6721D9DD)
 I (../ExHardware/DjiMotor.h)(0x6780F267)
 I (../ExHardware/DM4310.h)(0x6721D9DD)
-I (../ExHardware/NUC.h)(0x67A9C2FC)
+I (../ExHardware/NUC.h)(0x67B8AC88)
 I (../ExHardware/Misc.h)(0x6785FFF0)
 I (../Core/Inc/usart.h)(0x670DE7BE)
 I (../Core/Inc/can.h)(0x67AEFB90)
@@ -4265,7 +4265,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x65A4E1
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x65A4E1D1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x65A4E1D1)
-I (../UserLibrary/Universal.h)(0x6787AAB7)
+I (../UserLibrary/Universal.h)(0x67B8AE0A)
 I (../UserLibrary/UniversalFilter.h)(0x67AEEB47)
 I (../UserLibrary/MouseKeyboard.h)(0x6721D9DD)
 I (../UserLibrary/QuaternionEKF.h)(0x6721D9DD)
@@ -4273,17 +4273,17 @@ I (../UserLibrary/KalmanFilterInertial.h)(0x6721D9DD)
 I (../UserLibrary/FusionKF.h)(0x6721D9DD)
 I (../Task/DaemonTask.h)(0x6721D9DD)
 I (../Task/ControllerTask.h)(0x67B354F7)
-I (../Task/VisionTask.h)(0x67AEEB88)
+I (../Task/VisionTask.h)(0x67B8ADDA)
 I (../Task/InertialTask.h)(0x6721D9DD)
 I (../Task/DebugTask.h)(0x6721D9DD)
 I (../Task/BoardCommTask.h)(0x6721D9DD)
-I (../Task/GimbalTask.h)(0x67B3F2FD)
+I (../Task/GimbalTask.h)(0x67B40AE1)
 I (../Task/ShootingTask.h)(0x67B1F572)
 I (../Task/FusionInsTask.h)(0x6721D9DD)
 F (..\Middlewares\ST\ARM\DSP\Lib\arm_cortexM4lf_math.lib)(0x65B0AF57)()
 F (..\Drivers\CMSIS\DSP\Source\TransformFunctions\arm_rfft_fast_init_f32.c)(0x65A4E1CF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\arm_rfft_fast_init_f32.o --omf_browse universalgimbal\arm_rfft_fast_init_f32.crf --depend universalgimbal\arm_rfft_fast_init_f32.d)
-I (..\Drivers\CMSIS\DSP\Include\dsp/transform_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\arm_math_types.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/transform_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_math_types.h)(0x65A4E1CF)
 I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65A4E1CF)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65A4E1CF)
@@ -4291,16 +4291,16 @@ I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\math.h)(0x5CEB79D6)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\float.h)(0x5CEB79E2)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\limits.h)(0x5CEB79D6)
-I (..\Drivers\CMSIS\DSP\Include\arm_math_memory.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/none.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/utils.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/basic_math_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/complex_math_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/fast_math_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\arm_common_tables.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_math_memory.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/none.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/utils.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/basic_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/complex_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/fast_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_common_tables.h)(0x65A4E1CF)
 F (..\Drivers\CMSIS\DSP\Source\TransformFunctions\arm_rfft_fast_f32.c)(0x65A4E1CF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\arm_rfft_fast_f32.o --omf_browse universalgimbal\arm_rfft_fast_f32.crf --depend universalgimbal\arm_rfft_fast_f32.d)
-I (..\Drivers\CMSIS\DSP\Include\dsp/transform_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\arm_math_types.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/transform_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_math_types.h)(0x65A4E1CF)
 I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65A4E1CF)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65A4E1CF)
@@ -4308,15 +4308,15 @@ I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\math.h)(0x5CEB79D6)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\float.h)(0x5CEB79E2)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\limits.h)(0x5CEB79D6)
-I (..\Drivers\CMSIS\DSP\Include\arm_math_memory.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/none.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/utils.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/basic_math_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/complex_math_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/fast_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_math_memory.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/none.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/utils.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/basic_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/complex_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/fast_math_functions.h)(0x65A4E1CF)
 F (..\Drivers\CMSIS\DSP\Source\TransformFunctions\arm_cfft_init_f32.c)(0x65A4E1CF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/ARM/DSP/Inc -I ../../ -I ../Task -I ../UserLibrary -I ../ExHardware -I ../ExHardware/BMI088 -I ../Drivers/CMSIS/DSP/Include-I.\RTE\_UniversalGimbal-IC:\Users\17494\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\17494\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o universalgimbal\arm_cfft_init_f32.o --omf_browse universalgimbal\arm_cfft_init_f32.crf --depend universalgimbal\arm_cfft_init_f32.d)
-I (..\Drivers\CMSIS\DSP\Include\dsp/transform_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\arm_math_types.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/transform_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_math_types.h)(0x65A4E1CF)
 I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65A4E1CF)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65A4E1CF)
@@ -4324,12 +4324,12 @@ I (D:\Programs\Keil_mdk\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\math.h)(0x5CEB79D6)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\float.h)(0x5CEB79E2)
 I (D:\Programs\Keil_mdk\ARM\ARMCC\include\limits.h)(0x5CEB79D6)
-I (..\Drivers\CMSIS\DSP\Include\arm_math_memory.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/none.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/utils.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/basic_math_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/complex_math_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\dsp/fast_math_functions.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\arm_common_tables.h)(0x65A4E1CF)
-I (..\Drivers\CMSIS\DSP\Include\arm_const_structs.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_math_memory.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/none.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/utils.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/basic_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/complex_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/dsp/fast_math_functions.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_common_tables.h)(0x65A4E1CF)
+I (../Drivers/CMSIS/DSP/Include/arm_const_structs.h)(0x65A4E1CF)
 F (../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4l_math.lib)(0x65B0AF57)()

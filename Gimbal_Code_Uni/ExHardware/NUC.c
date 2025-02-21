@@ -4,8 +4,8 @@
  * @authors     北工大PIP战队 樊郡捷
  * @version     v1.0
  * @date        2024-10-24
- * @details     
- */
+ * @details
+*/
 
 #include "header.h"
 
@@ -46,7 +46,7 @@ void NUC_SendConfig(void)
 void NUC_RC_RxCallback(void)
 {
     uint32_t NowTick = HAL_GetTick();
-    
+
     if (NowTick - RC_VTM.LastOnlineTick > 100)
     {
         NUC.RC.Mouse.X = NucRxBuf[22] | (NucRxBuf[23] << 8);	//Mouse X axis
@@ -83,7 +83,7 @@ void NUC_RC_RxCallback(void)
     ChassisBoard_SendRcVision();
 }
 
-void NUC_RxCallback(void)
+void NUC_RxCallback(int isFromUart)
 {
     int FrameHeaderOffset = 0;
     uint32_t NowTick = HAL_GetTick();
@@ -98,21 +98,25 @@ void NUC_RxCallback(void)
 
         if (FrameHeaderOffset != 0)
         {
-            // HAL_UART_DMAStop(&huart1);
-            // HAL_UART_Receive(&huart1, NucRxBuf, FrameHeaderOffset, 1);
-            // HAL_UART_Receive_DMA(&huart1, NucRxBuf, NUC_PACKAGE_LENGTH);
+            // if (isFromUart)
+            // {
+            //     HAL_UART_DMAStop(&huart1);
+            //     HAL_UART_Receive(&huart1, NucRxBuf, FrameHeaderOffset, 1);
+            //     HAL_UART_Receive_DMA(&huart1, NucRxBuf, NUC_PACKAGE_LENGTH);
+            // }
             return;
         }
     }
 
     NUC.PitchAngle = ((float)((NucRxBuf[2] << 8) | NucRxBuf[3]) - 32768) / 100;// / 180 * NORMAL_PI;
-    NUC.YawAngle = ((float)((NucRxBuf[4] << 8) | NucRxBuf[5]) - 32768) / 100;// / 180 * NORMAL_PI;
+    // NUC.YawAngle = ((float)((NucRxBuf[4] << 8) | NucRxBuf[5]) - 32768) / 100;// / 180 * NORMAL_PI;
     NUC.Distance = ((float)((NucRxBuf[6] << 8) | (NucRxBuf[7]))) / 1000.0f;
     if (NucRxBuf[8] != 0xB0 || NucRxBuf[10] != 0xD7)
         return;
     NUC.Position.X = NucRxBuf[9];
     NUC.Position.Y = NucRxBuf[11];
-    NUC.YawAngleRaw = ((float)((NucRxBuf[13] << 8) | NucRxBuf[14]) - 32768) / 100;// / 180 * NORMAL_PI;
+    NUC.YawAngleRaw = ((float)((NucRxBuf[12] << 8) | NucRxBuf[13]) - 32768) / 100;// / 180 * NORMAL_PI;
+    NUC.YawAngle = ((float)((NucRxBuf[12] << 8) | NucRxBuf[13]) - 32768) / 100;// / 180 * NORMAL_PI;
 
     if (NucRxBuf[12] == 0x9E)	//0x3B未反小陀螺 0x6D反小陀螺未发生装甲切换 0x9E反小陀螺发生装甲切换
         NUC.isTargetSpinning = SET;
