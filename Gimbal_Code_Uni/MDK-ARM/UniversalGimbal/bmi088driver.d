@@ -1,6 +1,6 @@
 universalgimbal\bmi088driver.o: ..\ExHardware\BMI088\BMI088driver.c
 universalgimbal\bmi088driver.o: ..\ExHardware\BMI088\BMI088driver.h
-universalgimbal\bmi088driver.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\bmi088driver.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 universalgimbal\bmi088driver.o: ../Core/Inc/main.h
 universalgimbal\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 universalgimbal\bmi088driver.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -16,7 +16,7 @@ universalgimbal\bmi088driver.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 universalgimbal\bmi088driver.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 universalgimbal\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 universalgimbal\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-universalgimbal\bmi088driver.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\bmi088driver.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 universalgimbal\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 universalgimbal\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 universalgimbal\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -39,4 +39,4 @@ universalgimbal\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll
 universalgimbal\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 universalgimbal\bmi088driver.o: ..\ExHardware\BMI088\BMI088reg.h
 universalgimbal\bmi088driver.o: ..\ExHardware\BMI088\BMI088Middleware.h
-universalgimbal\bmi088driver.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\math.h
+universalgimbal\bmi088driver.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\math.h

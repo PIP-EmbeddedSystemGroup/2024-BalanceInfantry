@@ -35,7 +35,7 @@ void BoardCommTask(void const* argument)
         else if (tx_switch == 2)
         {
             TxMessage.StdId = 0x207;
-            Data[0] = 1;//Command.StorageFlag;
+            Data[0] = Controller.isSpinMode; //1；
             Data[1] = 0;//Command.UIFlag;
             tx_switch = tx_switch >> 1;
         }

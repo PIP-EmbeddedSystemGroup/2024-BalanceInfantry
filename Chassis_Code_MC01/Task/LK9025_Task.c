@@ -25,7 +25,8 @@ void LK9025_Tx_Task(void const * argument)
 			LK9025_Output_Normal(-Leg[LEFT].U[0] + Balance_Yaw_Position_pid.Output , Leg[RIGHT].U[0] + Balance_Yaw_Position_pid.Output );
 		}
 		else
-			LK9025_Output_Damping();
+			//LK9025_Output_Damping();
+		    LK9025_Output_Zero();
 	}
 	
 }

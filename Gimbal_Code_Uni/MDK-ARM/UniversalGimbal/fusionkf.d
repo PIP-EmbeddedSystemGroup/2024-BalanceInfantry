@@ -7,7 +7,7 @@ universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_de
 universalgimbal\fusionkf.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 universalgimbal\fusionkf.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 universalgimbal\fusionkf.o: ../Drivers/CMSIS/Include/core_cm4.h
-universalgimbal\fusionkf.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\fusionkf.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 universalgimbal\fusionkf.o: ../Drivers/CMSIS/Include/cmsis_version.h
 universalgimbal\fusionkf.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 universalgimbal\fusionkf.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -15,7 +15,7 @@ universalgimbal\fusionkf.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 universalgimbal\fusionkf.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-universalgimbal\fusionkf.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\fusionkf.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -36,7 +36,7 @@ universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ua
 universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 universalgimbal\fusionkf.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
-universalgimbal\fusionkf.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\math.h
+universalgimbal\fusionkf.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\math.h
 universalgimbal\fusionkf.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 universalgimbal\fusionkf.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 universalgimbal\fusionkf.o: ../Core/Inc/FreeRTOSConfig.h
@@ -53,7 +53,7 @@ universalgimbal\fusionkf.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/s
 universalgimbal\fusionkf.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 universalgimbal\fusionkf.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 universalgimbal\fusionkf.o: ../Drivers/CMSIS/Include/core_cm4.h
-universalgimbal\fusionkf.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\string.h
+universalgimbal\fusionkf.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\string.h
 universalgimbal\fusionkf.o: ../../RobotConfig.h
 universalgimbal\fusionkf.o: ../ExHardware/RC_DBUS.h
 universalgimbal\fusionkf.o: ../ExHardware/RC_VTM.h
@@ -73,8 +73,8 @@ universalgimbal\fusionkf.o: ../Core/Inc/spi.h
 universalgimbal\fusionkf.o: ../USB_DEVICE/App/usb_device.h
 universalgimbal\fusionkf.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
 universalgimbal\fusionkf.o: ../USB_DEVICE/Target/usbd_conf.h
-universalgimbal\fusionkf.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdio.h
-universalgimbal\fusionkf.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdlib.h
+universalgimbal\fusionkf.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+universalgimbal\fusionkf.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 universalgimbal\fusionkf.o: ../USB_DEVICE/App/usbd_cdc_if.h
 universalgimbal\fusionkf.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
 universalgimbal\fusionkf.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h

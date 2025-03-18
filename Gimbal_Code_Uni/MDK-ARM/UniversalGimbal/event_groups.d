@@ -1,8 +1,8 @@
 universalgimbal\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-universalgimbal\event_groups.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdlib.h
+universalgimbal\event_groups.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 universalgimbal\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-universalgimbal\event_groups.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
-universalgimbal\event_groups.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\event_groups.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\event_groups.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 universalgimbal\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
 universalgimbal\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 universalgimbal\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

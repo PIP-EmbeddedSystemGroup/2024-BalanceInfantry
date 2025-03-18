@@ -14,7 +14,7 @@ function [K,Q,R] = get_k_length(leg_length)
     syms x(t) T R Iw mw M L LM theta(t) l phi(t) mp g Tp Ip IM
     syms f1 f2 f3 d_theta d_x d_phi theta0 x0 phi0 
 
-    R1=0.1;                          %驱动轮半径
+    R1=0.075;                          %驱动轮半径
     L1=leg_length/2;                  %摆杆重心到驱动轮轴距离
     LM1=leg_length/2;                 %摆杆重心到其转轴距离
     l1=0.012;                       %机体质心距离转轴距离
@@ -48,20 +48,15 @@ function [K,Q,R] = get_k_length(leg_length)
     B=subs(B,[R,L,LM,l,mw,mp,M,Iw,Ip,IM,g],[R1,L1,LM1,l1,mw1,mp1,M1,Iw1,Ip1,IM1,9.8]);
     B=double(B);
     
-    %超参数：
-    %实车参数：
-    % Q=diag([1 1 5 1000 9000 1]);%theta d_theta x d_x phi d_phi%700 1 600 200 1000 1
-    % R=[50,0;0,8];%240；25                %T Tp
-
-    % Q=diag([700 1 600 200 1000 1]);
-    % R=[240 0;0 25];
-
-    %仿真参数：
-    % Q=diag([10 30 50 10 250 1]);
-    % R=[20 0;0 3];
     
-    Q=diag([200 1 1 150 4000 1]);
-    R=diag([2.85,0.25]);
+    %模板QR值：
+    Q=diag([1 1 1 150 2000 1]);
+    R=diag([1.5,0.1]);
+    % R1= (4*leg_length) +0.1 ;
+    % R2= (-7.6*leg_length)+2.76;
+    % Q=diag([1 1 1 100 3000 1]);
+    % R=diag([R1,R2]);
+
     K=lqr(A,B,Q,R);
   
 end

@@ -1,9 +1,9 @@
 universalgimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
-universalgimbal\tasks.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdlib.h
-universalgimbal\tasks.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\string.h
+universalgimbal\tasks.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+universalgimbal\tasks.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\string.h
 universalgimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-universalgimbal\tasks.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
-universalgimbal\tasks.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\tasks.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\tasks.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 universalgimbal\tasks.o: ../Core/Inc/FreeRTOSConfig.h
 universalgimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 universalgimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

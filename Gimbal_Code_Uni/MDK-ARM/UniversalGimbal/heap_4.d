@@ -1,8 +1,8 @@
 universalgimbal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
-universalgimbal\heap_4.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdlib.h
+universalgimbal\heap_4.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 universalgimbal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-universalgimbal\heap_4.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
-universalgimbal\heap_4.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\heap_4.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\heap_4.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 universalgimbal\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
 universalgimbal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 universalgimbal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

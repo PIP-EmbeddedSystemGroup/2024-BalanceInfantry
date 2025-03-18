@@ -8,7 +8,7 @@ universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 universalgimbal\can.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 universalgimbal\can.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 universalgimbal\can.o: ../Drivers/CMSIS/Include/core_cm4.h
-universalgimbal\can.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\can.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 universalgimbal\can.o: ../Drivers/CMSIS/Include/cmsis_version.h
 universalgimbal\can.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 universalgimbal\can.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,7 +16,7 @@ universalgimbal\can.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 universalgimbal\can.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-universalgimbal\can.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\can.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -38,7 +38,7 @@ universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 universalgimbal\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 universalgimbal\can.o: ../Core/Inc/header.h
-universalgimbal\can.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\math.h
+universalgimbal\can.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\math.h
 universalgimbal\can.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 universalgimbal\can.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 universalgimbal\can.o: ../Core/Inc/FreeRTOSConfig.h
@@ -55,7 +55,7 @@ universalgimbal\can.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr
 universalgimbal\can.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 universalgimbal\can.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 universalgimbal\can.o: ../Drivers/CMSIS/Include/core_cm4.h
-universalgimbal\can.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\string.h
+universalgimbal\can.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\string.h
 universalgimbal\can.o: ../../RobotConfig.h
 universalgimbal\can.o: ../ExHardware/RC_DBUS.h
 universalgimbal\can.o: ../ExHardware/RC_VTM.h
@@ -73,8 +73,8 @@ universalgimbal\can.o: ../Core/Inc/spi.h
 universalgimbal\can.o: ../USB_DEVICE/App/usb_device.h
 universalgimbal\can.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
 universalgimbal\can.o: ../USB_DEVICE/Target/usbd_conf.h
-universalgimbal\can.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdio.h
-universalgimbal\can.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdlib.h
+universalgimbal\can.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+universalgimbal\can.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 universalgimbal\can.o: ../USB_DEVICE/App/usbd_cdc_if.h
 universalgimbal\can.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
 universalgimbal\can.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h

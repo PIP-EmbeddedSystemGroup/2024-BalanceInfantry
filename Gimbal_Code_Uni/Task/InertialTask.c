@@ -132,7 +132,7 @@ void InertialTask(void const* argument)
 {
     uint32_t PreviousWakeTime = osKernelSysTick();
 
-    const float Gravity[3] = { 0, 0, 9.81f };
+    const float Gravity[3] = { 0, 0, -9.81f };
     const float xb[3] = { 1, 0, 0 };
     const float yb[3] = { 0, 1, 0 };
     const float zb[3] = { 0, 0, 1 };
@@ -221,6 +221,10 @@ void InertialTask(void const* argument)
         Inertial.Pitch = QEKF_INERTIAL.Pitch;
         Inertial.Roll = QEKF_INERTIAL.Roll;
         Inertial.YawTotalAngle = QEKF_INERTIAL.YawTotalAngle;
+//				Inertial.Yaw = QEKF_INERTIAL.Yaw;
+//        Inertial.Pitch = QEKF_INERTIAL.Roll;
+//        Inertial.Roll = -QEKF_INERTIAL.Pitch;
+//        Inertial.YawTotalAngle = QEKF_INERTIAL.YawTotalAngle;
     }
 }
 

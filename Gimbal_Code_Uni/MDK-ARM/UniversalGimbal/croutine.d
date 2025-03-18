@@ -1,7 +1,7 @@
 universalgimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
 universalgimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-universalgimbal\croutine.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
-universalgimbal\croutine.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\croutine.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\croutine.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 universalgimbal\croutine.o: ../Core/Inc/FreeRTOSConfig.h
 universalgimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 universalgimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

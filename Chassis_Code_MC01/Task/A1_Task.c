@@ -67,14 +67,13 @@ void A1_Tx_Task(void const * argument)
 			{
                 if(Robot_Status.Body.Body_Upright_Status == YES)
                 {
-									
                     Leg_Output(&Leg[LEFT] , L0_pid[LEFT].Output +Support_F[LEFT] * arm_cos_f32(Leg[0].theta) * (1.0f + arm_sin_f32(Ins_Data.Roll)) - Leg_ROLL_Compensate_pid[0].Output , -Leg[LEFT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[0],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[0].theta),Theta0_pid[0].Output
                     Leg_Output(&Leg[RIGHT] , L0_pid[RIGHT].Output + Support_F[RIGHT] * arm_cos_f32(Leg[1].theta) * (1.0f - arm_sin_f32(Ins_Data.Roll)) + Leg_ROLL_Compensate_pid[0].Output, Leg[RIGHT].U[1] - Leg_theta_Harmonize_pid[0].Output);//&Leg[1],L0_pid[0].Output + Support_F * arm_cos_f32(Leg[1].theta),Theta0_pid[1].Output
                 }
                 else
                 {
-                    Leg_Output(&Leg[0],-10,0);
-                    Leg_Output(&Leg[1],-10,0);
+                    Leg_Output(&Leg[0],-50,0);
+                    Leg_Output(&Leg[1],-50,0);
                 }
 			}
 			

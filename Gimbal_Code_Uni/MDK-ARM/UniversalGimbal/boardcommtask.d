@@ -7,7 +7,7 @@ universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_h
 universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Include/core_cm4.h
-universalgimbal\boardcommtask.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdint.h
+universalgimbal\boardcommtask.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Include/cmsis_version.h
 universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -15,7 +15,7 @@ universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-universalgimbal\boardcommtask.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stddef.h
+universalgimbal\boardcommtask.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -36,7 +36,7 @@ universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_h
 universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 universalgimbal\boardcommtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
-universalgimbal\boardcommtask.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\math.h
+universalgimbal\boardcommtask.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\math.h
 universalgimbal\boardcommtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 universalgimbal\boardcommtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 universalgimbal\boardcommtask.o: ../Core/Inc/FreeRTOSConfig.h
@@ -53,7 +53,7 @@ universalgimbal\boardcommtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/incl
 universalgimbal\boardcommtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 universalgimbal\boardcommtask.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 universalgimbal\boardcommtask.o: ../Drivers/CMSIS/Include/core_cm4.h
-universalgimbal\boardcommtask.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\string.h
+universalgimbal\boardcommtask.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\string.h
 universalgimbal\boardcommtask.o: ../../RobotConfig.h
 universalgimbal\boardcommtask.o: ../ExHardware/RC_DBUS.h
 universalgimbal\boardcommtask.o: ../ExHardware/RC_VTM.h
@@ -73,8 +73,8 @@ universalgimbal\boardcommtask.o: ../Core/Inc/spi.h
 universalgimbal\boardcommtask.o: ../USB_DEVICE/App/usb_device.h
 universalgimbal\boardcommtask.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
 universalgimbal\boardcommtask.o: ../USB_DEVICE/Target/usbd_conf.h
-universalgimbal\boardcommtask.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdio.h
-universalgimbal\boardcommtask.o: D:\Programs\Keil_mdk\ARM\ARMCC\Bin\..\include\stdlib.h
+universalgimbal\boardcommtask.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+universalgimbal\boardcommtask.o: A:\MDK-ARM\keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 universalgimbal\boardcommtask.o: ../USB_DEVICE/App/usbd_cdc_if.h
 universalgimbal\boardcommtask.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
 universalgimbal\boardcommtask.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
