@@ -29,7 +29,7 @@ arm_matrix_instance_f32 A_inverse_Left;
 arm_matrix_instance_f32 A_inverse_Right;
 
 
-float Support_F[2] = {62.0f,62.0f};//{62.0f,62.0f}支撑力补偿，抵消机体所受重力
+float Support_F[2] = {70.0f,70.0f};//{70.0f,70.0f}支撑力补偿，抵消机体所受重力
 //float Roll_Extra_comp_p = 80.0f;
 
 static uint32_t A1_dwt_cnt = 0; 
@@ -84,10 +84,10 @@ void A1_Tx_Task(void const * argument)
 			
 			//电机输出限幅，目前限制的转子最大转矩是正负2NM，对应的输出轴最大转矩是正负18NM左右，在平地上应该是绝对够用的
 			//之后要实现跳跃和飞坡落地应该需要放宽限制
-			A1_Control[0].T =  Func_Limit(Leg[0].T0,3.0,-3.0);
-			A1_Control[1].T =  Func_Limit(Leg[0].T1,3.0,-3.0);
-			A1_Control[2].T =  Func_Limit(Leg[1].T0,3.0,-3.0);
-			A1_Control[3].T =  Func_Limit(Leg[1].T1,3.0,-3.0);
+			A1_Control[0].T =  Func_Limit(Leg[0].T0,3.5,-3.5);
+			A1_Control[1].T =  Func_Limit(Leg[0].T1,3.5,-3.5);
+			A1_Control[2].T =  Func_Limit(Leg[1].T0,3.5,-3.5);
+			A1_Control[3].T =  Func_Limit(Leg[1].T1,3.5,-3.5);
 			
 //		if(Leg[0].transmit_count % 2 == 0)//通过计数变量做分频发送
 //		{

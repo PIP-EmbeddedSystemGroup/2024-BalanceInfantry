@@ -2,7 +2,7 @@
  * @Author: 闂傚倸鍊搁悧濠囨偘婵犲洦鐓熼煫鍥ュ劜鐎氾拷 lintianlang0918@qq.com
  * @Date: 2024-03-07 19:46:25
  * @LastEditors: frozen-fire 2812643217@qq.com
- * @LastEditTime: 2025-02-21 22:24:18
+ * @LastEditTime: 2025-03-22 17:39:28
  * @FilePath: \MC-01_chassis\Task\Chassis_Task.c
  * @Description: 闂佸搫顦弲婊堟偡閿曗偓鍗遍柛娑樷看濞撹埖淇婇娑卞劌闁告艾娲幃瑙勬媴缁嬪簱鎸冮梺姹囧€ч幏锟�,闂佽崵濮村ú銊╁蓟婢舵劦鏁婇柡鍥╁Х绾鹃箖鏌ｉ姀鈺傛喗ustomMade`, 闂備胶鎳撻悘姘跺箰閸濄儲顫曢柟杈╅嚋roFileHeader闂備礁鎼悮顐﹀磿閸愯鑰块柛娑樼摠閻撯偓閻庡箍鍎卞ú銊╁几閿燂拷 闂佸搫顦弲婊呯矙閺嶎厹鈧線骞嬮悩鍐差€涢梺鍛婃寙閸涱喚鈧拷: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -64,7 +64,7 @@
 // float a25[4] = {1753.7109,-2063.0298,875.8850,-16.2438};
 // float a26[4] = {116.6211,-151.7745,72.0041,-5.0101};
 
-// //新的好参数
+// //200mm轮径，新的好参数
 // >> get_k
 //            1           0           0           0           0           0
 //            0           1           0           0           0           0
@@ -75,31 +75,18 @@
 
 //     1.5000         0
 //          0    0.1000
-float a11[4] = {-85.6247,190.0988,-171.6393,1.7090};
-float a12[4] = {35.4812,-29.5969,-12.1526,0.3255};
-float a13[4] = {-9.6588,11.6747,-5.1018,0.0476};
-float a14[4] = {-98.4245,119.5144,-52.8106,0.4658};
-float a15[4] = {205.8624,-58.1173,-87.9158,51.0655};
-float a16[4] = {13.7923,-3.2020,-7.7021,5.0357};
-float a21[4] = {1435.9877,-1382.2368,398.0509,18.2997};
-float a22[4] = {125.5407,-143.2859,57.4923,1.8566};
-float a23[4] = {13.9901,-3.6139,-6.2595,3.4993};
-float a24[4] = {143.7636,-37.5781,-64.1389,36.2215};
-float a25[4] = {2138.2226,-2581.5742,1128.9115,-17.5698};
-float a26[4] = {137.9437,-182.0126,87.7051,-6.6202};
-
-//float a11[4] = {79.8473,66.7939,-156.9339,1.2961};
-//float a12[4] = {68.0434,-56.1743,-8.6083,0.1864};
-//float a13[4] = {-6.9734,9.6371,-4.7654,0.0999};
-//float a14[4] = {-85.4930,119.3586,-59.7975,1.2192};
-//float a15[4] = {360.8769,-210.0128,-24.4562,39.9836};
-//float a16[4] = {22.6515,-12.6601,-3.5858,4.4457};
-//float a21[4] = {1978.0090,-1874.8830,568.7377,13.1775};
-//float a22[4] = {135.2983,-169.4598,77.9773,1.1665};
-//float a23[4] = {30.6135,-17.5167,-2.2459,3.3326};
-//float a24[4] = {382.6644,-220.1005,-27.3653,41.8697};
-//float a25[4] = {1296.2799,-1770.8388,871.9780,-25.6787};
-//float a26[4] = {98.0621,-150.1647,81.2129,-8.0990};
+float a11[4] = {-31.7495,163.4819,-172.2407,1.3575};
+float a12[4] = {53.5304,-41.5515,-9.8923,0.2206};
+float a13[4] = {-9.2348,11.4449,-5.1305,0.0760};
+float a14[4] = {-93.6394,116.9382,-53.0921,0.7570};
+float a15[4] = {412.6779,-202.4809,-55.9350,49.7856};
+float a16[4] = {24.8670,-10.6989,-6.3815,5.1816};
+float a21[4] = {1958.2310,-1752.5758,482.8962,15.5989};
+float a22[4] = {141.5783,-157.4349,62.7027,1.6066};
+float a23[4] = {28.6066,-13.8184,-3.9922,3.4025};
+float a24[4] = {293.6767,-142.3782,-40.8545,35.2620};
+float a25[4] = {2063.6618,-2543.9034,1138.2601,-23.9632};
+float a26[4] = {131.0173,-184.3257,92.3564,-7.3532};
 
 State_Val_t State_Variables = {0};//
 
@@ -115,22 +102,34 @@ LK9025_Motor_t LK9025_Motor[2]={0};
 Motor_t GM6020_YAW = {0};
 Leg_t Leg[2] = {0};
 
-int Jumping=0;
+
 float yaw_ddwrNwwr, yaw_p_ddwrNwwr, pitch_ddwrNwwr;
 float macc_x, macc_z;
 float u, k;
 float vel_prior, vel_measure, vel_cov;
 
+//腿部角度补偿量
 float fai_offset = 0.0f;
-float theta_offset = 0.00f;
+float theta_offset = 0.05f;
 
-float Theta_Klpf = 0.99f;
+float Theta_Klpf = 0.99f;//腿部角度低通滤波系数
 
 static uint32_t balance_dwt_cnt = 0; 
 float BalanceTask_dt = 0;
 
+
 extern float Support_F[2];
+
+int Jumping_State=0;
+int Last_Jumping_State=0;
+float jump_start_time_ = 0.0f;
+float jump_now_time_ = 0.0f;
 float Jump_F[2]={80.0f,80.0f};
+float k_jump_force = 350.0f;
+float k_jump_time = 0.15f;
+float k_retract_force = -160.0f;
+float k_retract_time = 0.15f;
+
 float acc_avg =0;
 int32_t avg_count = 3000;
 void Balance_Task(void const * argument)
@@ -160,21 +159,12 @@ void Balance_Task(void const * argument)
         
 		if(Command.Storage_Flag == 1)
 		{
-//			if(Jumping ==0)
-//				Jumping = 1;
-//			
-//			Support_F[0]+=Jump_F[0];
-//			Support_F[1]+=Jump_F[1];
 //			static float target_Phi = 0;
-//			static float target_theta = 0;
 //			Func_FRamp(-0.15,&target_Phi,0.001);
-//			Func_FRamp(-0.15,&target_theta,0.001);
 //			State_Variables.target_Phi = target_Phi;
-//			State_Variables.target_Theta = target_theta;
-			State_Variables.target_Roll = 0.4;
+//			State_Variables.target_Roll = 0.4;
+			Jumping_State = YES;
 			
-			Support_F[0]=62.0f;
-			Support_F[1]=62.0f;
 			
 		}else
 		{
@@ -187,9 +177,17 @@ void Balance_Task(void const * argument)
 //			State_Variables.target_Phi = 0;
 //			State_Variables.target_Theta = 0;
 			State_Variables.target_Roll = 0;
-			Support_F[0]=62.0f;
-			Support_F[1]=62.0f;
 			
+
+			
+		}
+		if(Jumping_State == YES)
+			Jump();
+		else
+		{
+			Support_F[0]=70.0f;
+			Support_F[1]=70.0f;
+			Leg_Control_Cacl();
 		}
 		
 		//缂佹鍓欏ú鎾愁潰閵夘垳绀夐悹渚婄磿閻ｇ睈QR闁绘ǹ鍩栭埀顑跨瀵姤锛冮崼鐔蜂粯闁告帟娉涘▍锟�
@@ -201,11 +199,13 @@ void Balance_Task(void const * argument)
 			//Balance_Yaw_Position_pid.Max_out = 2 - Func_Abs(- Balance_fai_Position_pid.Output - Balance_fai_Speed_pid.Output + (Balance_theta_Position_pid[0].Output +Balance_theta_Position_pid[1].Output)*0.5f - Wheel_Speed_pid.Output);
 //		if(Leg[0].P > CONTACT_F_MIN)//站立后再进行底盘航向角跟随
 		{
-			if(Command.Rotate_Flag == 1)
-			{
-				Balance_Yaw_Position_pid.Output = Func_Limit(80,Balance_Yaw_Position_pid.Max_out,-Balance_Yaw_Position_pid.Max_out);
-			}
-			else
+//			if(Command.Storage_Flag == 1)
+//			{
+//				PID_Calc(&Balance_Yaw_Position_pid,GM6020_YAW.Position.Real_fp32,(Func_ValueRannge(YAW_POSITION_INIT + 2048 + Command.Yaw_Position_Move,8192,0)/8192.0f)*2*NORMAL_PI);//PD
+
+//				//Balance_Yaw_Position_pid.Output = Func_Limit(1,Balance_Yaw_Position_pid.Max_out,-Balance_Yaw_Position_pid.Max_out);
+//			}
+//			else
 				//Chassis_Follow_PD_Calc(&Balance_Yaw_Position_pid,Fuzzy_PD_Param,GM6020_YAW.Position.Real_fp32,Func_ValueRannge(YAW_POSITION_INIT + Command.Yaw_Position_Move,8192,0)*0.043f);//PD
 				PID_Calc(&Balance_Yaw_Position_pid,GM6020_YAW.Position.Real_fp32,(Func_ValueRannge(YAW_POSITION_INIT + Command.Yaw_Position_Move,8192,0)/8192.0f)*2*NORMAL_PI);//PD
 		
@@ -222,7 +222,6 @@ void Balance_Task(void const * argument)
 //		}
 			
 		
-		Leg_Control_Cacl();
 		//PID_Calc(&Leg_theta_Harmonize_pid[1],Leg[LEFT].theta - Leg[RIGHT].theta ,0);
 		
 //		L9015_Output_Zero();//缂佸倷鐒﹂娑欐姜椤旂晫妲嬮柣銏犵仛濠р偓閺夊牊鎸搁崵顓㈡晬瀹€鍐閻犲洦娲滈弫锟�
@@ -608,6 +607,50 @@ void Leg_Fall_Mode(void)
 
 }
 
+void Jump(void) {
+  if (Leg[0].L0 > 130 && Leg[1].L0 > 130 &&
+      Last_Jumping_State == NO) {
+		Leg[0].L0_set = 100;
+		Leg[1].L0_set = 100;
+		PID_Calc(&L0_pid[0],Leg[0].L0,Leg[0].L0_set);
+		PID_Calc(&L0_pid[1],Leg[1].L0,Leg[1].L0_set);
+		PID_Calc(&Leg_theta_Harmonize_pid[0],Leg[LEFT].theta - Leg[RIGHT].theta ,0);
+		PID_Calc(&Leg_ROLL_Compensate_pid[0],Ins_Data.Roll,State_Variables.target_Roll);
+    Last_Jumping_State = NO;
+    return;
+  } else {
+    if (Jumping_State == YES && Last_Jumping_State == NO) {
+      jump_start_time_ = HAL_GetTick() / 1000.0f;
+    }
+
+    jump_now_time_ = HAL_GetTick() / 1000.0f;
+
+    if (fabs(jump_now_time_ - jump_start_time_) <= k_jump_time) {
+      Support_F[0] = k_jump_force;
+      Support_F[1] = k_jump_force;
+			L0_pid[0].Output = 0.0f;
+			L0_pid[1].Output = 0.0f;
+    }
+
+    jump_now_time_ = HAL_GetTick() / 1000.0f;
+    if ((jump_now_time_ - jump_start_time_ - k_jump_time) <= k_retract_time &&
+        (jump_now_time_ - jump_start_time_) > k_jump_time) {
+		Leg[0].F = k_retract_force;
+		Leg[1].F = k_retract_force;
+		Support_F[0] = k_retract_force;
+		Support_F[1] = k_retract_force;
+		L0_pid[0].Output = 0.0f;
+		L0_pid[1].Output = 0.0f;
+		Leg[0].U[0] = 0.0f;
+		Leg[1].U[0] = 0.0f;
+		Balance_Yaw_Position_pid.Output = 0;
+    }
+    if ((jump_now_time_ - jump_start_time_ - k_jump_time) > k_retract_time) {
+      Jumping_State = NO;
+    }
+    Last_Jumping_State = Jumping_State;
+  }
+}
 
 
 	
