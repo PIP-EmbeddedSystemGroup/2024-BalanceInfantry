@@ -26,6 +26,7 @@ void LK9025_Tx_Task(void const * argument)
 		}
 		else
 			LK9025_Output_Damping();
+		  //LK9025_Output_Zero();
 	}
 	
 }

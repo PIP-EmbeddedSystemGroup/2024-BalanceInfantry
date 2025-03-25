@@ -181,4 +181,4 @@ void State_Variables_Update(State_Val_t* state , float dt);
 void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status);
 void Leg_Output(Leg_t * leg,float f,float tp);
 float Leg_Theta0_Limit(Leg_t* leg);
-
+void Jump(void);

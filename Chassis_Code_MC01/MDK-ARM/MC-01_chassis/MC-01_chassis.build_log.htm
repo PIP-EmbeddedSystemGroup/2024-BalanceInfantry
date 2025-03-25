@@ -28,11 +28,32 @@ Project File Date:  02/17/2025
 *** Using Compiler 'V6.19', folder: 'A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin'
 Build target 'MC-01_chassis'
 Note: source file '..\BSP\Timers.c' - object file renamed from 'MC-01_chassis\Timers.o' to 'MC-01_chassis\timers_1.o'.
+compiling LK9025_Task.c...
+compiling A1_Task.c...
+compiling A1_Driver.c...
+compiling IMU_Task.c...
+compiling PID.c...
+../BSP/Can_Bus.c(10): warning: 'RAD_2_DEGREE' macro redefined [-Wmacro-redefined]
+#define RAD_2_DEGREE 57.2957795f    // 180/pi
+        ^
+../Task/inc\Configuration.h(41): note: previous definition is here
+#define RAD_2_DEGREE 57.2958f
+        ^
+../BSP/Can_Bus.c(11): warning: 'DEGREE_2_RAD' macro redefined [-Wmacro-redefined]
+#define DEGREE_2_RAD 0.01745329252f // pi/180
+        ^
+../Task/inc\Configuration.h(40): note: previous definition is here
+#define DEGREE_2_RAD 0.0174533f
+        ^
+2 warnings generated.
+compiling Can_Bus.c...
+compiling main.c...
+compiling Monitor_Task.c...
 compiling Balance_Task.c...
 linking...
-Program Size: Code=71648 RO-data=3656 RW-data=500 ZI-data=22628  
+Program Size: Code=71080 RO-data=3656 RW-data=476 ZI-data=22564  
 FromELF: creating hex file...
-"MC-01_chassis\MC-01_chassis.axf" - 0 Error(s), 0 Warning(s).
+"MC-01_chassis\MC-01_chassis.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -56,7 +77,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:6.0.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>
