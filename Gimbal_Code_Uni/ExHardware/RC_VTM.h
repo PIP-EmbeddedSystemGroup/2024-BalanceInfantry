@@ -43,16 +43,22 @@ typedef struct
         uint16_t Raw;
     } Key;
 
+    uint8_t CustomCtrlData[30];
+
     uint32_t LastOnlineTick;
 
+    int PackageCount;
+    int StickyCount;
+    int ErrorCount;
     int UpdateCounter;
     uint32_t LastFreqUpdateTick;
     int Freq;
 } RC_VTM_t;
 
 void RC_VTM_Init(void);
-void RC_VTM_RxCallback(void);
+void RC_VTM_RxCallback(uint8_t* rxBuf, int rxSize);
 
+extern uint8_t VtmBuf[64];
 extern RC_VTM_t RC_VTM;
 
 #endif

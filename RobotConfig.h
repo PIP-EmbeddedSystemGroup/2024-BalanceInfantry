@@ -52,7 +52,7 @@ enum RobotNumber
 #define YAW_SENSITY_PAD (120.f) // deg/s
 
 #define FEEDING_AMMO_PER_TURN 8 //拨弹盘每圈弹量
-#define SHOOTING_FREQ 5         //射击频率
+#define SHOOTING_FREQ 5        //射击频率
 
 #define VISION_CHASSIS_SPEED_SCALE 0.8f  //视觉预瞄的速度补偿系数 具体见Vision_PathPreview
 

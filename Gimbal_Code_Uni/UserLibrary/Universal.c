@@ -1,10 +1,10 @@
 /**
- * @attention   采用GB2312字符集编码
+ * @attention   采用UTF-8字符集编码
  * @brief       通用函数库
  * @authors     北工大PIP战队 樊郡捷
- * @version     v1.0
- * @date        2024-10-14
- * @details     
+ * @version     v1.1
+ * @date        2025-02-27
+ * @details
  */
 
 #include "header.h"
@@ -75,5 +75,31 @@ float AngleDiffF(float a, float b, float max)
 void HanningWindow_Init(float* out, int n)
 {
     for (int i = 0; i < n; i++)
-        out[i] = 0.5f - 0.5f * arm_cos_f32(2 * PI *  i / (n - 1));
+        out[i] = 0.5f - 0.5f * arm_cos_f32(2 * PI * i / (n - 1));
+}
+
+void AngleUnwrap_Init(AngleUnwrap_t* angleUnwrap, float value, float circle)
+{
+    angleUnwrap->Value = value;
+    angleUnwrap->Unwraped = value;
+    angleUnwrap->PrevVal = value;
+    angleUnwrap->Circle = circle;
+}
+
+float AngleUnwrap_Update(AngleUnwrap_t* angleUnwrap, float value)
+{
+    angleUnwrap->Value = value;
+    float DeltaAngle = angleUnwrap->Value - angleUnwrap->PrevVal;
+    angleUnwrap->PrevVal = value;
+
+    //过零点时计算劣弧
+    float HalfCircle = angleUnwrap->Circle / 2;
+    if (DeltaAngle > HalfCircle)
+        DeltaAngle -= angleUnwrap->Circle;
+    else if (DeltaAngle < -HalfCircle)
+        DeltaAngle += angleUnwrap->Circle;
+
+    angleUnwrap->Unwraped += DeltaAngle;
+
+    return angleUnwrap->Unwraped;
 }

@@ -11,6 +11,9 @@
 
 #define BOARD_COMM_TASK_UPDATE_TICK 1
 
+/// @brief CAN的发送邮箱只有三个缓冲 在这个任务中通过消息队列的方式增加一个外部缓冲
+///        COMM. -> communication
+/// @param argument 
 void BoardCommTask(void const* argument)
 {
     uint32_t PreviousWakeTime = osKernelSysTick();
@@ -35,7 +38,7 @@ void BoardCommTask(void const* argument)
         else if (tx_switch == 2)
         {
             TxMessage.StdId = 0x207;
-            Data[0] = 1;//Command.StorageFlag;
+            Data[0] = Controller.isJump ? 1 : 0;
             Data[1] = 0;//Command.UIFlag;
             tx_switch = tx_switch >> 1;
         }
