@@ -106,7 +106,7 @@ void Robot_Fall_Detect(void)
 				Leg[RIGHT].U[1] = 0;
 				Leg[LEFT].Tp = 0;
 				Leg[RIGHT].Tp = 0;
-				PID_Clear(&Balance_Yaw_Position_pid);
+				//PID_Clear(&Balance_Yaw_Position_pid);
 				PID_Clear(&Balance_Yaw_Speed_pid);
 				PID_Clear(&Leg_theta_Harmonize_pid[0]);
 				State_Variables.target_Leg_Length_Step[0] = L0_LOW;

@@ -12,3 +12,8 @@
 *.iex
 *.log
 ~$*
+
+*.uvgui*
+*.json
+
+Gimbal_Code_Uni\MDK-ARM\UniversalGimbal\*

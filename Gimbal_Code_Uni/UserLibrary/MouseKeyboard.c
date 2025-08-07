@@ -13,13 +13,13 @@
 Mouse_t Mouse = { 0 };
 Keyboard_t Keyboard;
 
-void Key_Init(Key_t* key, unsigned LongPressTick)
+void Key_Init(Key_t* key, unsigned longPressTick)
 {
     key->State = KEY_UNPRESSED;
     key->Value = RESET;
     key->PrevValue = RESET;
     key->ClickDownTick = 0;
-    key->LongPressTick = LongPressTick;
+    key->LongPressTick = longPressTick;
 }
 
 KeyState_t Key_Update(Key_t* key)
@@ -59,11 +59,11 @@ void Keyboard_Init(void)
     Key_Init(&Keyboard.Q, 0);
     Key_Init(&Keyboard.E, 0);
     Key_Init(&Keyboard.R, 0);
-    Key_Init(&Keyboard.F, 0);
+    Key_Init(&Keyboard.F, 500);
     Key_Init(&Keyboard.G, 0);
     Key_Init(&Keyboard.Z, 0);
-    Key_Init(&Keyboard.X, 0);
+    Key_Init(&Keyboard.X, 500);
     Key_Init(&Keyboard.C, 0);
-    Key_Init(&Keyboard.V, 0);
-    Key_Init(&Keyboard.B, 0);
+    Key_Init(&Keyboard.V, 500);
+    Key_Init(&Keyboard.B, 500);
 }

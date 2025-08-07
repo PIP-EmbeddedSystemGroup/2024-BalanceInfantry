@@ -153,7 +153,7 @@ void StartDefaultTask(void const * argument)
 	osThreadDef(LK9025_Tx_Task, LK9025_Tx_Task, osPriorityNormal,0,256);
   LK9025_Tx_Task_Handle = osThreadCreate(osThread(LK9025_Tx_Task), NULL);
 	
-	osThreadDef(Communicate_Task, Communicate_Task, osPriorityBelowNormal,0,128);
+	osThreadDef(Communicate_Task, Communicate_Task, osPriorityNormal,0,128);
   CommunicateTaskHandle = osThreadCreate(osThread(Communicate_Task ), NULL);
 	
   User_Init();

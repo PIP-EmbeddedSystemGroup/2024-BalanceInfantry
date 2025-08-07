@@ -5,7 +5,7 @@
  * @version     v1.0
  * @date        2024-10-24
  * @details
-*/
+ */
 
 #include "header.h"
 
@@ -13,6 +13,9 @@
 uint8_t NucRxBuf[NUC_PACKAGE_LENGTH] = { 0 };
 uint8_t NucTxBuf[8] = { 0 };
 NUC_t NUC;
+
+float tempy = 0;//4.f;	
+float tempp = 0;
 
 extern osThreadId VisionHandle;
 
@@ -25,10 +28,9 @@ void NUC_Init(void)
     NUC.ErrorCount = 0;
     NUC.LastOnlineTick = 0;
 
-    // HAL_UART_Receive_DMA(&huart1, NucRxBuf, NUC_PACKAGE_LENGTH);
+    HAL_UART_Receive_DMA(&huart1, NucRxBuf, NUC_PACKAGE_LENGTH);
 }
 
-int tempColor = 0x53;
 void NUC_SendConfig(void)
 {
     NucTxBuf[0] = 0xFF;
@@ -36,10 +38,10 @@ void NUC_SendConfig(void)
     NucTxBuf[2] = Controller.VisionMode;
     NucTxBuf[3] = Controller.AimingInvRotateEnable ? 0xE9 : 0x53;
     NucTxBuf[5] = 0x00;   //?
-    NucTxBuf[6] = tempColor;   //53为瞄准蓝色，E9瞄准红色
-    NucTxBuf[7] = 0x00;//Controller.AimingOn ? 0xE9 : 0x53;
+    NucTxBuf[6] = 0x53;   //53为瞄准蓝色，E9瞄准红色
+    NucTxBuf[7] = Controller.AimingOn ? 0xE9 : 0x53;
 
-    // HAL_UART_Transmit_IT(&huart1, NucTxBuf, 8);
+    HAL_UART_Transmit_IT(&huart1, NucTxBuf, 8);
     CDC_Transmit_FS(NucTxBuf, 8);
 }
 
@@ -98,17 +100,17 @@ void NUC_RxCallback(int isFromUart)
 
         if (FrameHeaderOffset != 0)
         {
-            // if (isFromUart)
-            // {
-            //     HAL_UART_DMAStop(&huart1);
-            //     HAL_UART_Receive(&huart1, NucRxBuf, FrameHeaderOffset, 1);
-            //     HAL_UART_Receive_DMA(&huart1, NucRxBuf, NUC_PACKAGE_LENGTH);
-            // }
+            if (isFromUart)
+            {
+                HAL_UART_DMAStop(&huart1);
+                HAL_UART_Receive(&huart1, NucRxBuf, FrameHeaderOffset, 1);
+                HAL_UART_Receive_DMA(&huart1, NucRxBuf, NUC_PACKAGE_LENGTH);
+            }
             return;
         }
     }
 
-    NUC.PitchAngle = ((float)((NucRxBuf[2] << 8) | NucRxBuf[3]) - 32768) / 100;// / 180 * NORMAL_PI;
+    NUC.PitchAngle = ((float)((NucRxBuf[2] << 8) | NucRxBuf[3]) - 32768) / 100 - tempp;// / 180 * NORMAL_PI;
     // NUC.YawAngle = ((float)((NucRxBuf[4] << 8) | NucRxBuf[5]) - 32768) / 100;// / 180 * NORMAL_PI;
     NUC.Distance = ((float)((NucRxBuf[6] << 8) | (NucRxBuf[7]))) / 1000.0f;
     if (NucRxBuf[8] != 0xB0 || NucRxBuf[10] != 0xD7)
@@ -116,15 +118,11 @@ void NUC_RxCallback(int isFromUart)
     NUC.Position.X = NucRxBuf[9];
     NUC.Position.Y = NucRxBuf[11];
     NUC.YawAngleRaw = ((float)((NucRxBuf[12] << 8) | NucRxBuf[13]) - 32768) / 100;// / 180 * NORMAL_PI;
-    NUC.YawAngle = ((float)((NucRxBuf[12] << 8) | NucRxBuf[13]) - 32768) / 100;// / 180 * NORMAL_PI;
+    NUC.YawAngle = ((float)((NucRxBuf[12] << 8) | NucRxBuf[13]) - 32768) / 100 - tempy;// / 180 * NORMAL_PI;
 
-    if (NucRxBuf[12] == 0x9E)	//0x3B未反小陀螺 0x6D反小陀螺未发生装甲切换 0x9E反小陀螺发生装甲切换
-        NUC.isTargetSpinning = SET;
-    else if (NucRxBuf[12] == 0x6D)
-        NUC.isTargetSpinning = SET;
-    else
-        NUC.isTargetSpinning = RESET;
-
+    NUC.LossFrame = NucRxBuf[14];
+    NUC.TargetID = NucRxBuf[15] - 10;
+    
     NUC_RC_RxCallback();
 
     NUC.UpdateCounter++;

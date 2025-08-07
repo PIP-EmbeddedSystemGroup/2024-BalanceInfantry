@@ -46,7 +46,7 @@ void MX_CAN2_Init(void);
 /* USER CODE BEGIN Prototypes */
 
 /**
- * @attention   采用UTF-8字符集编�?
+ * @attention   采用UTF-8字符集编�?
  */
 
 void CAN1_UniversalInit(void);

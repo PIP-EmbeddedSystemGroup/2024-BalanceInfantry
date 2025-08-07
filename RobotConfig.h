@@ -38,6 +38,8 @@ enum RobotNumber
 #define PITCH_INIT_ENCODER (6120)//(0x8000)
 #define PITCH_MAX_ENCODER (6750)//(PITCH_INIT_ENCODER + 1050)
 #define PITCH_MIN_ENCODER (5620)//(PITCH_INIT_ENCODER - 950)
+//#define PITCH_MAX_ENCODER (6850)//(PITCH_INIT_ENCODER + 1050)
+//#define PITCH_MIN_ENCODER (5705)//(PITCH_INIT_ENCODER - 950)
 
 #define PITCH_DEGREE_TO_ENCODER(enc) ((float)enc / 360.f * 8192.f + PITCH_INIT_ENCODER)
 #define PITCH_ENCODER_TO_DEGREE(enc) (((float)enc - PITCH_INIT_ENCODER) / 8192.f * 360.f)
@@ -52,7 +54,7 @@ enum RobotNumber
 #define YAW_SENSITY_PAD (120.f) // deg/s
 
 #define FEEDING_AMMO_PER_TURN 8 //拨弹盘每圈弹量
-#define SHOOTING_FREQ 5         //射击频率
+#define SHOOTING_FREQ 5        //射击频率
 
 #define VISION_CHASSIS_SPEED_SCALE 0.8f  //视觉预瞄的速度补偿系数 具体见Vision_PathPreview
 

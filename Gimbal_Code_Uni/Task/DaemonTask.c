@@ -56,10 +56,11 @@ void DaemonTask(void const* argument)
         uint32_t NowTick = HAL_GetTick();
 
         // ChassisBoard_SendError();   //将底盘错误标志同步到云台
+        // ChassisBoard_SendState();
 
         //遥控器掉线超过1秒 且未处于电脑控制模式或图传链路也掉线时 重启程序
         if (NowTick - RC_DBUS.LastOnlineTick > 1000)
-            if (RC_DBUS.Pad.S2 != RC_DBUS_S2_COMPUTER_CTRL || NowTick - RC_VTM.LastOnlineTick > 100)
+            if (RC_DBUS.Pad.S2 != RC_DBUS_S2_COMPUTER_CTRL || NowTick - RC_VTM.LastOnlineTick > 200)
                 HAL_NVIC_SystemReset();
 
         if (RC_DBUS.Pad.CH0 < 364 || RC_DBUS.Pad.CH0 > 1684 || RC_DBUS.Pad.CH1 < 364 || RC_DBUS.Pad.CH1 > 1684)

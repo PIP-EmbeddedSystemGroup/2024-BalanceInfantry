@@ -102,8 +102,10 @@ void INS_Task(void const * argument)
 					BodyFrameToEarthFrame(Ins_Data.MotionAccel_b, Ins_Data.MotionAccel_n, Ins_Data.q); // 转换回导航系n
 
 
-		if(operate_count%2 ==0)
-			IMU_Temperature_Ctrl();
+		//if(operate_count%2 ==0)
+//			IMU_Temperature_Ctrl();
+		
+		
 //        if(count[0] !=60000&&count[1]==0)
 //        {
 //            Accel_Data_Avg+= BMI088.Accel[2];
