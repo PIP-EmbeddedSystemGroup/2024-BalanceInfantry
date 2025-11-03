@@ -3,81 +3,59 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.38.0.0
-Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: 2812643217@qq.com,  , LIC=UJWP0-BAJDP-SBIEJ-U3SPS-AVNYC-A21JU
+IDE-Version: ¦ÌVision V5.42.0.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Liu ÁõÊ«ºñ, BJUT, LIC=TIVNB-27XAS-NNMAF-6CBAS-LU2X4-M34SU
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
-Toolchain Path:  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.19
-Assembler:       Armasm.exe V6.19
-Linker/Locator:  ArmLink.exe V6.19
-Library Manager: ArmAr.exe V6.19
-Hex Converter:   FromElf.exe V6.19
-CPU DLL:         SARMCM3.DLL V5.38.0.0
+Toolchain:       MDK-ARM Plus  Version: 5.42.0.0
+Toolchain Path:  E:\Program\Keli_MDK_RAM\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.23
+Assembler:       Armasm.exe V6.23
+Linker/Locator:  ArmLink.exe V6.23
+Library Manager: ArmAr.exe V6.23
+Hex Converter:   FromElf.exe V6.23
+CPU DLL:         SARMCM3.DLL V5.42.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      CMSIS_AGDI.dll V1.33.15.0
-Dialog DLL:      TCM.DLL V1.56.4.0
+Target DLL:      CMSIS_AGDI.dll V1.33.22.0
+Dialog DLL:      TCM.DLL V1.56.6.0
  
 <h2>Project:</h2>
-D:\Robot_develop\2024-BalanceInfantry\Chassis_Code_MC01\MDK-ARM\MC-01_chassis.uvprojx
-Project File Date:  02/17/2025
+E:\RobotMaster\NewCode\2024-BalanceInfantry\Chassis_Code_MC01\MDK-ARM\MC-01_chassis.uvprojx
+Project File Date:  11/01/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.19', folder: 'A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V6.23', folder: 'E:\Program\Keli_MDK_RAM\ARM\ARMCLANG\Bin'
 Build target 'MC-01_chassis'
 Note: source file '..\BSP\Timers.c' - object file renamed from 'MC-01_chassis\Timers.o' to 'MC-01_chassis\timers_1.o'.
 compiling LK9025_Task.c...
-compiling A1_Task.c...
-compiling A1_Driver.c...
-compiling IMU_Task.c...
-compiling PID.c...
-../BSP/Can_Bus.c(10): warning: 'RAD_2_DEGREE' macro redefined [-Wmacro-redefined]
-#define RAD_2_DEGREE 57.2957795f    // 180/pi
-        ^
-../Task/inc\Configuration.h(41): note: previous definition is here
-#define RAD_2_DEGREE 57.2958f
-        ^
-../BSP/Can_Bus.c(11): warning: 'DEGREE_2_RAD' macro redefined [-Wmacro-redefined]
-#define DEGREE_2_RAD 0.01745329252f // pi/180
-        ^
-../Task/inc\Configuration.h(40): note: previous definition is here
-#define DEGREE_2_RAD 0.0174533f
-        ^
-2 warnings generated.
-compiling Can_Bus.c...
-compiling main.c...
-compiling Monitor_Task.c...
-compiling Balance_Task.c...
 linking...
-Program Size: Code=71080 RO-data=3656 RW-data=476 ZI-data=22564  
+Program Size: Code=71440 RO-data=3656 RW-data=472 ZI-data=22560  
 FromELF: creating hex file...
-"MC-01_chassis\MC-01_chassis.axf" - 0 Error(s), 2 Warning(s).
+"MC-01_chassis\MC-01_chassis.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
-                ARM.CMSIS.6.0.0
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 6.0.0
+   * Component: CORE Version: 6.1.0
 
 Package Vendor: Keil
-                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
-                Keil.STM32F4xx_DFP.2.17.1
-                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.3.0.0.pack
+                Keil::STM32F4xx_DFP@3.0.0
+                STMicroelectronics STM32F4 Series Device Support
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_MC-01_chassis
-  A:/MDK-ARM/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
-  A:/MDK-ARM/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  E:/Program/Keli_MDK_RAM/ARM/CMSIS/6.1.0/CMSIS/Core/Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:6.0.0
+   * Component: ARM::CMSIS:CORE@6.1.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

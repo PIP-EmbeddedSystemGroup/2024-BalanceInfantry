@@ -47,7 +47,7 @@ void BoardCommTask(void const* argument)
         int16_t MoveFB = (int16_t)Controller.Move.FB.Set;
         Data[4] = (uint8_t)(MoveFB >> 8);
         Data[5] = (uint8_t)MoveFB;
-        Data[6] = 0;//Command.SideWay_Set;
+        Data[6] = Controller.Rotate_Flag;
         Data[7] = 0;
 
         uint32_t TxFifoUsed;

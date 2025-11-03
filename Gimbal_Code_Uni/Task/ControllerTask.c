@@ -143,8 +143,10 @@ void Controller_Pad(void)
         break;
     }
 
-    Controller.AimingOn = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
-    Controller.isBoxOn = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
+  //  Controller.AimingOn = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
+   // Controller.isBoxOn = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
+    Controller.Rotate_Flag = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
+    
     if (Controller.isBoxOn)
         Shooting_BoxOpen();
     else

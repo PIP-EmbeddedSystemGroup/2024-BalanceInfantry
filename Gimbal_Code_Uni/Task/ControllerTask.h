@@ -59,6 +59,7 @@ typedef struct
     } View; // degree
 
     int HeightSet;
+    int Rotate_Flag;
 } Controller_t;
 
 void ControllerTask(void const* argument);

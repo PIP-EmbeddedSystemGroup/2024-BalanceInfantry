@@ -53,10 +53,10 @@ void PID_Calc(PidTypeDef * pid, float real_val, float set_val)
 	
 	if(pid==&Balance_Yaw_Position_pid)//杞悜璧板姡寮�
 	{
-		if(pid->E[2]>4096)
-			pid->E[2]=pid->E[2]-8192;
-		else if((-pid->E[2])>4096)
-			pid->E[2]=8192+pid->E[2];
+		if(pid->E[2]>  NORMAL_PI)
+			pid->E[2]=pid->E[2]- 2 *NORMAL_PI;
+		else if((-pid->E[2])> NORMAL_PI)
+			pid->E[2]= 2 * NORMAL_PI+pid->E[2];
 	}
 	if(Func_Abs(pid->E[2]) >=  pid->Dead_band)//鍒ゆ柇鏄惁杩涘叆姝诲尯
 	{

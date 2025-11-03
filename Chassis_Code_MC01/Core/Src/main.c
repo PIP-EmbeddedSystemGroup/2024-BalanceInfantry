@@ -104,7 +104,7 @@ void User_Init(void)
 	//积分范围只有在位置式PID计算的时候起作用 
 		//底盘电机
 //	PID_Init(&Balance_Yaw_Position_pid,10,0,900,6.0f,0,50,10000,200,0.05f,POSITIONAL);//底盘跟随PD
-	PID_Init(&Balance_Yaw_Position_pid,9.0f,0.0,900,6.0f,0,NORMAL_HALF_PI,10000,2,0.05f,POSITIONAL);//底盘跟随PD
+	PID_Init(&Balance_Yaw_Position_pid,9.0f,0.0,10,6.0f,0,NORMAL_HALF_PI,10000,2,0.05f,POSITIONAL);//底盘跟随PD
 	//PID_Init(&Balance_Yaw_Speed_pid,10,0,0,5,0,0,3,0,POSITIONAL);
 	PID_Init(&Leg_theta_Harmonize_pid[0],45,0.5,1000,20,0,0.05,2,5,0.1f,POSITIONAL);//关节电机抗劈叉PD
 	//PID_Init(&Leg_theta_Harmonize_pid[1],0,0,0,10,0,0,4,0,POSITIONAL);//轮毂电机抗劈叉PD

@@ -1,8 +1,6 @@
 mc-01_chassis/lk9025_task.o: ..\Task\LK9025_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
-  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Core\Inc\FreeRTOSConfig.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \

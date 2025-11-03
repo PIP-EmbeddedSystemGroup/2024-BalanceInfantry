@@ -2,18 +2,10 @@ mc-01_chassis/kalman_filter.o: ..\Algorithm\kalman_filter.c \
   ..\Algorithm\inc\kalman_filter.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
-  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\Drivers\CMSIS\Include\cmsis_version.h \
-  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
-  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
   ..\Drivers\CMSIS\DSP\Include\arm_math.h \
   ..\Drivers\CMSIS\DSP\Include\arm_math_types.h \
-  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
-  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin\..\include\float.h \
-  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin\..\include\limits.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\Drivers\CMSIS\DSP\Include\arm_math_memory.h \
   ..\Drivers\CMSIS\DSP\Include\dsp\none.h \
   ..\Drivers\CMSIS\DSP\Include\dsp\utils.h \
@@ -32,5 +24,4 @@ mc-01_chassis/kalman_filter.o: ..\Algorithm\kalman_filter.c \
   ..\Drivers\CMSIS\DSP\Include\dsp\transform_functions.h \
   ..\Drivers\CMSIS\DSP\Include\dsp\filtering_functions.h \
   ..\Drivers\CMSIS\DSP\Include\dsp\quaternion_math_functions.h \
-  A:\MDK-ARM\keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ..\Algorithm\inc\QuaternionEKF.h

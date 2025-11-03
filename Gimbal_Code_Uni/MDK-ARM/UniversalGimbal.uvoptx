@@ -241,12 +241,12 @@
           <ItemText>FusionINS</ItemText>
         </Ww>
         <Ww>
-          <count>9</count>
+          <count>17</count>
           <WinNumber>1</WinNumber>
           <ItemText>Inertial</ItemText>
         </Ww>
         <Ww>
-          <count>10</count>
+          <count>18</count>
           <WinNumber>1</WinNumber>
           <ItemText>Gimbal,0x0A</ItemText>
         </Ww>

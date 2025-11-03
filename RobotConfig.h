@@ -26,7 +26,7 @@ enum RobotNumber
 #define GIMBAL_BOARD_OFFSET_Y (0) //XXX云台C板到云台轴心的*水平左右向*距离 靠左为正值
 #define GIMBAL_BOARD_OFFSET_Z (0.055f) //XXX云台C板到云台轴心的*垂直*距离 靠上为正值
 
-#define CHASSIS_SPEED (200)
+#define CHASSIS_SPEED (99)
 #define CHASSIS_MOTOR_MAX_RPM (6000)    //rpm
 #define CHASSIS_SPIN_SPEED (540.f)  // deg/s
 #define CHASSIS_SLIDE_CONSTRAIN_INTERVAL (1.f) //打滑抑制速度区间 轮速设定值不会超过观测值±此值
