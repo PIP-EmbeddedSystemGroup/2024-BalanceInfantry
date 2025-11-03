@@ -2,8 +2,8 @@
  * @attention   采用UTF-8字符集编码
  * @brief       通用PID库
  * @authors     北工大PIP战队 樊郡捷
- * @version     v1.1
- * @date        2025-03-02
+ * @version     v1.0
+ * @date        2024-10-14
  * @details     实现了通用的PID控制器
  *              角度量的位置环实现了解卷绕后转劣弧
  */
@@ -15,13 +15,10 @@
  /// @param param    PID控制器参数
 void PID_Init(PID_t* pid, PID_InitStruct_t* pidParam)
 {
-    pid->DeltaTime = pidParam->DeltaTime;
-    pid->DifferentialFreqDiv = (pidParam->DifferentialFreqDiv == 0 || pidParam->DifferentialFreqDiv == NAN) ? 1 : pidParam->DifferentialFreqDiv;
-    pid->DifferentialCounter = 0;
-    
     pid->kP = pidParam->kP;
     pid->kI_mdt = pidParam->kI * pidParam->DeltaTime;
-    pid->kD_ddt = pidParam->kD / (pid->DeltaTime * pid->DifferentialFreqDiv);
+    pid->kD_ddt = pidParam->kD / pidParam->DeltaTime;
+    pid->DeltaTime = pidParam->DeltaTime;
 
     pid->CircleResolution = pidParam->CircleResolution;
 
@@ -66,16 +63,12 @@ void PID_Calc(PID_t* pid, float real, float set)
         pid->I += pid->kI_mdt * pid->Error[0];
         pid->I = ConstrainF(pid->I, pid->I_Max, -pid->I_Max);
     }
-    pid->DifferentialCounter += 1;
-    if (pid->DifferentialCounter >= pid->DifferentialFreqDiv)
-    {
-        pid->D = pid->kD_ddt * (pid->Error[0] - pid->Error[1]);
-        pid->Error[1] = pid->Error[0];
-        pid->DifferentialCounter = 0;
-    }
+    pid->D = pid->kD_ddt * (pid->Error[0] - pid->Error[1]);
 
     pid->Output = pid->P + pid->I + pid->D;
     pid->Output = ConstrainF(pid->Output, pid->MaxOut, -pid->MaxOut);
+
+    pid->Error[1] = pid->Error[0];
 }
 
 /// @brief 角度量存在过零点问题时(存在卷绕时)使用优先转劣弧的PID控制器更新计算
@@ -105,16 +98,12 @@ void PID_AngleCalc(PID_t* pid, float real, float set)
         pid->I += pid->kI_mdt * pid->Error[0];
         pid->I = ConstrainF(pid->I, pid->I_Max, -pid->I_Max);
     }
-    pid->DifferentialCounter += 1;
-    if (pid->DifferentialCounter >= pid->DifferentialFreqDiv)
-    {
-        pid->D = pid->kD_ddt * (pid->Error[0] - pid->Error[1]);
-        pid->Error[1] = pid->Error[0];
-        pid->DifferentialCounter = 0;
-    }
+    pid->D = pid->kD_ddt * (pid->Error[0] - pid->Error[1]);
 
     pid->Output = pid->P + pid->I + pid->D;
     pid->Output = ConstrainF(pid->Output, pid->MaxOut, -pid->MaxOut);
+
+    pid->Error[1] = pid->Error[0];
 }
 
 /// @brief 清除PID控制器运算过程中的时间相关参量

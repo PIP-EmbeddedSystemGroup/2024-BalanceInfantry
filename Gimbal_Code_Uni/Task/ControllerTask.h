@@ -19,6 +19,8 @@ typedef struct
 {
     int isEnable;
 
+    int isSpinMode;
+
     struct
     {
         Key_t Up;
@@ -27,14 +29,9 @@ typedef struct
     int FrictionOn;
     int ShootingOn;
 
-    int isBoxOn;
-    int isJump;
-
     int AimingOn;
     VisionMode_t VisionMode;
     int AimingInvRotateEnable;
-
-    int isBossMode;
 
     struct
     {

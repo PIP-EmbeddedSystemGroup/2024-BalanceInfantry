@@ -19,8 +19,7 @@ typedef struct
         uint8_t X;
         uint8_t Y;
     } Position;
-    int LossFrame;
-    int TargetID;
+    int isTargetSpinning;
 
     struct
     {

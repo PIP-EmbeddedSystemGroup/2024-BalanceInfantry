@@ -99,8 +99,13 @@
                 "_ILP32=1",
                 "_USE_STATIC_INLINE=1",
                 "__APCS_32__=1",
+<<<<<<< HEAD
                 "__ARMCC_VERSION=6230001",
                 "__ARMCOMPILER_VERSION=6230001",
+=======
+                "__ARMCC_VERSION=6220000",
+                "__ARMCOMPILER_VERSION=6220000",
+>>>>>>> parent of 987bf74 (Merge branch 'main' of github.com:PIP-EmbeddedSystemGroup/2024-BalanceInfantry)
                 "__ARMEL__=1",
                 "__ARM_32BIT_STATE=1",
                 "__ARM_ACLE=200",
@@ -363,9 +368,12 @@
                 "__SIZE_TYPE__=unsigned int",
                 "__SIZE_WIDTH__=32",
                 "__SOFTFP__=1",
+<<<<<<< HEAD
                 "__STDC_EMBED_EMPTY__=2",
                 "__STDC_EMBED_FOUND__=1",
                 "__STDC_EMBED_NOT_FOUND__=0",
+=======
+>>>>>>> parent of 987bf74 (Merge branch 'main' of github.com:PIP-EmbeddedSystemGroup/2024-BalanceInfantry)
                 "__STDC_HOSTED__=1",
                 "__STDC_UTF_16__=1",
                 "__STDC_UTF_32__=1",
@@ -463,7 +471,11 @@
                 "__UINT_LEAST8_MAX__=255",
                 "__UINT_LEAST8_TYPE__=unsigned char",
                 "__USER_LABEL_PREFIX__=",
+<<<<<<< HEAD
                 "__VERSION__=\"Clang 20.0.0git\"",
+=======
+                "__VERSION__=\"Clang 19.0.0git\"",
+>>>>>>> parent of 987bf74 (Merge branch 'main' of github.com:PIP-EmbeddedSystemGroup/2024-BalanceInfantry)
                 "__VFP_FP__=1",
                 "__WCHAR_MAX__=4294967295U",
                 "__WCHAR_TYPE__=unsigned int",
@@ -476,10 +488,17 @@
                 "__arm__=1",
                 "__clang__=1",
                 "__clang_literal_encoding__=\"UTF-8\"",
+<<<<<<< HEAD
                 "__clang_major__=20",
                 "__clang_minor__=0",
                 "__clang_patchlevel__=0",
                 "__clang_version__=\"20.0.0git \"",
+=======
+                "__clang_major__=19",
+                "__clang_minor__=0",
+                "__clang_patchlevel__=0",
+                "__clang_version__=\"19.0.0git \"",
+>>>>>>> parent of 987bf74 (Merge branch 'main' of github.com:PIP-EmbeddedSystemGroup/2024-BalanceInfantry)
                 "__clang_wide_literal_encoding__=\"UTF-32\"",
                 "__llvm__=1"
             ],

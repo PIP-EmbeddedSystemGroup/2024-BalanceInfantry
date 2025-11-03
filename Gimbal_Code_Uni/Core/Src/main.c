@@ -37,7 +37,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "header.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,7 +116,6 @@ int main(void)
   HAL_Delay(500);
   CAN1_UniversalInit();
   CAN2_UniversalInit();
-	RC_VTM_Init();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

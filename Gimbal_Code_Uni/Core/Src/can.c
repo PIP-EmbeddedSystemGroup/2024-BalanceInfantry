@@ -218,9 +218,9 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 
 /* USER CODE BEGIN 1 */
 /**
- * @attention   ����UTF-8�ַ������1�7?
- * @brief       CAN��ʼ�1�7? �ص�
- * @authors     ������PIPս�� �����1�7?
+ * @attention   采用UTF-8字符集编�??
+ * @brief       CAN初始�?? 回调
+ * @authors     北工大PIP战队 樊郡�??
  * @version     v1.0
  * @date        2024-10-14
  * @details
@@ -232,18 +232,18 @@ void CAN1_UniversalInit(void)
 {
   HAL_CAN_Start(&hcan1);
 
-  //�����ǵĄ1�7?����������˱��� ��˳�ʼ��һ������һ�б��Ą1�7?�1�7���Ĺ�����
+  //在我们的�??求中无需过滤报文 因此初始化一个兝许一切报文�?�过的过滤器
   CAN_FilterTypeDef FilterConfig;
-  FilterConfig.FilterBank = 0;                      //��������1�7?
-  FilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;  //����ģ�y���б���ģ�y/�б�ģ�y
-  FilterConfig.FilterScale = CAN_FILTERSCALE_32BIT; //������������32�1�7?
-  FilterConfig.FilterIdHigh = 0x0000;               //32��ID
+  FilterConfig.FilterBank = 0;                      //过滤器组�??
+  FilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;  //过滤模弝：屝蔽佝模弝/列表模弝
+  FilterConfig.FilterScale = CAN_FILTERSCALE_32BIT; //过滤器佝宽：32�??
+  FilterConfig.FilterIdHigh = 0x0000;               //32佝ID
   FilterConfig.FilterIdLow = 0x0000;
-  FilterConfig.FilterMaskIdHigh = 0x0000;           //32��MASK
+  FilterConfig.FilterMaskIdHigh = 0x0000;           //32佝MASK
   FilterConfig.FilterMaskIdLow = 0x0000;
-  FilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0; //���˄1�7?0���f��FIFO0
-  FilterConfig.FilterActivation = ENABLE;           //�1�7?���˲���0
-  FilterConfig.SlaveStartFilterBank = 14;           //ʹ�Èi��CAN����ʱ�������ސ݄1�7?
+  FilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0; //过滤�??0关蝔到FIFO0
+  FilterConfig.FilterActivation = ENABLE;           //�??活滤波器0
+  FilterConfig.SlaveStartFilterBank = 14;           //使用坕个CAN外设时此坂数无愝�??
   HAL_CAN_ConfigFilter(&hcan1, &FilterConfig);
 
   HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
@@ -260,7 +260,7 @@ void CAN2_UniversalInit(void)
   CAN_FilterConfig.FilterMaskIdHigh = 0x0000;
   CAN_FilterConfig.FilterMaskIdLow = 0x0000;
   CAN_FilterConfig.FilterFIFOAssignment = CAN_FilterFIFO1;
-  CAN_FilterConfig.FilterBank = 14; // ï¿½ï¿½ï¿½ï¿½CAN2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CAN1ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½CAN1Ö®ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Îª14-27Ö®ï¿½ï¿½
+  CAN_FilterConfig.FilterBank = 14; // ����CAN2������CAN1���˲�����λ��CAN1֮����Ҫ����Ϊ14-27֮��
   CAN_FilterConfig.SlaveStartFilterBank = 14;
   CAN_FilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
   CAN_FilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
@@ -287,20 +287,20 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan)
     case 0x202:
     case 0x203:
     case 0x204:
-      if (DjiMotor_CanID_0x200_List[RxMessage.StdId - 0x201] != NULL) //ID1-4��M3508/M2006
+      if (DjiMotor_CanID_0x200_List[RxMessage.StdId - 0x201] != NULL) //ID1-4的M3508/M2006
         DjiMotor_Update(DjiMotor_CanID_0x200_List[RxMessage.StdId - 0x201], Data);
       break;
     case 0x205:
     case 0x206:
     case 0x207:
     case 0x208:
-      if (DjiMotor_CanID_0x1FF_List[RxMessage.StdId - 0x205] != NULL) //ID5-8��M3508/M2006 ID1-4��GM6020
+      if (DjiMotor_CanID_0x1FF_List[RxMessage.StdId - 0x205] != NULL) //ID5-8的M3508/M2006 ID1-4的GM6020
         DjiMotor_Update(DjiMotor_CanID_0x1FF_List[RxMessage.StdId - 0x205], Data);
       break;
     case 0x209:
     case 0x20A:
     case 0x20B:
-      if (DjiMotor_CanID_0x2FF_List[RxMessage.StdId - 0x209] != NULL) //ID5-7��GM6020
+      if (DjiMotor_CanID_0x2FF_List[RxMessage.StdId - 0x209] != NULL) //ID5-7的GM6020
         DjiMotor_Update(DjiMotor_CanID_0x2FF_List[RxMessage.StdId - 0x209], Data);
       break;
     default:

@@ -47,7 +47,6 @@
 #include "DM4310.h"
 #include "NUC.h"
 #include "Misc.h"
-#include "Referee.h"
 
 //外设
 #include "usart.h"
@@ -61,7 +60,6 @@
 #include "Universal.h"
 #include "UniversalPID.h"
 #include "UniversalFilter.h"
-#include "UniversalCRC.h"
 #include "MouseKeyboard.h"
 #include "QuaternionEKF.h"
 #include "FusionKF.h"

@@ -27,7 +27,7 @@ void GimbalTask(void const* argument)
     // DM4310_Init(&Gimbal.Pitch.Motor, 0x000, 0x001, 0, 0);    //不使用DM4310自带的速度环位置环PID
     GM6020_Init(&Gimbal.Pitch.Motor, 2);
 
-    PID_InitParam.kP = 0.32f;
+    PID_InitParam.kP = 0.364f;
     PID_InitParam.kI = 0;
     PID_InitParam.kD = 0;
     PID_InitParam.CircleResolution = 360;
@@ -95,10 +95,7 @@ void GimbalTask(void const* argument)
 void Gimbal_YawPID_Calc(void)
 {
     PID_AngleCalc(&Gimbal.Yaw.PositionPID, Inertial.Yaw, Controller.View.Yaw);
-    float SpeedSet = Gimbal.Yaw.PositionPID.Output;
-    if (Controller.AimingOn && Vision.isDetected)
-        SpeedSet += Vision.Yaw.CompensatePID.Output;
-    PID_Calc(&Gimbal.Yaw.SpeedPID, Inertial.Gyro[AZ], SpeedSet);
+    PID_Calc(&Gimbal.Yaw.SpeedPID, Inertial.Gyro[AZ], Gimbal.Yaw.PositionPID.Output);
 }
 
 /// @brief 计算Pitch轴PID 根据Pitch轴电机编码器 计算超出限幅的角度大小 并检测云台目标角度是否会超出限幅

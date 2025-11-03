@@ -172,6 +172,7 @@ extern State_Val_t State_Variables;
 void Balance_Task(void const *argument);
 void Jointmotor_Feedback_Update_Left(float dt);
 void Jointmotor_Feedback_Update_Right(float dt);
+<<<<<<< HEAD
 void Odometry_Update(Leg_t *lp, Leg_t *rp, State_Val_t *state, LK9025_Motor_t *lw, LK9025_Motor_t *rw, INS_t *imu, float dt);
 void State_Variables_Update(State_Val_t *state, float dt);
 void LQR_Calc(State_Val_t *state, Leg_t *leg, Robot_Status_t *robot_status);
@@ -179,4 +180,11 @@ void Leg_Output(Leg_t *leg, float f, float tp);
 float Leg_Theta0_Limit(Leg_t *leg);
 void Jump(void);
 
+=======
+void Odometry_Update(Leg_t* lp, Leg_t* rp,State_Val_t* state,LK9025_Motor_t* lw,LK9025_Motor_t* rw,INS_t* imu,float dt);
+void State_Variables_Update(State_Val_t* state , float dt);
+void LQR_Calc(State_Val_t* state,Leg_t* leg,Robot_Status_t* robot_status);
+void Leg_Output(Leg_t * leg,float f,float tp);
+float Leg_Theta0_Limit(Leg_t* leg);
+>>>>>>> parent of 987bf74 (Merge branch 'main' of github.com:PIP-EmbeddedSystemGroup/2024-BalanceInfantry)
 

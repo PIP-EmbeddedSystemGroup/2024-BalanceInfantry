@@ -34,7 +34,10 @@ void LK9025_Tx_Task(void const *argument)
 		}
 		else
 			LK9025_Output_Damping();
+<<<<<<< HEAD
 		// LK9025_Output_Zero();
+=======
+>>>>>>> parent of 987bf74 (Merge branch 'main' of github.com:PIP-EmbeddedSystemGroup/2024-BalanceInfantry)
 	}
 }
 

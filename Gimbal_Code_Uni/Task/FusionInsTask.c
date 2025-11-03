@@ -50,8 +50,8 @@ void FusionInsTask(void const* argument)
 
         FusionKF_Update(&FusionINS.KF, AccelFB, AccelLR);
 
-        FusionINS.Robot.Speed.FB = 0;//MAT_ELEM(FusionINS.KF.x[0], 1, 1);
-        FusionINS.Robot.Speed.LR = 0;//MAT_ELEM(FusionINS.KF.x[0], 2, 1);
+        FusionINS.Robot.Speed.FB = MAT_ELEM(FusionINS.KF.x[0], 1, 1);
+        FusionINS.Robot.Speed.LR = MAT_ELEM(FusionINS.KF.x[0], 2, 1);
 
         FusionINS.World.Speed.X = FusionINS.Robot.Speed.FB * YawCos + FusionINS.Robot.Speed.LR * -YawSin;
         FusionINS.World.Speed.Y = FusionINS.Robot.Speed.FB * YawSin + FusionINS.Robot.Speed.LR * YawCos;

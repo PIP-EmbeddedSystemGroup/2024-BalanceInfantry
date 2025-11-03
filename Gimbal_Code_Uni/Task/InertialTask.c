@@ -16,13 +16,13 @@
 
 #define INERTIAL_TASK_UPDATE_TICK 2
 
-void BodyFrameToEarthFrame(const float *vecBF, float *vecEF, float *q);
-void EarthFrameToBodyFrame(const float *vecEF, float *vecBF, float *q);
+void BodyFrameToEarthFrame(const float* vecBF, float* vecEF, float* q);
+void EarthFrameToBodyFrame(const float* vecEF, float* vecBF, float* q);
 
 typedef struct
 {
-    uint32_t TimeStamp;    // 校准时的时间戳
-    uint32_t TempWhenCali; // 校准时的温度 4字节对齐
+    uint32_t TimeStamp;     //校准时的时间戳
+    uint32_t TempWhenCali;  //校准时的温度 4字节对齐
     union
     {
         uint32_t Raw;
@@ -32,26 +32,26 @@ typedef struct
     {
         uint32_t Raw;
         float Value;
-    } AccelScale; // 和9.81标准重力加速度相差的系数
+    } AccelScale;   //和9.81标准重力加速度相差的系数
 } IMU_CaliData_t;
 
-Inertial_t Inertial = {0};
+Inertial_t Inertial = { 0 };
 
-const IMU_CaliData_t *const IMU_FlashCaliData = (void *)IMU_CALI_DATA_FLASH_ADDR;
+const IMU_CaliData_t* const IMU_FlashCaliData = (void*)IMU_CALI_DATA_FLASH_ADDR;
 
-void InertialCalibrateTask(void const *argument)
+void InertialCalibrateTask(void const* argument)
 {
     float TempErrorFadingFilter = 10;
     const float FadingFactor = 0.9f;
 
-    Inertial.IMU->TempWhenCali = IMU_HEATER_TEMP_SET; // 作为温度PID的设置值
-    osDelay(4000);                                    // 先等待温度基本稳定
+    Inertial.IMU->TempWhenCali = IMU_HEATER_TEMP_SET;   //作为温度PID的设置值
+    osDelay(4000);  //先等待温度基本稳定
 
     while (1)
     {
         osDelay(100);
 
-        // 计算一段时间内误差非线性累计值
+        //计算一段时间内误差非线性累计值
         TempErrorFadingFilter *= FadingFactor;
         TempErrorFadingFilter += fabsf(Inertial.ImuHeaterPID.Error[0]) * (1 - FadingFactor);
 
@@ -59,10 +59,9 @@ void InertialCalibrateTask(void const *argument)
             break;
     }
 
-    while (BMI088_init(&hspi1, 1) != BMI088_NO_ERROR)
-        ; // 重新初始化 并执行校准
+    while (BMI088_init(&hspi1, 1) != BMI088_NO_ERROR);  //重新初始化 并执行校准
 
-    Inertial.IMU->TempWhenCali = IMU_HEATER_TEMP_SET; // 作为温度PID的设置值
+    Inertial.IMU->TempWhenCali = IMU_HEATER_TEMP_SET;   //作为温度PID的设置值
 
     IMU_CaliData_t IMU_CaliData;
     IMU_CaliData.TimeStamp = IMU_CALI_TIMESTAMP;
@@ -75,14 +74,14 @@ void InertialCalibrateTask(void const *argument)
     HAL_FLASH_Unlock();
     FLASH_WaitForLastOperation(3000);
 
-    FLASH_EraseInitTypeDef FlashEraseInit = {0};
+    FLASH_EraseInitTypeDef FlashEraseInit = { 0 };
     FlashEraseInit.Banks = FLASH_BANK_1;
-    FlashEraseInit.Sector = FLASH_SECTOR_11; // 1MB Flash空间中的最后128kB 见F4参考手册P75
+    FlashEraseInit.Sector = FLASH_SECTOR_11;    //1MB Flash空间中的最后128kB 见F4参考手册P75
     FlashEraseInit.TypeErase = FLASH_TYPEERASE_SECTORS;
     FlashEraseInit.VoltageRange = FLASH_VOLTAGE_RANGE_3;
     FlashEraseInit.NbSectors = 1;
     uint32_t SectorError;
-    HAL_FLASHEx_Erase(&FlashEraseInit, &SectorError); // Flash写入操作只能把1变为0 因此需要先擦除(全部置1)
+    HAL_FLASHEx_Erase(&FlashEraseInit, &SectorError);   //Flash写入操作只能把1变为0 因此需要先擦除(全部置1)
     FLASH_WaitForLastOperation(3000);
 
     HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, IMU_CALI_DATA_FLASH_ADDR, IMU_CaliData.TimeStamp);
@@ -102,14 +101,13 @@ void InertialCalibrateTask(void const *argument)
 }
 
 /// @brief 初始化惯导的IMU部分 尝试从Flash中读取校准参数 若出错则重新校准并保存到Flash
-/// @param
+/// @param  
 void Inertial_ImuInit(void)
 {
     SET_BIT(Daemon.ErrorFlag, ERR_GIMBAL_INERTIAL_INIT);
 
     Inertial.IMU = &BMI088;
-    while (BMI088_init(&hspi1, 0) != BMI088_NO_ERROR)
-        ; // 即使需要校准 也需要先初始化芯片才能读取芯片温度
+    while (BMI088_init(&hspi1, 0) != BMI088_NO_ERROR);  //即使需要校准 也需要先初始化芯片才能读取芯片温度
 
     if (IMU_FlashCaliData->TimeStamp == IMU_CALI_TIMESTAMP)
     {
@@ -128,18 +126,18 @@ void Inertial_ImuInit(void)
         SET_BIT(Daemon.ErrorFlag, ERR_GIMBAL_INERTIAL_INIT);
     }
 }
-float gravity_b[3];
+        float gravity_b[3];
 
-void InertialTask(void const *argument)
+void InertialTask(void const* argument)
 {
     uint32_t PreviousWakeTime = osKernelSysTick();
 
-    const float Gravity[3] = { 0, 0, -9.81f };
+    const float Gravity[3] = { 0, 0, 9.81f };
     const float xb[3] = { 1, 0, 0 };
     const float yb[3] = { 0, 1, 0 };
     const float zb[3] = { 0, 0, 1 };
 
-    PID_InitStruct_t PID_InitParam = {0};
+    PID_InitStruct_t PID_InitParam = { 0 };
     PID_InitParam.kP = 500;
     PID_InitParam.kI = 40;
     PID_InitParam.kD = 0;
@@ -172,7 +170,7 @@ void InertialTask(void const *argument)
         PID_Calc(&Inertial.ImuHeaterPID, Inertial.IMU->Temperature, Inertial.IMU->TempWhenCali);
         __HAL_TIM_SetCompare(&htim10, TIM_CHANNEL_1, Constrain(Inertial.ImuHeaterPID.Output, 2000, 0));
 
-        if (READ_BIT(Daemon.ErrorFlag, ERR_GIMBAL_INERTIAL_INIT)) // 陀螺仪校准好之前只计算温度闭环PID
+        if (READ_BIT(Daemon.ErrorFlag, ERR_GIMBAL_INERTIAL_INIT))  //陀螺仪校准好之前只计算温度闭环PID
             continue;
 
         float DeltaTime = INERTIAL_TASK_UPDATE_TICK / 1000.f;
@@ -208,7 +206,7 @@ void InertialTask(void const *argument)
             LPF_1stOrderIIR_Update(&Inertial.AccelLPF[i], Inertial.Accel[i] - gravity_b[i]);
             Inertial.MotionAccel_b[i] = Inertial.AccelLPF[i].Output;
         }
-        BodyFrameToEarthFrame(Inertial.MotionAccel_b, Inertial.MotionAccel_n, Inertial.Q); // 转换回导航系n
+        BodyFrameToEarthFrame(Inertial.MotionAccel_b, Inertial.MotionAccel_n, Inertial.Q);// 转换回导航系n
 
         for (int i = 0; i < 3; i++)
         {
@@ -223,10 +221,6 @@ void InertialTask(void const *argument)
         Inertial.Pitch = QEKF_INERTIAL.Pitch;
         Inertial.Roll = QEKF_INERTIAL.Roll;
         Inertial.YawTotalAngle = QEKF_INERTIAL.YawTotalAngle;
-//				Inertial.Yaw = QEKF_INERTIAL.Yaw;
-//        Inertial.Pitch = QEKF_INERTIAL.Roll;
-//        Inertial.Roll = -QEKF_INERTIAL.Pitch;
-//        Inertial.YawTotalAngle = QEKF_INERTIAL.YawTotalAngle;
     }
 }
 
@@ -236,19 +230,19 @@ void InertialTask(void const *argument)
  * @param[2]       vector in EarthFrame
  * @param[3]       quaternion
  */
-void BodyFrameToEarthFrame(const float *vecBF, float *vecEF, float *q)
+void BodyFrameToEarthFrame(const float* vecBF, float* vecEF, float* q)
 {
     vecEF[0] = 2.0f * ((0.5f - q[2] * q[2] - q[3] * q[3]) * vecBF[0] +
-                       (q[1] * q[2] - q[0] * q[3]) * vecBF[1] +
-                       (q[1] * q[3] + q[0] * q[2]) * vecBF[2]);
+        (q[1] * q[2] - q[0] * q[3]) * vecBF[1] +
+        (q[1] * q[3] + q[0] * q[2]) * vecBF[2]);
 
     vecEF[1] = 2.0f * ((q[1] * q[2] + q[0] * q[3]) * vecBF[0] +
-                       (0.5f - q[1] * q[1] - q[3] * q[3]) * vecBF[1] +
-                       (q[2] * q[3] - q[0] * q[1]) * vecBF[2]);
+        (0.5f - q[1] * q[1] - q[3] * q[3]) * vecBF[1] +
+        (q[2] * q[3] - q[0] * q[1]) * vecBF[2]);
 
     vecEF[2] = 2.0f * ((q[1] * q[3] - q[0] * q[2]) * vecBF[0] +
-                       (q[2] * q[3] + q[0] * q[1]) * vecBF[1] +
-                       (0.5f - q[1] * q[1] - q[2] * q[2]) * vecBF[2]);
+        (q[2] * q[3] + q[0] * q[1]) * vecBF[1] +
+        (0.5f - q[1] * q[1] - q[2] * q[2]) * vecBF[2]);
 }
 
 /**
@@ -257,17 +251,17 @@ void BodyFrameToEarthFrame(const float *vecBF, float *vecEF, float *q)
  * @param[2]       vector in BodyFrame
  * @param[3]       quaternion
  */
-void EarthFrameToBodyFrame(const float *vecEF, float *vecBF, float *q)
+void EarthFrameToBodyFrame(const float* vecEF, float* vecBF, float* q)
 {
     vecBF[0] = 2.0f * ((0.5f - q[2] * q[2] - q[3] * q[3]) * vecEF[0] +
-                       (q[1] * q[2] + q[0] * q[3]) * vecEF[1] +
-                       (q[1] * q[3] - q[0] * q[2]) * vecEF[2]);
+        (q[1] * q[2] + q[0] * q[3]) * vecEF[1] +
+        (q[1] * q[3] - q[0] * q[2]) * vecEF[2]);
 
     vecBF[1] = 2.0f * ((q[1] * q[2] - q[0] * q[3]) * vecEF[0] +
-                       (0.5f - q[1] * q[1] - q[3] * q[3]) * vecEF[1] +
-                       (q[2] * q[3] + q[0] * q[1]) * vecEF[2]);
+        (0.5f - q[1] * q[1] - q[3] * q[3]) * vecEF[1] +
+        (q[2] * q[3] + q[0] * q[1]) * vecEF[2]);
 
     vecBF[2] = 2.0f * ((q[1] * q[3] + q[0] * q[2]) * vecEF[0] +
-                       (q[2] * q[3] - q[0] * q[1]) * vecEF[1] +
-                       (0.5f - q[1] * q[1] - q[2] * q[2]) * vecEF[2]);
+        (q[2] * q[3] - q[0] * q[1]) * vecEF[1] +
+        (0.5f - q[1] * q[1] - q[2] * q[2]) * vecEF[2]);
 }

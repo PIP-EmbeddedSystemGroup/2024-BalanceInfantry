@@ -2,17 +2,17 @@
  * @attention   采用UTF-8字符集编码
  * @brief       通用滤波器库
  * @authors     北工大PIP战队 樊郡捷
- * @version     v1.1
- * @date        2025-02-27
+ * @version     v1.0
+ * @date        2024-10-24
  * @details     实现了通用的滤波器
  */
 
 #include "header.h"
 
- /// @brief 一阶IIR低通滤波器初始化
- /// @param filter       滤波器类
- /// @param deltaTime    采样周期
- /// @param cutOffFreq   截止频率
+/// @brief 一阶IIR低通滤波器初始化
+/// @param filter       滤波器类
+/// @param deltaTime    采样周期
+/// @param cutOffFreq   截止频率
 void LPF_1stOrderIIR_Init(LPF_1stOrderIIR_t* filter, float deltaTime, float cutOffFreq)
 {
     filter->DeltaTime = deltaTime;
@@ -50,52 +50,4 @@ float KalmanFilter1st_Update(KalmanFilter1st_t* filter, float data)
     filter->P_Last = filter->P_Now;                                         //状态更新
     filter->X_Last = filter->X_Now;
     return filter->X_Now;                                                   //输出预测结果x(k|k)
-}
-
-/// @brief 实现了入队自动迭代队列整体的均值 减小计算直流分量时的计算量
-/// @param queue 队列对象
-/// @param Len   队列长度
-/// @param enterWithShift 是否需要在入队时插入到第一个元素 而非做为循环队列 >0头插 <0尾差
-void MeanQueue_Init(MeanQueue_t* queue, unsigned len, int enterWithShift)
-{
-    queue->Len = len;
-    queue->Index = 0;
-    queue->Data = (float*)pvPortMalloc(sizeof(float) * queue->Len);
-    for (int i = 0; i < queue->Len; i++)
-        queue->Data[i] = 0.f;
-    queue->Mean = 0;
-    queue->EnterWithShift = enterWithShift;
-}
-
-void MeanQueue_Clear(MeanQueue_t* queue, float data)
-{
-    queue->Index = 0;
-    for (int i = 0; i < queue->Len; i++)
-        queue->Data[i] = data;
-    queue->Mean = data;
-}
-
-void MeanQueue_Enter(MeanQueue_t* queue, float data)
-{
-    if (queue->EnterWithShift > 0)
-    {
-        queue->Mean = queue->Mean + (data - queue->Data[queue->Len - 1]) / queue->Len;
-        for (int i = queue->Len - 1; i >= 1; i--)
-            queue->Data[i] = queue->Data[i - 1];
-        queue->Data[0] = data;
-    }
-    else if (queue->EnterWithShift < 0)
-    {
-        queue->Mean = queue->Mean + (data - queue->Data[0]) / queue->Len;
-        for (int i = 0; i < queue->Len - 1; i++)
-            queue->Data[i] = queue->Data[i + 1];
-        queue->Data[queue->Len - 1] = data;
-    }
-    else
-    {
-        queue->Mean = queue->Mean + (data - queue->Data[queue->Index]) / queue->Len;
-        queue->Data[queue->Index++] = data;
-        if (queue->Index >= queue->Len)
-            queue->Index = 0;
-    }
 }

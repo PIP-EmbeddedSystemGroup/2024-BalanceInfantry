@@ -8,10 +8,6 @@
 #include "stdint.h"
 #include "cmsis_os.h"
 
-#define DEBUG_MODE_NORMAL   0
-#define DEBUG_MODE_FFT      1
-#define DEBUG_MODE          DEBUG_MODE_NORMAL
-
 void DebugTask(void const * argument);
 
 #endif

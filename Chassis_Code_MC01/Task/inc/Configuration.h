@@ -37,8 +37,7 @@
 //圆周率宏定义
 #define NORMAL_PI 3.14159265f
 #define NORMAL_HALF_PI 1.5708f
-#define DEGREE_2_RAD 0.0174533f
-#define RAD_2_DEGREE 57.2958f
+
 //CAN总线ID宏定义
 #define LEFT_WHEEL_ID 0x141
 #define RIGHT_WHEEL_ID 0x142
@@ -68,7 +67,7 @@
 #define l4 140
 #define WHEEL_RADIUS 0.1 //m
 //云台参数设置
-#define YAW_POSITION_INIT   4800
+#define YAW_POSITION_INIT   4700
 
 //里程计二维卡尔曼滤波器参数
 #define VEL_PROCESS_NOISE 100	//速度过程噪声

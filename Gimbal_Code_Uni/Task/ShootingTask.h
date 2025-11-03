@@ -28,15 +28,12 @@ typedef struct
         M2006_t Motor;
         PID_t PositionPID;
         PID_t SpeedPID;
-        int Count;
         uint32_t LastFeedingTick;
         uint32_t LastStuckTick;
     } Feeding;
 } Shooting_t;
 
 void ShootingTask(void const* argument);
-void Shooting_BoxOpen(void);
-void Shooting_BoxClose(void);
 
 extern Shooting_t Shooting;
 

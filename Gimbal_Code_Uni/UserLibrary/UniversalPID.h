@@ -14,7 +14,6 @@ typedef struct
     float kI;           //积分项系数
     float kD;           //微分项系数
     float DeltaTime;    //控制器更新时间 单位:s
-    int DifferentialFreqDiv;    //微分更新时间分频系数
 
     float CircleResolution; //位置环存在角度量过零点问题时 角度一圈所对应的数值大小
 
@@ -33,8 +32,6 @@ typedef struct
     float kI_mdt;       //mdt: Multiplied by Delta Time -> 一般会省略
     float kD_ddt;       //ddt: Divided by Delta Time    -> 一般会省略
     float DeltaTime;
-    int DifferentialFreqDiv;    //微分更新时间分频系数
-    int DifferentialCounter;
 
     float Error[2];     //0:本次误差 1:上次误差
 

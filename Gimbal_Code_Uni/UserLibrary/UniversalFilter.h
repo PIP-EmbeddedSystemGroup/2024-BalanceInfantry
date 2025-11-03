@@ -30,21 +30,9 @@ typedef struct
     float R;
 } KalmanFilter1st_t;
 
-typedef struct
-{
-    float* Data;
-    unsigned Len;
-    unsigned Index;
-    float Mean;
-    int EnterWithShift;
-} MeanQueue_t;
-
 void LPF_1stOrderIIR_Init(LPF_1stOrderIIR_t* filter, float deltaTime, float cutOffFreq);
 void LPF_1stOrderIIR_Update(LPF_1stOrderIIR_t* filter, float value);
 void KalmanFilter1st_Init(KalmanFilter1st_t* filter, float t_q, float t_r);
 float KalmanFilter1st_Update(KalmanFilter1st_t* filter, float data);
-void MeanQueue_Init(MeanQueue_t* queue, unsigned len, int enterWithShift);
-void MeanQueue_Clear(MeanQueue_t* queue, float data);
-void MeanQueue_Enter(MeanQueue_t* queue, float data);
 
 #endif

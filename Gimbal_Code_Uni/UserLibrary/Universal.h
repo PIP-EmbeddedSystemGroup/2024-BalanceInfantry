@@ -25,14 +25,6 @@ typedef arm_matrix_instance_f32 matrix_t;
 #define MAT_TRS(m1, m) arm_mat_trans_f32(&m1, m)
 #define MAT_INV(m1, m) arm_mat_inverse_f32(&m1, m)
 
-typedef struct
-{
-    float Value;
-    float Unwraped;
-    float PrevVal;
-    float Circle;   //转一圈对应的值
-} AngleUnwrap_t;
-
 int Constrain(int val, int max, int min);
 float ConstrainF(float val, float max, float min);
 int AngleWrap(int val, int max);
@@ -40,7 +32,5 @@ float AngleWrapF(float val, float max);
 int AngleDiff(int a, int b, int max);
 float AngleDiffF(float a, float b, float max);
 void HanningWindow_Init(float* out, int n);
-void AngleUnwrap_Init(AngleUnwrap_t* angleUnwrap, float value, float circle);
-float AngleUnwrap_Update(AngleUnwrap_t* angleUnwrap, float value);
 
 #endif

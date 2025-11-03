@@ -30,14 +30,12 @@ void ControllerTask(void const* argument)
 
     Controller.isEnable = RESET;
     Daemon.ErrorFlag = 0;
+    Controller.isSpinMode = RESET;
     Controller.FrictionOn = RESET;
     Controller.ShootingOn = RESET;
-    Controller.isBoxOn = RESET;
-    Controller.isJump = RESET;
     Controller.AimingOn = RESET;
     Controller.VisionMode = VISION_MODE_ARMOR;
     Controller.AimingInvRotateEnable = SET;
-    Controller.isBossMode = RESET;
     Controller.Move.FB.Set = 0;
     Controller.Move.LR.Set = 0;
     Controller.Move.FB.Real = 0;
@@ -45,8 +43,6 @@ void ControllerTask(void const* argument)
     Controller.View.Pitch = 0;
     Controller.View.Yaw = 0;
     Controller.HeightSet = CTRL_HEIGHT_SET_LOW;
-    Controller.View.YawVisionOffset = 0;
-    Controller.View.PitchVisionOffset = 0;
 
     Key_Init(&Controller.PadS1.Up, 0);
     Key_Init(&Controller.PadS1.Down, 0);
@@ -58,7 +54,7 @@ void ControllerTask(void const* argument)
         uint32_t NowTick = HAL_GetTick();
 
         if ((RC_DBUS.Pad.S2 == 1 || RC_DBUS.Pad.S2 == 2) && //S2拨杆不在中位
-            (NowTick - RC_DBUS.LastOnlineTick < 100 || (RC_DBUS.Pad.S2 == RC_DBUS_S2_COMPUTER_CTRL && NowTick - RC_VTM.LastOnlineTick < 200)) &&    //DBUS或VTM在线
+            (NowTick - RC_DBUS.LastOnlineTick < 100) &&     //DBUS在线
             !Daemon.ErrorFlag)                          //底盘和云台均无错误标记
             Controller.isEnable = SET;
         else
@@ -78,11 +74,10 @@ void ControllerTask(void const* argument)
             Controller.Move.LR.Set = 0;
             Controller.View.Pitch = 0;
             Controller.View.Yaw = Inertial.Yaw;
+            Controller.isSpinMode = RESET;
             Controller.FrictionOn = RESET;
             Controller.ShootingOn = RESET;
             Controller.AimingOn = RESET;
-            Controller.isBossMode = RESET;
-            Controller.isJump = RESET;
             break;
         }
     }
@@ -143,6 +138,7 @@ void Controller_Pad(void)
         break;
     }
 
+<<<<<<< HEAD
   //  Controller.AimingOn = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
    // Controller.isBoxOn = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
     Controller.Rotate_Flag = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
@@ -153,6 +149,10 @@ void Controller_Pad(void)
         Shooting_BoxClose();
 
     Controller.isJump = ((int)RC_DBUS.Pad.CH4 - 1024) > 500;
+=======
+    Controller.isSpinMode = ((int)RC_DBUS.Pad.CH4 - 1024) > 500;
+    Controller.AimingOn = ((int)RC_DBUS.Pad.CH4 - 1024) < -500;
+>>>>>>> parent of 987bf74 (Merge branch 'main' of github.com:PIP-EmbeddedSystemGroup/2024-BalanceInfantry)
 
     Controller.PadS1.Up.Value = RC_DBUS.Pad.S1 == 1;
     if (Key_Update(&Controller.PadS1.Up) == KEY_LONG_PRESS)
@@ -165,14 +165,15 @@ void Controller_Pad(void)
         Controller.ShootingOn = RESET;
 }
 
+extern int tempColor;
 void Controller_MouseKeyboard(void)
 {
     if (Key_Update(&Mouse.R) == KEY_PRESSED)
     {
         if (!Controller.AimingOn)
         {
-           Controller.View.YawVisionOffset = 0;
-           Controller.View.PitchVisionOffset = 0;
+            Controller.View.YawVisionOffset = 0;
+            Controller.View.PitchVisionOffset = 0;
         }
         Controller.AimingOn = SET;
     }
@@ -181,12 +182,13 @@ void Controller_MouseKeyboard(void)
         Controller.AimingOn = RESET;
     }
 
-    if (!Controller.AimingOn || !Vision.isDetected)
+    if (!Controller.AimingOn)
     {
         Controller.View.Yaw += -Mouse.X * YAW_SENSITY_MOUSE;
-        Controller.View.Pitch += -Mouse.Y * PITCH_SENSITY_MOUSE;
+        if (Gimbal.Pitch.Motor.Position.Real <= PITCH_MAX_ENCODER && Gimbal.Pitch.Motor.Position.Real >= PITCH_MIN_ENCODER)
+            Controller.View.Pitch += -Mouse.Y * PITCH_SENSITY_MOUSE;
     }
-    else //if (Key_Update(&Keyboard.Q) == KEY_PRESSED && Vision.isDetected)
+    else
     {
         Controller.View.YawVisionOffset += -Mouse.X * YAW_SENSITY_MOUSE * 0.1f;
         Controller.View.PitchVisionOffset += -Mouse.Y * PITCH_SENSITY_MOUSE * 0.1f;
@@ -237,6 +239,9 @@ void Controller_MouseKeyboard(void)
     else
         Controller.ShootingOn = RESET;
 
+    // if (Key_Update(&Keyboard.G) == KEY_LONG_PRESS)
+    //     Controller.isSpinMode = !Controller.isSpinMode;
+
     if (Key_Update(&Keyboard.V) == KEY_LONG_PRESS)
     {
         if (Controller.VisionMode == VISION_MODE_ARMOR)
@@ -248,17 +253,5 @@ void Controller_MouseKeyboard(void)
     }
 
     if (Key_Update(&Keyboard.B) == KEY_LONG_PRESS)
-        Controller.isBossMode = !Controller.isBossMode;
-
-    if (Key_Update(&Keyboard.R) == KEY_LONG_PRESS)
-    {
-        Controller.isBoxOn = !Controller.isBoxOn;
-        if (Controller.isBoxOn)
-            Shooting_BoxOpen();
-        else
-            Shooting_BoxClose();
-    }
-
-    if (Key_Update(&Keyboard.X) == KEY_LONG_PRESS)
-        Controller.AimingInvRotateEnable = !Controller.AimingInvRotateEnable;
+        tempColor = tempColor == 0x53 ? 0xE9 : 0x53;
 }

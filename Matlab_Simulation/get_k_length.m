@@ -48,7 +48,6 @@ function [K,Q,R] = get_k_length(leg_length)
     B=subs(B,[R,L,LM,l,mw,mp,M,Iw,Ip,IM,g],[R1,L1,LM1,l1,mw1,mp1,M1,Iw1,Ip1,IM1,9.8]);
     B=double(B);
     
-<<<<<<< HEAD
     %超参数：
     %实车参数：
     % Q=diag([1 1 5 1000 9000 1]);%theta d_theta x d_x phi d_phi%700 1 600 200 1000 1
@@ -63,17 +62,6 @@ function [K,Q,R] = get_k_length(leg_length)
     
     %Q=diag([200 1 1 150 4000 1]);
     %R=diag([2.85,0.25]);
-=======
-    
-    %模板QR值：
-    Q=diag([1 1 1 100 3000 1]);
-    R=diag([1.5,0.1]);
-    % R1= (4*leg_length) +0.1 ;
-    % R2= (-7.6*leg_length)+2.76;
-    % Q=diag([1 1 1 100 3000 1]);
-    % R=diag([R1,R2]);
-
->>>>>>> 92611cd9f54b30af6509b2c2a7d13b3348740c38
     K=lqr(A,B,Q,R);
   
 end

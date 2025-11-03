@@ -57,7 +57,7 @@ osThreadId ShootingHandle;
 uint32_t ShootingBuffer[ 128 ];
 osStaticThreadDef_t ShootingControlBlock;
 osThreadId VisionHandle;
-uint32_t VisionBuffer[ 512 ];
+uint32_t VisionBuffer[ 1024 ];
 osStaticThreadDef_t VisionControlBlock;
 osThreadId InertialHandle;
 uint32_t InertialBuffer[ 1024 ];
@@ -149,7 +149,7 @@ void MX_FREERTOS_Init(void) {
   ShootingHandle = osThreadCreate(osThread(Shooting), NULL);
 
   /* definition and creation of Vision */
-  osThreadStaticDef(Vision, VisionTask, osPriorityNormal, 0, 512, VisionBuffer, &VisionControlBlock);
+  osThreadStaticDef(Vision, VisionTask, osPriorityNormal, 0, 1024, VisionBuffer, &VisionControlBlock);
   VisionHandle = osThreadCreate(osThread(Vision), NULL);
 
   /* definition and creation of Inertial */
